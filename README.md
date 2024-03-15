@@ -149,11 +149,11 @@ One value of the function determines which of the 10 palettes is to be used. Thi
 
 ### toonity
 
-One value of the function determines the smoothness or abruptness of the transitions between colors on the palettes used.
+One value of the function determines the smoothness or abruptness of the transitions between colors on the two palettes being used.
 
 ### main height
 
-The "main" value of the function is interpreted as a "height" along an imagined vertical palette. Given a palette and a toonity, a height implies a certain color. In general, the pixel will be between two palettes (see palette choice), so the color will be calculated for both palettes and blended in between.
+The "main" value of the function is interpreted as a "height" along an imagined vertical palette. Given a palette and a toonity, a height implies a certain color. In general, the pixel will be between two palettes (see palette choice), so the color will be calculated for both palettes and blended in between, according to how far along it is between one and the other.
 
 ### hue, saturation, value tweaking
 
@@ -167,7 +167,7 @@ The other 3 values of the function determine the extent to which the hue, satura
 
 ### Functions
 
-A function is an arbitrary composition of about a dozen possible components, currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). Specifically, a function is represented as a directed acyclic graph (DAG), where each node is an instance of one of those components, and represents an intermediate value in the calculation of the function, its children representing its arguments—values that need to be calculated first.
+A function is an arbitrary composition of about a dozen possible types of component functions (like types of Lego blocks), currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). Specifically, a function is represented as a directed acyclic graph (DAG), where each node is an instance of one of those components, and represents an intermediate value in the calculation of the function, its children representing its arguments—values that need to be calculated first.
 
 ### Schemes
 
