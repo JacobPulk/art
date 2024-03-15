@@ -46,7 +46,7 @@ You can re-render an already-produced image at a specified resolution (represent
 
 You can run and re-run a scheme+theme combination ad infinitum, producing a new image each time, saving the ones you like.
 
-`butterfly alpha` will generate and show a new image with the scheme called "butterfly" and its theme called "alpha".
+<color="ffff00">`butterfly alpha` will generate and show a new image with the scheme called "butterfly" and its theme called "alpha".</color>
 
 ` ` (just leave the command blank) will generate a new image with whatever scheme and theme were last used. This will be your most used command.
 
@@ -159,6 +159,32 @@ The other 3 values of the function determine the extent to which the hue, satura
 
 ## Image creation: Function building
 
-### Function ontology
+### Functions
 
-A function is an arbitrary composition of about a dozen possible components, currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). Specifically, a function is represented as a directed acyclic graph (DAG), where nodes represent these parametrized components
+A function is an arbitrary composition of about a dozen possible components, currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). Specifically, a function is represented as a directed acyclic graph (DAG), where each node is an instance of one of those components, and represents an intermediate value in the calculation of the function, its children representing its arguments—values that need to be calculated first.
+
+### Schemes
+
+A scheme represents an algorithm for constructing functions. It is a set of **kinds**, which are like a specified (metaphorically, colored or numbered) component function type (e.g. `POW`) and how it behaves in the construction (how many are allowed in the function, which **kinds** it can take as arguments, etc.) There many be several **kinds** with the same function type. Maybe a `3-POW` can only accept a `5-SIGMOID` as an argument, while a `4-POW` can accept a `1-X` or a `2-X`. When a scheme is used to construct a function, the first node constructed is a root, representing a final calculated value of the function. According to the scheme, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. 6 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. To the extend they are connected, the effects of the 6 values will be more coherent in the final image, because their functions depend on shared arguments. Thus, a scheme, applied through this stochastic process, generates the 6-valued function that almost fully determines an image.
+
+### Themes
+
+A scheme says nothing about parameters for the functions it generates. It needs a theme to assign them. A theme has four parts, two of which modulate the function's parameters.
+
+#### Conceiver
+
+A conceiver is a mapping from **kinds** to **concepts**. A **concept** specifies a distribution of parameters. Thus, a **conceiver** will, stochastically, assign parameters to the components of a function, according to which **kind** they represent. It may be pulling parameters from one distribution for `3-POW`s and from another for `4-POW`s.
+
+#### Correlator
+
+After a conceiver has assigned parameters to the entire function, the **correlator** may rearrange some of those parameters. A correlator specifies a positive or negative correlation between **kinds** of a given relationship within the function. For example, the conceiver may collect a list of `3-POW`s that are first cousins of `4-POW`s, and rearrange their parameters so that the highest `3-POW` parameters tend to be matched with the lowest `4-POW` parameters.
+
+#### Calmer
+
+All 6 final values of the function potentially range from 0 to 1. Apart from the main value, it may not be desirable to allow the others to affect the image so strongly. The **calmer** specifies a distribution from which, for each image, constants are chosen that shrink (or shrink and shift) these values. Images with rainbows tend to result from **calmers** that do not calm the hue much, and allow it to be shifted through a substantial part of the spectrum.
+
+#### Colorcounter
+
+This part of a theme simply specifies a distribution of numbers of colors to use for the palette. This is applied at the beginning of the process, even before the scheme has been invoked. 
+
+
