@@ -30,7 +30,7 @@ Hence, you can curate outputs at multiple levels: choose which images to save, w
 
 <br>
 
-### re-render
+- ### re-render
 
 You can re-render an already-produced image at a specified resolution (representing the longer side of the paintings within the ptych). Use a double-quote mark:
 
@@ -40,7 +40,7 @@ You can re-render an already-produced image at a specified resolution (represent
 
 <br>
 
-### explore images
+- ### explore images
 
 You can run and re-run a scheme+theme combination ad infinitum, producing a new image each time, saving the ones you like.
 
@@ -50,7 +50,7 @@ You can run and re-run a scheme+theme combination ad infinitum, producing a new 
 
 <br> 
 
-### explore themes
+- ### explore themes
 
 You can specify a scheme and (repeatedly) direct the program to find a new theme for it, saving the themes you like. Of course, to test each theme, you will probably want to explore its images (run the scheme+theme combination several times), and may want to save some of those images along the way as well.
 
@@ -60,27 +60,27 @@ You can specify a scheme and (repeatedly) direct the program to find a new theme
 
 <br>
 
-### explore schemes
+- ### explore schemes
 
-You can specify nothing, and (repeatedly) direct the program to find a new scheme, saving the schemes you like. Of course, to test each scheme, you will probably want to 
+You can specify nothing, and (repeatedly) direct the program to find a new scheme, saving the schemes you like. Of course, to test each scheme, you will probably want to test at least the first-generated theme several times (explore images), and may want to test several more themes for it(explore themes).
 
 `??` will find a new **scheme** with a new, appropriate **theme**, and generate and show a new image created by them.
 
 <br>
 
-### interrupt scheme/theme search
+- ### interrupt scheme/theme search
 
 Using default settings, searches for **schemes** and **themes** should produce a result in seconds. That said, if the search is taking too long, press ``ctrl+C`` to interrupt it and enter a new command.
 
 <br>
 
-### quit
+- ### quit
 
 `#` will quit the program.
 
 <br>
 
-### manually composed schemes/themes
+- ### manually composed schemes/themes
 
 There are functions in the `art_scheme.py` file where a user can manually compose a **scheme** and/or **theme**. However, this is difficult, and the program is not finalized enough for the effort to be worth it. Hence, the following types of commands will be of no use and should be avoided:
 
