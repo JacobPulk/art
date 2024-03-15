@@ -131,4 +131,34 @@ On either prompt...
 <br>
 <br>
 
-## How it works
+# How it works
+
+## Image creation: Palettes
+
+A palette of several colors is chosen, and arranged in a sequence, both according to some encoded aesthetics about consistencies and inconsistencies of hue, saturation, and value. Each color is given a "thickness"; the palette should be visualized like a vertical diagram of skin or soil layers. The arrangement is stochastically performed 10 times, to produce 10 replicate palettes of the same colors but different sequences.
+
+## Image creation: Rendering/calculations
+
+The values of a 6-valued function (see below) are calculated for each pixel based on its X and Y coordinates. The domains and ranges are all [0,1]. The interpretation of those functions is as follows.
+
+### palette choice
+
+One value of the function determines which of the 10 palettes is to be used. This is made continuous by calculating (see below) and blending both the colors implied by the "ceiling" palette and "floor" palette resulting from this value.
+
+### toonity
+
+One value of the function determines the smoothness or abruptness of the transitions between colors on the palettes used.
+
+### main height
+
+The "main" value of the function is interpreted as a "height" along an imagined vertical palette. Given a palette and a toonity, a height implies a certain color. In general, the pixel will be between two palettes (see palette choice), so the color will be calculated for both palettes and blended in between.
+
+### hue, saturation, value tweaking
+
+The other 3 values of the function determine the extent to which the hue, saturation, and value are to be shifted upwards or downwards from the main color.
+
+## Image creation: Function building
+
+### Function ontology
+
+A function is an arbitrary composition of about a dozen possible components, currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). Specifically, a function is represented as a directed acyclic graph (DAG), where nodes represent these parametrized components
