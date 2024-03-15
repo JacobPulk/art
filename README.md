@@ -17,14 +17,16 @@ Hence, you can curate outputs at multiple levels: choose which images to save, w
 
 # How to use it
 
-Understand...
+<br>
+
+## 1. Understand...
 - the relationship between **schemes** and **themes**. Images are created by one **scheme** and one **theme** together. Together, they specify a stochastic (random number-influenced) system for creating images. A **scheme** owns its **theme**—a theme is only associated with one particular **scheme**.
-- what a **ptych** is: a whole, final artistic product of one to several related paintings, either rendered as an image (a `.bmp` file in the `images` folder), or unrendered as a "blueprint" for an image at any resolution (a `.json` file in the `ptychs` folder). If you delete the `.json` file, you will not be able to re-render the image.
-- the file system. In the `data` folder are the `images`, `ptychs`, `themes`, and `schemes` folders. Look at the former two to see the saved/re-renderable images, and the latter two to see the saved/usable **schemes** and **themes**.
+- what a **ptych** is: a whole, final product of one to several related paintings, either _rendered_ as an image (a `.bmp` file in the `images` folder), or _unrendered_ as a "blueprint" for an image at any resolution (a `.json` file in the `ptychs` folder). If you delete the `.json` file, you will not be able to re-render the image.
+- the file system. In the `data` folder are the `images`, `ptychs`, `themes`, and `schemes` folders. Look at the former two to see the saved/re-renderable images, and the latter two to see the saved/usable **schemes** and **themes**. Feel free to rename these files, as long as you (1) do so after quitting the program and deleting the files in the `cache` folder, and (2) maintain the same obvious naming conventions (**ptychs** and images have corresponding filenames; **schemes** and their **themes** have corresponding filenames).
 
 <br>
 
-## main commands
+## 2. Main commands
 
 <br>
 
@@ -34,7 +36,7 @@ You can re-render an already-produced image at a specified resolution (represent
 
 `" 2000` will re-render the last shown image at 2000 pixels.
 
-`" abc 2000` will re-render the saved image called "abc" (leave off the extension) at 2000 pixels.
+`" nice 2000` will re-render the saved image called "nice" (leave off the extension) at 2000 pixels.
 
 <br>
 
@@ -50,7 +52,7 @@ You can run and re-run a scheme+theme combination ad infinitum, producing a new 
 
 ### explore themes
 
-You can specify a scheme and (repeatedly) direct the program to find a new theme for it, saving the themes you like. Of course, to test each theme, you will probably want to run the scheme+theme combination several times, and may want to save some of those images as well.
+You can specify a scheme and (repeatedly) direct the program to find a new theme for it, saving the themes you like. Of course, to test each theme, you will probably want to explore its images (run the scheme+theme combination several times), and may want to save some of those images along the way as well.
 
 `butterfly` will find a new **theme** for the **scheme** called "butterfly".
 
@@ -90,11 +92,39 @@ There are functions in the `art_scheme.py` file where a user can manually compos
 
 <br>
 
-## save commands
+## 3. Save commands
 
-After generating anything (a re-rendered old image, or a new image/**scheme**/**theme**), you will be prompted to save the new content—first the image, and then the **scheme**/**theme** (if applicable).
+<br>
 
-````` will xyps
+After generating anything (a re-rendered old image, or a new image/**scheme**/**theme**), you will be prompted to save the new content—first the image...
+
+`image` will save the image with a timestamp-based filename, with the render/resolution just shown.
+
+`image 2000` will save the image with a timestamp-based filename, at 2000 pixels.
+
+`image nice` will save the image with the filename "nice", with the render/resolution just shown.
+
+`image nice 2000` will save the image with the filename "nice", at 2000 pixels.
+
+<br>
+
+..and then the **scheme**, **theme**, or both (depending on what has already been saved).
+
+`scheme moth` will save the scheme with the filename "moth".
+
+`theme alpha` will save the theme with the filename "x_alpha", where "x" is the already-named scheme that was used.
+
+`both moth alpha` will save the scheme with the filename "moth" and the the theme with the filename "moth_alpha".
+
+<br>
+
+On either prompt...
+
+`` ` `` (a backtick, next to the `1` key on a normal keyboard) will skip saving entirely.
+
+`-` (a dash) will skip saving just the currently prompted part (the image, or the **scheme**/**theme**).
+
+
 
 <br>
 <br>
