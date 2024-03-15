@@ -46,7 +46,7 @@ You can re-render an already-produced image at a specified resolution (represent
 
 You can run and re-run a scheme+theme combination ad infinitum, producing a new image each time, saving the ones you like.
 
-<color="ffff00">`butterfly alpha` will generate and show a new image with the scheme called "butterfly" and its theme called "alpha".</color>
+`butterfly alpha` will generate and show a new image with the scheme called "butterfly" and its theme called "alpha".
 
 ` ` (just leave the command blank) will generate a new image with whatever scheme and theme were last used. This will be your most used command.
 
@@ -126,20 +126,22 @@ On either prompt...
 
 `-` (a dash) will skip saving just the currently prompted part (the image, or the **scheme**/**theme**).
 
-
-
 <br>
 <br>
 
 # How it works
 
-## Image creation: Palettes
+<br>
 
-A palette of several colors is chosen, and arranged in a sequence, both according to some encoded aesthetics about consistencies and inconsistencies of hue, saturation, and value. Each color is given a "thickness"; the palette should be visualized like a vertical diagram of skin or soil layers. The arrangement is stochastically performed 10 times, to produce 10 replicate palettes of the same colors but different sequences.
+## Palettes
 
-## Image creation: Rendering/calculations
+A palette of several colors is chosen, and arranged in a sequence, both according to some encoded aesthetics about consistencies and inconsistencies of hue, saturation, and value. Each color is assigned a "thickness". The palette should be visualized like a vertical diagram of skin or soil layers. The arrangement is stochastically performed 10 times, to produce 10 replicate palettes of the same colors but different sequences.
 
-The values of a 6-valued function (see below) are calculated for each pixel based on its X and Y coordinates. The domains and ranges are all [0,1]. The interpretation of those functions is as follows.
+<br>
+
+## Rendering
+
+For each pixel, the values of a continuous 6-valued function (see below for how the function is constructed) are calculated based on its X and Y coordinates. The domains and ranges are all [0,1]. The interpretation of these 6 values is as follows.
 
 ### palette choice
 
@@ -157,7 +159,11 @@ The "main" value of the function is interpreted as a "height" along an imagined 
 
 The other 3 values of the function determine the extent to which the hue, saturation, and value are to be shifted upwards or downwards from the main color.
 
-## Image creation: Function building
+<br>
+
+## Schemes, themes, and functions
+
+<br>
 
 ### Functions
 
