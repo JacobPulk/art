@@ -38,7 +38,7 @@ All **schemes**, **themes**, and images generated can probably be assumed, stati
 
 <br>
 
-- ### re-render
+- ### re-render images
 
 You can re-render an already-produced image at a specified resolution (representing the longer side of the paintings within the ptych). Use a double-quote mark:
 
@@ -48,7 +48,7 @@ You can re-render an already-produced image at a specified resolution (represent
 
 <br>
 
-- ### explore images
+- ### discover images
 
 You can run and re-run a **scheme**+**theme** combination ad infinitum, producing a new image each time, saving the ones you like.
 
@@ -60,7 +60,7 @@ You can run and re-run a **scheme**+**theme** combination ad infinitum, producin
 
 <br> 
 
-- ### explore themes
+- ### discover themes
 
 You can specify a **scheme** and (repeatedly) direct the program to find a new theme for it, saving the **themes** you like. Of course, to test each **theme**, you will probably want to explore its images (run the **scheme**+**theme** combination several times), and may want to save some of those images along the way as well.
 
@@ -70,7 +70,7 @@ You can specify a **scheme** and (repeatedly) direct the program to find a new t
 
 <br>
 
-- ### explore schemes
+- ### discover schemes
 
 You can specify nothing, and (repeatedly) direct the program to find a new **scheme**, saving the **schemes** you like. Of course, to test each **scheme**, you will probably want to test at least the first-generated **theme** several times (explore images), and may want to test several more themes for it (explore **themes**).
 
