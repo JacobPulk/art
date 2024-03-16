@@ -102,7 +102,7 @@ Using default settings, searches for **schemes** and **themes** should produce a
 
 <br>
 
-After generating anything (a re-rendered old image, or a new image/**scheme**/**theme**), you will be prompted to save the new content—first the image...
+After generating anything, you will be prompted to save the new content—first the image...
 
 `image` will save the image with a timestamp-based filename, with the render/resolution just shown.
 
