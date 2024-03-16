@@ -146,7 +146,7 @@ The other settings represent your requirements for new **themes** (and, indirect
 
 <br>
 
-"Complexity" is a _very rough_ estimate of the visual complexity resulting images. Low complexity **themes** may be less interesting; high complexity **themes** may be less pretty.
+"Complexity" is a _very rough_ estimate of the visual complexity resulting images. Low complexity **themes** may be less interesting; high complexity **themes** may be less pretty. **Themes** with median complexity above about 13 are hard to find.
 
 `LOW COMPLEXITY MIN` is the lowest complexity you will accept for an image at the 5th percentile (i.e., for the top of the simplest 5% of images produced by the theme).
 
