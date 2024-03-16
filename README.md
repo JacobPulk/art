@@ -245,3 +245,14 @@ Paintings in a **ptych** are similar but different. This is _not_ accomplished b
 Borders are subject to this same reseeding, but their variation is sometimes overriden shortly afterwards—on select paintings, they are replaced with replicates of select earlier-generated borders, so that the "odd" half of alternating paintings, and paintings mirroring each other in the **ptych** sequence, are assigned identical borders.
 
 <br>
+<br>
+
+# How it does not work
+
+<br>
+
+There is no "composition" beforehand; the color for each pixel is calculated once; there is no distortion or decoration afterwards (apart from the border/glow around the edges).
+
+There are no preset palettes, images, or "types of palettes" or "types of images".
+
+There is no neural network, training data, or training or learning of any kind. It is not AI.
