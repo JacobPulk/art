@@ -1,6 +1,6 @@
 # What it does
 
-This program generates procedural art images. Ideally, the images will be as diverse as possible without sacrificing aesthetics.
+This command-line program generates procedural art images. Ideally, the images will be as diverse as possible without sacrificing aesthetics.
 
 An image will contain one to several similar-but-different, ideally complementary, **paintings**, arranged in a **ptych** (from "triptych" or "polyptych").
 
@@ -27,6 +27,8 @@ Hence, you can curate outputs at multiple levels: choose which images to save, w
 - a **ptych**: a whole, final product of one to several related paintings, either _rendered_ as an image (a `.bmp` file in the `images` folder), or _unrendered_ as a "blueprint" for an image at any resolution (a `.json` file in the `ptychs` folder). If you delete the `.json` file, you will not be able to re-render the image.
   
 - the files. In the `data` folder are the `images`, `ptychs`, `themes`, and `schemes` folders. Look at the former two to see the saved/re-renderable images, and the latter two to see the saved/usable **schemes** and **themes**. Feel free to rename these files, as long as (1) you do so after quitting the program and deleting the files in the `cache` folder, and (2) you maintain the same obvious naming conventions (**ptychs** and images have corresponding filenames; **schemes** and their **themes** have corresponding filenames).
+  
+- using the program simply consists of entering commands as long as you like. You will be alternating a main command (telling the program to generate something) with one or two save commands.
 
 <br>
 
@@ -72,12 +74,6 @@ You can specify nothing, and (repeatedly) direct the program to find a new **sch
 
 <br>
 
-- ### interrupt scheme/theme search
-
-Using default settings, searches for **schemes** and **themes** should produce a result in seconds. That said, if the search is taking too long, press ``ctrl+C`` to interrupt it and enter a new command.
-
-<br>
-
 - ### quit
 
 `#` will quit the program.
@@ -93,6 +89,12 @@ There are functions in the `art_scheme.py` file where a user can manually compos
 `+?` will find a new theme for the manually composed **scheme**.
 
 `butterfly +` will use the manually composed **theme** for the saved scheme called "butterfly".
+
+<br>
+
+## 2.5. Interrupt scheme/theme search
+
+Using default settings, searches for **schemes** and **themes** should produce a result in seconds. That said, if the search is taking too long, press ``ctrl+C`` to interrupt it and enter a new command.
 
 <br>
 
