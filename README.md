@@ -144,6 +144,8 @@ Change settings in the `settings.txt` file. The setting name and value are separ
 
 The other settings represent your requirements for new **themes** (and, indirectly, for new **schemes** - for which the program must be able to find an acceptable **theme**). As the program searches through new (randomly generated) **themes**, for each one these measures will be estimated. The search ends and a **theme** is presented when one is found that meets your requirements. The more restrictive the requirements are, the longer the search will take; a search may never end (but any requirements in the ballpark of the default settings should yield results quickly).
 
+<br>
+
 "Complexity" is a _rough_ estimate of the number of color regions in the resulting images. We want it to not be too low or too high.
 
 `LOW COMPLEXITY MIN` is the lowest complexity you will accept for an image at the 5th percentile (i.e., for the top of the simplest 5% of images produced by the theme).
@@ -153,6 +155,8 @@ The other settings represent your requirements for new **themes** (and, indirect
 `MEDIAN COMPLEXITY MAX` is the highest complexity you will accept for a median image (i.e., half the images may be that complex or more complex).
 
 `HIGH COMPLEXITY MAX` is the highest complexity you will accept the an image at the 95th percentile (i.e., for the bottom of the most complex 5% of images produced by the theme).
+
+<br>
 
 "Speed" is an estimate of the speed of rendering the resulting images. A higher speed is better.
 
