@@ -157,6 +157,10 @@ The other settings represent your requirements for new **themes** (and, indirect
 `MEDIAN SPEED MIN` is the lowest speed you will accept for a median image (i.e., half the images may be that slow or slower).
 
 <br>
+
+You can also experiment with the additional settings found in the `default_settings()` function of `art.py`. However, these are less likely to improve your experience and not worth explaining here.
+
+<br>
 <br>
 
 # How it works
