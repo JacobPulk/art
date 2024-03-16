@@ -52,7 +52,9 @@ You can run and re-run a **scheme**+**theme** combination ad infinitum, producin
 
 `butterfly alpha` will generate and show a new image with the **scheme** called "butterfly" and its **theme** called "alpha".
 
-` ` (just leave the command blank) will generate a new image with whatever scheme and theme were last used. This will be your most used command.
+`!` will generate a new image from a random saved **scheme** and **theme**.
+
+` ` (just leave the command blank) will generate a new image with whatever scheme and theme were last used.
 
 <br> 
 
