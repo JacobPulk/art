@@ -114,7 +114,7 @@ After generating anything, you will be prompted to save the new content—first 
 
 <br>
 
-..and then the **scheme**, **theme**, or both (depending on what has already been saved).
+..and then the **scheme**, **theme**, or both (depending on what has already been saved—you will be told which option(s) are available).
 
 `scheme moth` will save the **scheme** with the filename "moth".
 
