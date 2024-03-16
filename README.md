@@ -142,11 +142,11 @@ Change settings in the `settings.txt` file. The setting name and value are separ
 
 <br>
 
-The other settings represent your requirements for new **themes** (and, indirectly, for new **schemes** - for which the program must be able to find an acceptable **theme**). As the program searches through new (randomly generated) **themes**, for each one these measures will be estimated. The search ends and a **theme** is presented when one is found that meets your requirements. The more restrictive the requirements are, the longer the search will take; a search may never end (but any requirements in the ballpark of the default settings should yield results quickly).
+The other settings represent your requirements for new **themes** (and, indirectly, for new **schemes** - for which the program must be able to find an acceptable **theme**). As the program searches through new (randomly generated) **themes**, for each one these measures will be estimated. The search ends and a **theme** is presented when one is found that meets your requirements. The more restrictive the requirements are, the longer the search will take; a search may never end (but any requirements at all similar to the default settings should yield results quickly).
 
 <br>
 
-"Complexity" is a _rough_ estimate of the number of color regions in the resulting images. We want it to not be too low or too high.
+"Complexity" is a _very rough_ estimate of the visual complexity resulting images. Low complexity **themes** may be less interesting; high complexity **themes** may be less pretty.
 
 `LOW COMPLEXITY MIN` is the lowest complexity you will accept for an image at the 5th percentile (i.e., for the top of the simplest 5% of images produced by the theme).
 
