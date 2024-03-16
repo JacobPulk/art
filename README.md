@@ -22,9 +22,11 @@ Hence, you can curate outputs at multiple levels: choose which images to save, w
 <br>
 
 ## 1. Understand...
-- the relationship between **schemes** and **themes**. Images are created by one **scheme** and one **theme** together. Together, they specify a stochastic (random number-influenced) system for creating images. A **scheme** owns its **theme**—a theme is only associated with one particular **scheme**. A **scheme**, **theme**, and image are analogous to a make, model, and car.  
-- what a **ptych** is: a whole, final product of one to several related paintings, either _rendered_ as an image (a `.bmp` file in the `images` folder), or _unrendered_ as a "blueprint" for an image at any resolution (a `.json` file in the `ptychs` folder). If you delete the `.json` file, you will not be able to re-render the image.
-- the file system. In the `data` folder are the `images`, `ptychs`, `themes`, and `schemes` folders. Look at the former two to see the saved/re-renderable images, and the latter two to see the saved/usable **schemes** and **themes**. Feel free to rename these files, as long as you (1) do so after quitting the program and deleting the files in the `cache` folder, and (2) maintain the same obvious naming conventions (**ptychs** and images have corresponding filenames; **schemes** and their **themes** have corresponding filenames).
+- a **scheme**, **theme**, and image are analogous to a make, model, and car. A **scheme** "owns" its **theme**—a theme is only associated with one particular **scheme**. Together, they specify a stochastic (random number-influenced) system for creating images. In other words, images are created by one **scheme**, one **theme**, and some randomness.
+  
+- a **ptych**: a whole, final product of one to several related paintings, either _rendered_ as an image (a `.bmp` file in the `images` folder), or _unrendered_ as a "blueprint" for an image at any resolution (a `.json` file in the `ptychs` folder). If you delete the `.json` file, you will not be able to re-render the image.
+  
+- the files. In the `data` folder are the `images`, `ptychs`, `themes`, and `schemes` folders. Look at the former two to see the saved/re-renderable images, and the latter two to see the saved/usable **schemes** and **themes**. Feel free to rename these files, as long as (1) you do so after quitting the program and deleting the files in the `cache` folder, and (2) you maintain the same obvious naming conventions (**ptychs** and images have corresponding filenames; **schemes** and their **themes** have corresponding filenames).
 
 <br>
 
