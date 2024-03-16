@@ -72,7 +72,7 @@ You can specify a **scheme** and (repeatedly) direct the program to find a new t
 
 - ### discover schemes
 
-You can specify nothing, and (repeatedly) direct the program to find a new **scheme**, saving the **schemes** you like. Of course, to test each **scheme**, you will probably want to test at least the first-generated **theme** several times (explore images), and may want to test several more themes for it (explore **themes**).
+You can specify nothing, and (repeatedly) direct the program to find a new **scheme**, saving the **schemes** you like. Of course, to test each **scheme**, you will probably want to test at least the first-generated **theme** several times (explore images), and may want to test several more **themes** for it.
 
 `??` will find a new **scheme** with a new, appropriate **theme**, and generate and show a new image created by them.
 
