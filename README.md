@@ -138,7 +138,7 @@ Change settings in the `settings.txt` file. The setting name and value are separ
 
 <br>
 
-The other settings represent your requirements for new **themes** (and, indirectly, for new **schemes** - for which the program must be able to find an acceptable **theme**). As the program searches through new (randomly generated) **themes**, for each one these measures will be estimated. The search ends and a **theme** is presented when one is found that meets your requirements.
+The other settings represent your requirements for new **themes** (and, indirectly, for new **schemes** - for which the program must be able to find an acceptable **theme**). As the program searches through new (randomly generated) **themes**, for each one these measures will be estimated. The search ends and a **theme** is presented when one is found that meets your requirements. The more restrictive the requirements are, the longer the search will take; a search may never end (but any requirements in the ballpark of the default settings should yield results quickly).
 
 "Complexity" is a _rough_ estimate of the number of color regions in the resulting images. We want it to not be too low or too high.
 
