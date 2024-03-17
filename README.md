@@ -1,6 +1,6 @@
 # What it does
 
-This command-line program generates procedural art images. Ideally, the images will be as diverse as possible without sacrificing aesthetics.
+This command-line program generates procedural art images. Ideally, the images will be as diverse as possible without sacrificing aesthetics. See a gallery [here](https://imgur.com/a/Pz2uvam).
 
 An image will contain one to several similar-but-different, ideally complementary, **paintings**, arranged in a **ptych** (from "triptych" or "polyptych").
 
