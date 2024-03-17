@@ -23,7 +23,33 @@ All **schemes**, **themes**, and images generated can probably be assumed, stati
 
 <br>
 
-## 1. Understand...
+## 1. Download & execute
+
+The program consists of a few Python scripts. I strongly recommend using PyPy to execute them, as the other options I have tried appear to be at least 3 times slower. You have 3 options:
+
+### Use PyPy (recommended)
+If you have already been using PyPy 3.10, just use it as normal for this. Otherwise follow these steps:
+
+- 1a) Download [PyPy 3.10](https://www.pypy.org/download.html) and extract ([Windows](https://www.cedarville.edu/insights/computer-help/post/how-to-extract-files-from-a-zipped-compressed-folder), [Mac](https://support.apple.com/guide/terminal/compress-and-uncompress-file-archives-apdc52250ee-4659-4751-9a3a-8b7988150530/mac)) the folder wherever you want.  
+- 1b) Download the latest Python version of this program and extract the folder wherever you want.  
+- 1c) (Recommended but not necessary) [Add pypy to your environment PATH.](https://www.activestate.com/resources/quick-reads/how-to-install-and-work-with-pypy/)  
+- 1d) Open your command prompt/PowerShell/Terminal in the art program folder ([Windows](https://www.howtogeek.com/662611/9-ways-to-open-powershell-in-windows-10/#from-the-right-click-context-menu), [Mac](https://apple.stackexchange.com/questions/11323/how-can-i-open-a-terminal-window-directly-from-my-current-finder-location)).  
+- 1e) If you have added pypy to your PATH, execute the program with `pypy art.py`.  
+Otherwise, execute the program with `X\Y\Z\pypy.exe art.py`, where `X\Y\Z\pypy.exe` is the full path ([Windows](https://www.howtogeek.com/670447/how-to-copy-the-full-path-of-a-file-on-windows-10/), [Mac](https://www.digitaltrends.com/computing/how-to-find-and-copy-a-file-path-on-mac/)) to `pypy.exe`. 
+
+### OR use the .exe
+
+Download the latest .exe version of this program and extract the folder wherever you want.
+
+Execute the program by double-clicking `art.exe`.
+
+### OR use Python otherwise (not recommended)
+
+Run `art.py` however you want.
+
+<br>
+
+## 2. Understand...
 - a **scheme**, **theme**, and image are analogous to a make, model, and car. A **scheme** "owns" its **theme**—a theme is only associated with one particular **scheme**. Together, they specify a stochastic (random number-influenced) system for creating images. In other words, images are created by one **scheme**, one **theme**, and some randomness.
   
 - a **ptych**: a whole, final product of one to several related paintings, either _rendered_ as an image (a `.bmp` file in the `images` folder), or _unrendered_ as a "blueprint" for an image at any resolution (a `.json` file in the `ptychs` folder). If you delete the `.json` file, you will not be able to re-render the image.
@@ -34,7 +60,7 @@ All **schemes**, **themes**, and images generated can probably be assumed, stati
 
 <br>
 
-## 2. Main commands
+## 3. Main commands
 
 <br>
 
@@ -96,13 +122,13 @@ There are functions in the `art_scheme.py` file where a user can manually compos
 
 <br>
 
-## 2.5. Interrupt scheme/theme search
+## 3.5. Interrupt scheme/theme search
 
 Using default settings, searches for **schemes** and **themes** should produce a result in seconds. That said, if the search is taking too long, press ``ctrl+C`` to interrupt it and enter a new command.
 
 <br>
 
-## 3. Save commands
+## 4. Save commands
 
 <br>
 
@@ -136,7 +162,7 @@ On either prompt...
 
 <br>
 
-## 4. Settings
+## 5. Settings
 
 Change settings in the `settings.txt` file. The setting name and value are separated by tabs; you can add or remove tabs freely.
 
