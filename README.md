@@ -6,7 +6,7 @@ An image will contain one to several similar-but-different, ideally complementar
 
 The primary outputs are `.bmp` files, which can be rendered and re-rendered at any resolution based on associated `.json` files.
 
-An image is drawn according to, essentially, a single, continuous mathematical function of the XY plane. Ideally, the space of pleasing functions will be covered as widely and evenly as possible.
+An image is drawn according to, essentially, a single, continuous mathematical function of the XY plane. Ideally, this program will explore the space of pleasing functions as widely and evenly as possible.
 
 The image is drawn in only one pass based on that function. There is no "composition" beforehand; the color for each pixel is calculated once; there is no distortion or decoration afterwards (apart from the border/glow around the edges).
 
