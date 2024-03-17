@@ -205,6 +205,10 @@ You can also experiment with the additional settings found in the `default_setti
 
 <br>
 
+Written in Python, only importing from the standard library. [Nuitka](https://pypi.org/project/Nuitka/) is used to compile the .exe version.
+
+<br>
+
 ## Palettes
 
 A palette of several colors is chosen, and arranged in a sequence, both according to some encoded aesthetics about consistencies and inconsistencies of hue, saturation, and value. Each color is assigned a "thickness". The palette should be visualized like a vertical diagram of skin or soil layers. The arrangement is stochastically performed 10 times, to produce 10 replicate palettes of the same colors but different sequences.
