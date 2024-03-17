@@ -37,7 +37,7 @@ If you have already been using PyPy 3.10, just use it as normal for this. Otherw
 - 1e) If you have added pypy to your PATH, execute the program with `pypy art.py`.  
 Otherwise, execute the program with `X\Y\Z\pypy.exe art.py`, where `X\Y\Z\pypy.exe` is the full path ([Windows](https://www.howtogeek.com/670447/how-to-copy-the-full-path-of-a-file-on-windows-10/), [Mac](https://www.digitaltrends.com/computing/how-to-find-and-copy-a-file-path-on-mac/)) to `pypy.exe`. 
 
-### OR use the .exe
+### OR use the .exe (not recommended)
 
 Download the latest executable version of this program (the `...executable.zip` version under "Assets" [here](https://github.com/JacobPulk/art/releases/latest)) and extract the folder wherever you want.
 
