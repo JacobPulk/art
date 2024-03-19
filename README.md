@@ -224,7 +224,7 @@ Written in Python, only importing from the standard library. [Nuitka](https://py
 
 ## Palettes
 
-A palette of several colors is chosen, and arranged in a sequence, both according to some encoded aesthetics about consistencies and inconsistencies of hue, saturation, and value. Each color is assigned a "thickness". The palette should be visualized like a vertical diagram of skin or soil layers. The arrangement is stochastically performed 10 times, to produce 10 replicate palettes of the same colors but different sequences. Palettes are essentially independent from **schemes** and **themes**.
+A palette of several colors is chosen, and arranged in a sequence, both according to some encoded aesthetics about consistencies and inconsistencies of hue, saturation, and brightness. The palette is sorted, and each color is assigned a "thickness", both partially randomly and partially in accordance with the colors' relative attributes. The resulting palette should be visualized like a vertical diagram of skin or soil layers. The arrangement is stochastically performed 10 times, to produce 10 replicate palettes of the same colors but different sequences. Palettes are essentially independent from **schemes** and **themes**.
 
 <br>
 
