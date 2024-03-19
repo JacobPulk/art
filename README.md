@@ -37,7 +37,7 @@ If you have already been using PyPy 3.10, just use it as normal for this. Otherw
 3. (Recommended but not necessary) [Add pypy to your environment PATH.](https://www.activestate.com/resources/quick-reads/how-to-install-and-work-with-pypy/)  
 4. Open your command prompt/PowerShell/Terminal in the art program folder ([Windows](https://www.howtogeek.com/662611/9-ways-to-open-powershell-in-windows-10/#from-the-right-click-context-menu), [Mac](https://apple.stackexchange.com/questions/11323/how-can-i-open-a-terminal-window-directly-from-my-current-finder-location)).  
 5. If you have added pypy to your PATH, execute the program with `pypy art.py`.  
-Otherwise, execute the program with `X\Y\Z\pypy.exe art.py`, where `X\Y\Z\pypy.exe` is the full path ([Windows](https://www.howtogeek.com/670447/how-to-copy-the-full-path-of-a-file-on-windows-10/), [Mac](https://www.digitaltrends.com/computing/how-to-find-and-copy-a-file-path-on-mac/)) to `pypy.exe`. 
+Otherwise, execute the program with `"X\Y\Z\pypy.exe" art.py`, where `X\Y\Z\pypy.exe` is the full path ([Windows](https://www.howtogeek.com/670447/how-to-copy-the-full-path-of-a-file-on-windows-10/), [Mac](https://www.digitaltrends.com/computing/how-to-find-and-copy-a-file-path-on-mac/)) to `pypy.exe`. 
 
 ### OR use the .exe
 
