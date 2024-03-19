@@ -254,13 +254,15 @@ The other 3 values of the function determine the extent to which the hue, satura
 
 <br>
 
-### Functions
+### What functions are
 
-A function is an arbitrary composition of about a dozen possible types of component functions (like types of Lego blocks), currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). The component functions and calculating method are constructed to maintain a range of [0,1] on the domain [0,1] at (basically) every step. The whole function is treated as a directed acyclic graph (DAG), where each node is an instance of one of those components, and represents an intermediate value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
+A function is an arbitrary composition of about a dozen possible types of component mini-functions (like types of Lego blocks), currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). The component functions and calculating method are constructed to maintain a range of [0,1] on the domain [0,1] at (basically) every step. The whole function is treated as a directed acyclic graph (DAG), where each node is an instance of one of those components, and represents an intermediate value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.  
+
+In the code, to avoid confusion from long words with multiple meanings like "function" and "parametrize", a function is called a **rope** and the instances of component mini-functions making it up are called **cords**. The list indicating which cords represent each of the 6 final values is called the **fray**.
 
 <br>
 
-### Schemes
+### What schemes are
 
 #### Kinds
 
@@ -271,7 +273,7 @@ When a **scheme** is used to construct a function, the order of construction is 
 
 <br>
 
-### Themes
+### What themes are
 
 A **scheme** says nothing about parameters for the functions it generates. It needs a **theme** to assign them. A **theme** has four parts, two of which modulate the function's parameters.
 
@@ -290,6 +292,20 @@ All 6 final values of the function potentially range from 0 to 1. Apart from the
 #### Colorcounter
 
 This part of a theme simply specifies a distribution of numbers of colors to use for the palette. This is applied at the beginning of the process, essential to creating the palette in the first place, even before the **scheme** has been considered. 
+
+<br>
+
+### Theme search
+
+Generating random **themes** is mostly straightforward. An important part of the code, part of generating a random **conceiver**, is the set of functions for generating random **concepts** for each of the types of component functions. These define a _distribution of distributions_ of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 1/2, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 1/2 and 2 being essential for a perfect circle.  
+
+The search ends when a randomly generated **theme** meets the requirements indicated in the settings. At the beginning of a **theme** search, the relevant **scheme** is applied many times to generate a sample of many "ropes" (functions). The **theme** is applied to all of them, the complexity and speed are estimated for all of them, and the results are checked against the settings.
+
+### Scheme search
+
+Generating random **schemes** is not as straightforward as one would hope, because a **scheme** should guarantee that the functions it produces depend on both `X` and `Y` components. It does not simply have to include `X` and `Y` kinds; it also has to guarantee that at least one of each will be reached every time. So, X **kinds**, Y **kinds**, guaranteed X-dependent **kinds**, guaranteed Y-dependent **kinds**, X- & Y-combining **kinds**, guaranteed X- & Y-depedent **kinds**, and unrestricted **kinds** are all generated separately to maintain their separate requirements; the **kinds** that can be used for the final 6 values must all be guaranteed X- & Y-dependent.
+
+A **scheme** search is really just a series of **theme** searches. A random **scheme** is generated; some number of random **themes** are tried for it; if one meets the **theme** requirements, that **scheme** and **theme** are returned, otherwise the next random **scheme** is tried, and so on.
 
 <br>
 
