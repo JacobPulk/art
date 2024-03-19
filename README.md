@@ -51,7 +51,7 @@ Run `art.py` however you want.
 <br>
 
 ## 2. Understand...
-- a **scheme**, **theme**, and image are analogous to a make, model, and car. A **scheme** "owns" its **theme**—a theme is only associated with one particular **scheme**. Together, they specify a stochastic (random number-influenced) system for creating images. In other words, images are created by one **scheme**, one **theme**, and some randomness.
+- a **scheme**, **theme**, and image are analogous to a make, model, and car. A **scheme** has its own **themes**—a **theme** is only associated with one particular **scheme**. Together, they specify a stochastic (random number-influenced) system for creating images. In other words, images are created by one **scheme**, one **theme**, and some randomness.
   
 - a **ptych**: a whole, final product of one to several related paintings, either _rendered_ as an image (a `.bmp` file in the `images` folder), or _unrendered_ as a "blueprint" for an image at any resolution (a `.json` file in the `ptychs` folder). If you delete the `.json` file, you will not be able to re-render the image.
   
