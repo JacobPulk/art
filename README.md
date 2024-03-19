@@ -61,7 +61,7 @@ Run `art.py` however you want.
 
 <br>
 
-## 3. Main commands
+## 3. Main (generating) commands
 
 <br>
 
