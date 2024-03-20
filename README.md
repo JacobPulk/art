@@ -332,6 +332,8 @@ A **theme's** complexity and speed are not estimated by test-drawing (they are e
 
 There is no "composition" beforehand; there is only one layer—the color for each pixel is calculated once; there is no distortion or decoration afterwards (apart from the border/glow around the edges).
 
-There is no drawing upon preset palettes, images, or archetypes thereof, in the code. (Of course, whatever **scheme** and **theme** you're using will narrow the range of possibilities—that's the point.)
+There is no drawing upon preset colors, palettes, images, compositions, or archetypes thereof, in the code. (Of course, whatever **scheme** and **theme** you're using will narrow the range of possibilities—that's the point.)
+
+There is no directly encoded or guaranteed "symmetry" or "asymmetry"; they both occur naturally from combining random functions.
 
 There is no neural network, training data, or training or learning of any kind. It is not AI.
