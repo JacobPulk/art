@@ -256,7 +256,7 @@ The other 3 values of the function determine the extent to which the hue, satura
 
 <br>
 
-### What functions are
+### Functions
 
 A function is an arbitrary composition of about a dozen possible types of component mini-functions (like types of Lego blocks), currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). The component functions and calculating method are constructed to maintain a range of [0,1] on the domain [0,1] at (basically) every step. The whole function is treated as a directed acyclic graph (DAG), where each node is an instance of one of those components, and represents an intermediate value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.  
 
@@ -264,7 +264,7 @@ In the code, to avoid confusion from long words with multiple meanings like "fun
 
 <br>
 
-### What schemes are
+### Schemes
 
 #### Kinds
 
@@ -275,7 +275,7 @@ When a **scheme** is used to construct a function, the order of construction is 
 
 <br>
 
-### What themes are
+### Themes
 
 A **scheme** says nothing about parameters for the functions it generates. It needs a **theme** to assign them. A **theme** has four parts, two of which modulate the function's parameters.
 
