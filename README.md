@@ -301,7 +301,7 @@ This part of a theme simply specifies a distribution of numbers of colors to use
 
 Generating random **themes** is mostly straightforward. An important part of the code, part of generating a random **conceiver**, is the set of functions for generating random **concepts** for each of the types of component functions. These define a _distribution of distributions_ of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 1/2, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 1/2 and 2 being essential for a perfect circle.  
 
-The search ends when a randomly generated **theme** meets the requirements indicated in the settings. At the beginning of a **theme** search, the relevant **scheme** is applied many times to generate a sample of many "ropes" (functions). The **theme** is applied to all of them, the complexity and speed are estimated for all of them, and the results are checked against the settings.
+The search ends when a randomly generated **theme** meets the requirements indicated in the settings. At the beginning of a **theme** search, the relevant **scheme** is applied many times to generate a sample of many "ropes" (functions). The **theme** is applied to all of them, the complexity and speed are estimated for all of them, and the results are checked against the set requirements.
 
 ### Scheme search
 
