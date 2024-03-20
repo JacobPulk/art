@@ -125,7 +125,7 @@ There are functions in the `art_scheme.py` file where a user can manually compos
 
 ## 3.5. Interrupt scheme/theme search
 
-Using default settings, searches for **schemes** and **themes** should produce a result in seconds. That said, if the search is taking too long, press ``ctrl+C`` to interrupt it and enter a new command.
+Using default settings, searches for **schemes** and **themes** should produce a result in seconds. Regardless, if the search is taking too long, press ``ctrl+C`` to interrupt it and enter a new command.
 
 <br>
 
