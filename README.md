@@ -303,6 +303,8 @@ Generating random **themes** is mostly straightforward. An important part of the
 
 The search ends when a randomly generated **theme** meets the requirements indicated in the settings. At the beginning of a **theme** search, the relevant **scheme** is applied many times to generate a sample of many "ropes" (functions). The **theme** is applied to all of them, the complexity and speed are estimated for all of them, and the results are checked against the set requirements.
 
+<br>
+
 ### Scheme search
 
 Generating random **schemes** is not as straightforward as one would hope, because a **scheme** should guarantee that the functions it produces depend on both `X` and `Y` components. It does not simply have to include `X` and `Y` kinds; it also has to guarantee that at least one of each will be reached every time. So, X **kinds**, Y **kinds**, guaranteed X-dependent **kinds**, guaranteed Y-dependent **kinds**, X- & Y-combining **kinds**, guaranteed X- & Y-depedent **kinds**, and unrestricted **kinds** are all generated separately to maintain their separate requirements; the **kinds** that can be used for the final 6 values must all be guaranteed X- & Y-dependent.
