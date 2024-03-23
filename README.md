@@ -169,7 +169,7 @@ Change settings in the `settings.txt` file. The setting name and value are separ
 
 `DEFAULT RESOLUTION` is self-explanatory.
 
-`SEARCH SLOWING` (in seconds per megapixel) and `RENDER SLOWING` slow the program to avoid CPU heating.
+`SEARCH SLOWING` (in seconds per megapixel) and `RENDER SLOWING` (in milliseconds per **theme**) slow the program to avoid CPU heating.
 
 <br>
 
