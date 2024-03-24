@@ -2,7 +2,7 @@
 
 This command-line program generates procedural art images. Ideally, the images will be as diverse as possible without sacrificing aesthetics. See a gallery [here](https://imgur.com/a/Pz2uvam).
 
-An image will contain one to several similar-but-different, ideally complementary, **paintings**, arranged in a **ptych** (from "triptych" or "polyptych").
+An image will contain one to several similar-but-different, ideally complementary, paintings.
 
 The primary outputs are `.bmp` files, which can be rendered and re-rendered at any resolution based on associated `.json` files.
 
@@ -50,14 +50,15 @@ Run `art.py` however you want.
 
 <br>
 
-## 2. Understand...
-- a **scheme**, **theme**, and image are analogous to a make, model, and car. A **scheme** has its own **themes**—a **theme** is only associated with one particular **scheme**. Together, they specify a stochastic (random number-influenced) system for creating images. In other words, images are created by one **scheme**, one **theme**, and some randomness.
+## 2. Basic information  
+
+- A **scheme**, **theme**, and image are analogous to a make, model, and car. A **scheme** has its own **themes**—a **theme** is only associated with one particular **scheme**. Together, they specify a stochastic (random number-influenced) system for creating images. In other words, images are created by one **scheme**, one **theme**, and some randomness. They are saved as `.json` files.
   
-- a **ptych**: a whole, final product of one to several related paintings, either _rendered_ as an image (a `.bmp` file in the `images` folder), or _unrendered_ as a "blueprint" for an image at any resolution (a `.json` file in the `ptychs` folder). If you delete the `.json` file, you will not be able to re-render the image.
+- A **ptych** (from "triptych" or "polyptych"), also saved as a `.json` file, is a blueprint for an image (containing one to several related paintings). An image can be re-rendered at any resolution from its **ptych**.
   
-- the files. In the `data` folder are the `images`, `ptychs`, `themes`, and `schemes` folders. Look at the former two to see the saved/re-renderable images, and the latter two to see the saved/usable **schemes** and **themes**. Feel free to rename these files, as long as (1) you do so after quitting the program and deleting the files in the `cache` folder, and (2) you maintain the same obvious naming conventions (**ptychs** and images have corresponding filenames; **schemes** and their **themes** have corresponding filenames).
+- In the `data` folder are the `images`, `ptychs`, `themes`, and `schemes` folders. Look at the former two to see the saved/re-renderable images, and the latter two to see the saved/usable **schemes** and **themes**. You can rename these files freely, as long as (1) you do so after quitting the program and deleting the files in the `cache` folder, and (2) you maintain the same obvious naming conventions (**ptychs** and images have corresponding filenames; **schemes** and their **themes** have corresponding filenames).
   
-- using the program simply consists of entering commands as long as you like. You will be alternating a main command (telling the program to generate something) with one or two save commands.
+- Using the program simply consists of entering commands as long as you like. You will be alternating a command to generate something with one or two save commands.
 
 <br>
 
