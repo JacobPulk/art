@@ -29,11 +29,11 @@ All **schemes**, **themes**, and images generated can probably be assumed, stati
 
 The program consists of a few Python scripts. I strongly recommend using PyPy to execute them, as the other options I have tried appear to be at least 3 times slower. You have 3 options:
 
-### Use PyPy (recommended)
+### Use PyPy (strongly recommended)
 If you have already been using PyPy 3.10, just use it as normal for this. Otherwise follow these steps:
 
-1. Download [PyPy 3.10](https://www.pypy.org/download.html) and extract the folder ([Windows](https://www.cedarville.edu/insights/computer-help/post/how-to-extract-files-from-a-zipped-compressed-folder), [Mac](https://support.apple.com/guide/terminal/compress-and-uncompress-file-archives-apdc52250ee-4659-4751-9a3a-8b7988150530/mac)) wherever you want.  
-2. Download the latest script version of this program (the `...scripts.zip` version under "Assets" [here](https://github.com/JacobPulk/art/releases/latest)) and extract the folder wherever you want.  
+1. Download [PyPy 3.10](https://www.pypy.org/download.html) and extract the folder wherever you want.  
+2. Download the latest script version of this program (the `...scripts.rar` version under "Assets" [here](https://github.com/JacobPulk/art/releases/latest)) and extract the folder wherever you want.  
 3. (Recommended but not necessary) [Add pypy to your environment PATH.](https://www.activestate.com/resources/quick-reads/how-to-install-and-work-with-pypy/)  
 4. Open your command prompt/PowerShell/Terminal in the art program folder ([Windows](https://www.howtogeek.com/662611/9-ways-to-open-powershell-in-windows-10/#from-the-right-click-context-menu), [Mac](https://apple.stackexchange.com/questions/11323/how-can-i-open-a-terminal-window-directly-from-my-current-finder-location)).  
 5. If you have added pypy to your PATH, execute the program with `pypy art.py`.  
@@ -41,7 +41,7 @@ Otherwise, execute the program with `"X\Y\Z\pypy.exe" art.py`, where `X\Y\Z\pypy
 
 ### OR use the .exe
 
-1. Download the latest executable version of this program (the `...executable.zip` version under "Assets" [here](https://github.com/JacobPulk/art/releases/latest)) and extract the folder ([Windows](https://www.cedarville.edu/insights/computer-help/post/how-to-extract-files-from-a-zipped-compressed-folder), [Mac](https://support.apple.com/guide/terminal/compress-and-uncompress-file-archives-apdc52250ee-4659-4751-9a3a-8b7988150530/mac)) wherever you want.  
+1. Download the latest executable version of this program (the `...executable.rar` version under "Assets" [here](https://github.com/JacobPulk/art/releases/latest)) and extract the folder wherever you want.  
 2. Execute the program by double-clicking `art.exe`.
 
 ### OR use Python otherwise (not recommended)
