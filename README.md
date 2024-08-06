@@ -53,6 +53,8 @@ Run `art.py` however you want.
 ## 2. Basic information  
 
 - A **scheme**, **theme**, and image are analogous to a make, model, and car. A **scheme** has its own **themes**—a **theme** is only associated with one particular **scheme**. Together, they specify a stochastic (random number-influenced) system for creating images. In other words, images are created by one **scheme**, one **theme**, and some randomness. They are saved as `.json` files.
+
+- The program comes with many "core" **schemes** and **themes**. You can use these and/or find your own.
   
 - A **ptych** (from "triptych" or "polyptych"), also saved as a `.json` file, is a blueprint for an image (containing one to several related paintings). An image can be re-rendered at any resolution from its **ptych**.
   
