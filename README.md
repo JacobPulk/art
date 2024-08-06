@@ -27,9 +27,9 @@ All **schemes**, **themes**, and images generated can probably be assumed, stati
 
 ## 1. Download & execute
 
-The program consists of a few Python scripts. I strongly recommend using PyPy to execute them, as the other options I have tried appear to be at least 3 times slower. You have 3 options:
+The program consists of a few Python scripts. I strongly recommend using PyPy to run them, as the other options I have tried appear to be much slower. You have 3 options:
 
-### Use PyPy (strongly recommended, for speed)
+### Use PyPy
 If you have already been using PyPy 3.10, just use it as normal for this. Otherwise follow these steps:
 
 1. Download [PyPy 3.10](https://www.pypy.org/download.html) and extract the folder wherever you want.  
@@ -39,12 +39,12 @@ If you have already been using PyPy 3.10, just use it as normal for this. Otherw
 5. If you have added pypy to your PATH, execute the program with `pypy art.py`.  
 Otherwise, execute the program with `"X\Y\Z\pypy.exe" art.py`, where `X\Y\Z\pypy.exe` is the full path ([Windows](https://www.howtogeek.com/670447/how-to-copy-the-full-path-of-a-file-on-windows-10/), [Mac](https://www.digitaltrends.com/computing/how-to-find-and-copy-a-file-path-on-mac/)) to `pypy.exe`. 
 
-### OR use the .exe
+### OR use the .exe (perhaps 4x slower)
 
 1. Download the latest executable version of this program (the `...executable.rar` version under "Assets" [here](https://github.com/JacobPulk/art/releases/latest)) and extract the folder wherever you want.  
 2. Execute the program by double-clicking `art.exe`.
 
-### OR use Python otherwise
+### OR use Python otherwise (perhaps 6x slower)
 
 Run `art.py` however you want.
 
