@@ -302,7 +302,7 @@ When a **scheme** is used to construct a function, the order of construction is 
 
 ### Themes
 
-A **scheme** says nothing about parameters for the functions it generates. It needs a **theme** to assign them. A **theme** has four parts, two of which modulate the function's parameters.
+A **scheme** says nothing about parameters for the functions it generates. It needs a **theme** to assign them. A **theme** has five parts. The first two determine the parameters inside the function.
 
 #### Conceiver
 
@@ -319,6 +319,10 @@ All 6 final values of the function potentially range from 0 to 1. Apart from the
 #### Colorcounter
 
 This part of a theme simply specifies a distribution of numbers of colors to use for the palette. This is applied at the beginning of the process, essential to creating the palette in the first place, even before the **scheme** has been considered. 
+
+#### Complicator
+
+This specifies two distributions, which are sampled to choose the minimum and maximum number of iterations the image's functions will be put through.
 
 <br>
 
