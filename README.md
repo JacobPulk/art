@@ -29,7 +29,7 @@ All **schemes**, **themes**, and images generated can probably be assumed, stati
 
 The program consists of a few Python scripts. I strongly recommend using PyPy to execute them, as the other options I have tried appear to be at least 3 times slower. You have 3 options:
 
-### Use PyPy (strongly recommended)
+### Use PyPy (strongly recommended, for speed)
 If you have already been using PyPy 3.10, just use it as normal for this. Otherwise follow these steps:
 
 1. Download [PyPy 3.10](https://www.pypy.org/download.html) and extract the folder wherever you want.  
@@ -44,7 +44,7 @@ Otherwise, execute the program with `"X\Y\Z\pypy.exe" art.py`, where `X\Y\Z\pypy
 1. Download the latest executable version of this program (the `...executable.rar` version under "Assets" [here](https://github.com/JacobPulk/art/releases/latest)) and extract the folder wherever you want.  
 2. Execute the program by double-clicking `art.exe`.
 
-### OR use Python otherwise (not recommended)
+### OR use Python otherwise
 
 Run `art.py` however you want.
 
