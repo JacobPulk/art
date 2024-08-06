@@ -227,7 +227,7 @@ The other three function values directly tweak that color's hue, saturation and 
 1. applying a **scheme**, which is an algorithm for generating functions composed of building blocks like `X`, `Y`, `POW`, and `SIN`, then
 2. applying a **theme**, which specifies a distribution of parameters to be assigned to those component functions (and a few miscellaneous parameters for the palette construction and color calculation).
 
-**Crucially,** those 7 functions are not independent. They share components in their calculation, so there will be some concordance in the way their values vary across the image.
+**Crucially,** those 7 functions are not independent. They share components in their calculation, so there will be some harmony in the way their values vary across the image.
 
 <br>
 
