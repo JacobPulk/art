@@ -2,7 +2,7 @@
 
 This command-line program generates procedural art images. See a gallery [here](https://imgur.com/a/Pz2uvam). An image will contain one to several similar-but-different, ideally complementary, "paintings".
 
-The way the program works is abstract and general. Ideally, the images will be as diverse as possible without sacrificing aesthetics. 
+The way the program works is abstract and general. The intention in writing it has been to produce the widest diversity of images possible using simple mathematical tools. Using the program, you are bushwacking through a jungle to find areas that are relatively dense with aesthetically pleasing images.
 
 The primary outputs are `.bmp` files, which can be rendered and re-rendered at any resolution based on associated `.json` files.
 
