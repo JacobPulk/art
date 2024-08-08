@@ -211,7 +211,7 @@ You can also experiment with the additional settings found in the `default_setti
 
 Basically, an image is defined by a palette and 7 mathematical functions. The palette is generated more or less independently from the functions.
 
-The functions are single-valued, more or less continuous functions of the XY plane.,The image is drawn in one pass, by applying the functions and palette to each pixel's coordinates to arrive at a color for it.
+The functions are single-valued, more or less continuous functions of the XY plane. The image is drawn in one pass, by applying the functions and palette to each pixel's coordinates to arrive at a color for it.
 
 At each pixel, one function value determines the number of iterations the rest of the functions will undergo. Two function values tweak the palette. One function value determines a location on the palette. Applied to the tweaked palette, this results in a color. The other three function values directly tweak that color's hue, saturation and brightness.
 
