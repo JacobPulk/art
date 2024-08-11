@@ -96,16 +96,9 @@ You can re-render an already-produced image at a specified resolution (represent
 
 You can specify a **scheme** and (repeatedly) direct the program to find a new theme for it, saving the **themes** you like. Of course, to test each **theme**, you will probably want to explore its images (run the **scheme**+**theme** combination several times), and may want to save some of those images along the way as well.
 
-<br>
-
 `butterfly` will find a new **theme** for the **scheme** called "butterfly".
 
-<br>
-
-`!!` will find a new **theme** for a random saved **scheme**.
-##### Note: You will notice that this search repeatedly moves on to different schemes, after a certain number of failed theme attempts from each one. This is because your current settings may not be loose enough that satisfactory themes can be found for every scheme. In other words, you do not have loosen your theme restrictions to be compatible with every scheme - this command will not try forever on schemes for which it is not finding themes. The other theme discovery commands assume your settings have been tailored for the scheme you are working with.
-
-<br>
+`!!` will find a new **theme** for a random saved **scheme**. (Note: You will notice that this search sometimes repeatedly moves on through different schemes before finding a theme. This is intentional - find more detail in the Settings section.)
 
 `!` will find a new **theme** for whatever **scheme** was last used.
 
@@ -187,7 +180,9 @@ Change settings in the `settings.txt` file. The setting name and value are separ
 
 <br>
 
-The other settings represent your requirements for new **themes** (and, indirectly, for new **schemes** - for which the program must be able to find an acceptable **theme**). As the program searches through new (randomly generated) **themes**, for each one these measures will be estimated. The search ends and a **theme** is presented when one is found that meets your requirements. The more restrictive the requirements are, the longer the search will take; a search may never end (but any requirements at all similar to the default settings should yield results quickly).
+The other settings represent your requirements for new **themes** (and, indirectly, for new **schemes** - for which the program must be able to find an acceptable **theme**). As the program searches through new (randomly generated) **themes**, for each one these measures will be estimated. The search ends and a **theme** is presented when one is found that meets your requirements. Obviously, the more restrictive the requirements are, the longer the search will take.
+
+For a given set of requirements, some schemes may be easy to find themes meeting them, and some schemes may be difficult or impossible. As an analogy, one car make might routinely produce models that produce cars that can exceed 200mph, another make might rarely produce models that produce such cars, and a third make might not be able to at all. Thus, the program's search for one new scheme (for example, with a `??` command) may involve many attempts at possible new schemes; for each a number of themes will be tried and it will be given up on if they all fail. The same method is applied to the `!!` command to find a single new theme for a random already-saved scheme. It would be unreasonable to expect your set requirements to be meetable by all saved schemes, so the search will periodically move on between random schemes to investigate.
 
 <br>
 
