@@ -108,7 +108,7 @@ You can specify a **scheme** and (repeatedly) direct the program to find a new t
 
 You can specify nothing, and (repeatedly) direct the program to find a new **scheme**, saving the **schemes** you like. Of course, to test each **scheme**, you will probably want to test at least the first-generated **theme** several times (explore images), and may want to test several more **themes** for it.
 
-`??` will find a new **scheme** with a new, appropriate **theme**, and generate and show a new image created by them.
+`??` will find a new **scheme** and a new **theme** for it, and will generate and show a new image created by them.
 
 <br>
 
@@ -116,12 +116,20 @@ You can specify nothing, and (repeatedly) direct the program to find a new **sch
 
 Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, themes, or schemes to generate sequentially.
 
+<br>
+
 `.. * 50` will generate 50 new images from random saved schemes and themes.
 
-`!! * 50` will generate 50 new themes for random saved schemes. One image from each will be generated. (Note: You will notice that this search repeatedly moves on to different schemes, after a certain number of failed theme attempts from each one. This is because your current settings may not be loose enough that satisfactory themes can be found for every scheme. In other words, you do not have loosen your theme restrictions to be compatible with every scheme - this command will not try forever on schemes for which it is not finding themes.)
+<br>
 
-`?? * 50` will generate 50 new schemes, each with a new, appropriate theme. One image from each will be generated.
+`!! * 50` will generate 50 new themes for random saved schemes. One image from each will be generated.
+##### Note: You will notice that this search repeatedly moves on to different schemes, after a certain number of failed theme attempts from each one. This is because your current settings may not be loose enough that satisfactory themes can be found for every scheme. In other words, you do not have loosen your theme restrictions to be compatible with every scheme - this command will not try forever on schemes for which it is not finding themes.
 
+<br>
+
+`?? * 50` will generate 50 new schemes, each with a new theme. One image from each will be generated.
+
+<br>
 <br>
 
 - ### quit
