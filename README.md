@@ -184,7 +184,7 @@ The other settings represent your requirements for new themes (and, indirectly, 
 
 For a given set of requirements, some schemes may be easy to find themes meeting them, and some schemes may be difficult or impossible. As an analogy, one car make might routinely produce models that produce cars that can exceed 200mph, another make might rarely produce models that produce cars that can exceed 200mph, and a third make might not be able to make cars that go that fast at all.
 
-Thus, the program's search for one new scheme (for example, with a `??` command) may involve many attempts at possible new schemes; for each a number of themes will be tried and it will be given up on if they all fail. The same method is applied to the `!!` command to find a single new theme for a random already-saved scheme. It would be unreasonable to expect your set requirements to be meetable by all saved schemes, so the search will periodically move on between random schemes to investigate.
+Thus, the program's search for one new scheme (for example, with a `??` command) may involve many attempts at possible new schemes. For each one a number of themes will be tried; if they all fail, that scheme will be given up on and a new scheme will be generated to try. The same approach is used by the `!!` command to find a single new theme for a random already-saved scheme. It would be unreasonable to expect your set requirements to be meetable by all saved schemes, so the search will periodically move on between random schemes to investigate.
 
 <br>
 
