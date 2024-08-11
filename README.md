@@ -118,7 +118,7 @@ Once you are familiar with the program, you may want to more efficiently generat
 
 `.. * 50` will generate 50 new images from random saved schemes and themes.
 
-`!! * 50` will generate 50 new themes for random saved schemes. One image from each will be generated.
+`!! * 50` will generate 50 new themes for random saved schemes. One image from each will be generated. (Note: You will notice that this search repeatedly moves on to different schemes, after a certain number of failed theme attempts from each one. This is because your current settings may not be loose enough that satisfactory themes can be found for every scheme. In other words, you do not have loosen your theme restrictions to be compatible with every scheme - this command will not try forever on schemes for which it is not finding themes.)
 
 `?? * 50` will generate 50 new schemes, each with a new, appropriate theme. One image from each will be generated.
 
