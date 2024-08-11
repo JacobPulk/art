@@ -114,7 +114,7 @@ You can specify nothing, and (repeatedly) direct the program to find a new **sch
 
 - ### bulk discovery
 
-Once you are familiar with the program, you may want to more efficiently generate content to trawl through. You can specify a number of images, themes, or schemes to generate sequentially.
+Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, themes, or schemes to generate sequentially.
 
 `.. * 50` will generate 50 new images from random saved schemes and themes.
 
