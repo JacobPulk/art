@@ -2,7 +2,7 @@
 
 This command-line program generates procedural art images. See a gallery [here](https://imgur.com/a/Pz2uvam). 
 
-An image will contain one to several similar-but-different, ideally complementary, "paintings".
+An image will contain one "painting" or a few that are similar-but-different, ideally complementary.
 
 The primary outputs are `.bmp` files, which can be rendered and re-rendered at any resolution based on associated `.json` files.
 
