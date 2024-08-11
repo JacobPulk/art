@@ -98,7 +98,7 @@ You can specify a **scheme** and (repeatedly) direct the program to find a new t
 
 `butterfly` will find a new **theme** for the **scheme** called "butterfly".
 
-`!!` will find a new **theme** for a random saved **scheme**. (Note: You will notice that this search sometimes repeatedly moves on through different schemes before finding a theme. This is intentional - find more detail in the Settings section.)
+`!!` will find a new **theme** for a random saved **scheme**. (Note: You will notice that this search sometimes investigates multiple schemes before finding a theme. This is intentional - see the Settings section.)
 
 `!` will find a new **theme** for whatever **scheme** was last used.
 
