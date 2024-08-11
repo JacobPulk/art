@@ -96,9 +96,16 @@ You can re-render an already-produced image at a specified resolution (represent
 
 You can specify a **scheme** and (repeatedly) direct the program to find a new theme for it, saving the **themes** you like. Of course, to test each **theme**, you will probably want to explore its images (run the **scheme**+**theme** combination several times), and may want to save some of those images along the way as well.
 
+<br>
+
 `butterfly` will find a new **theme** for the **scheme** called "butterfly".
 
+<br>
+
 `!!` will find a new **theme** for a random saved **scheme**.
+##### Note: You will notice that this search repeatedly moves on to different schemes, after a certain number of failed theme attempts from each one. This is because your current settings may not be loose enough that satisfactory themes can be found for every scheme. In other words, you do not have loosen your theme restrictions to be compatible with every scheme - this command will not try forever on schemes for which it is not finding themes. The other theme discovery commands assume your settings have been tailored for the scheme you are working with.
+
+<br>
 
 `!` will find a new **theme** for whatever **scheme** was last used.
 
@@ -116,20 +123,12 @@ You can specify nothing, and (repeatedly) direct the program to find a new **sch
 
 Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, themes, or schemes to generate sequentially.
 
-<br>
-
 `.. * 50` will generate 50 new images from random saved schemes and themes.
 
-<br>
-
 `!! * 50` will generate 50 new themes for random saved schemes. One image from each will be generated.
-##### Note: You will notice that this search repeatedly moves on to different schemes, after a certain number of failed theme attempts from each one. This is because your current settings may not be loose enough that satisfactory themes can be found for every scheme. In other words, you do not have loosen your theme restrictions to be compatible with every scheme - this command will not try forever on schemes for which it is not finding themes.
-
-<br>
 
 `?? * 50` will generate 50 new schemes, each with a new theme. One image from each will be generated.
 
-<br>
 <br>
 
 - ### quit
