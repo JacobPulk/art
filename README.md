@@ -6,7 +6,7 @@ An image will contain one "painting" or a few that are similar-but-different, id
 
 The primary outputs are `.bmp` files, which can be rendered and re-rendered at any resolution based on associated `.json` files.
 
-The program can produce a wide diversity of images. Using it could be compared to bushwacking through a jungle of unpleasant outputs to find aeesthetically fruitful areas.
+The program can produce a wide diversity of images. Usage could be compared to bushwacking through a jungle of unpleasant outputs to find aeesthetically fruitful areas.
 
 The program is intended to be "simple", as far as following a number of constraints.
 
