@@ -357,7 +357,9 @@ Borders are subject to this same reseeding, but their variation is sometimes ove
 
 It is not AI, in that it does not use machine learning or training data.
 
-Similarly, there are no preset or prototypical colors, palettes, images, compositions, or similar.
+No graphics libraries can be used.
+
+There are no preset or prototypical colors, palettes, images, compositions, or similar.
 
 An image is drawn in one pass, with one layer. It does not synthesizing multiple images for an output image.
 
