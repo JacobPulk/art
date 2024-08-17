@@ -4,7 +4,7 @@ This command-line program generates procedural art images. See a gallery [here](
 
 An image will contain one panel or a few that are similar-but-different, ideally complementary.
 
-The primary outputs are `.bmp` files, which can be rendered and re-rendered at any resolution based on associated `.json` files.
+The primary outputs are `.bmp` files, which can be re-rendered at any resolution based on associated `.json` files.
 
 The program can produce a wide diversity of images. Usage could be compared to bushwacking through a jungle of unpleasant outputs to find aesthetically fruitful areas.
 
