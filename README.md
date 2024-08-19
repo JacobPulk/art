@@ -312,7 +312,7 @@ Option lists: a kind specifies its options (the kinds that its children/argument
 
 Option preferences: A kind specifies its option lists in a particular order, ranked by likelihood, along with an amount to shuffle this order each time, and defaults to fall back on. Obviously none of this is represented in the graph, as the graph does not even indicate full option lists.
 
-Degree: Some mini-functions can take an arbitrary number of arguments (e.g. `MINX`, `AMEAN`). A kind for one of these mini-functions specifies a range of degrees (a range of numbers of arguments) it can take.
+Degree: Some mini-functions can take an arbitrary number of arguments (e.g. `MINX`, `AMEAN`). Each kind for one of these mini-functions specifies a range of degrees (a range of numbers of arguments) it can take.
 
 Maximum count: Each kind specifies how many cords of that kind the scheme is allowed to produce in a rope. Once that many are in the rope, the scheme will do its best to avoid adding more.
 
