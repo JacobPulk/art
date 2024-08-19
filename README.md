@@ -212,8 +212,13 @@ Thus, the program's search for one new scheme (for example, with a `??` command)
 
 <br>
 
-You can also experiment with the additional settings found in the `default_settings()` function of `art.py`. However, these are less likely to improve your experience and not worth explaining here.
+You may be interested to see the functions behind particular images, or the outlines of particular schemes. With the following settings set to `True`, their files will be added to the `data\graphs` folder.
 
+`EXPORT IMAGE FORMULAS` will provide, for each new saved image, a relatively human-readable `.txt` file describing its function.
+
+`EXPORT IMAGE GRAPHS` will provide, for each new saved image, a `.tgf` (Trivial Graph Format) file depicting its function. When opened in a program like [yEd](https://www.yworks.com/products/yed) and arranged in an appropriate layout (e.g., `Layout -> Hierarchical` in yEd), it will be the clearest possible visualization of the structure of its formula.
+
+`EXPORT SCHEME GRAPHS` will provide, for each new saved scheme, a `.tgf` file depicting its function-constructing method. See [Schemes](#schemes) for details on what this means, and note that this graph does not contain all information in a scheme—it is just a summary.
 <br>
 <br>
 
