@@ -308,7 +308,7 @@ When a **scheme** is used to construct a function, the order of construction is 
 #### Details
 The description above is represented in the graphs produced by the `EXPORT SCHEME GRAPHS` setting. However, each kind in a scheme has some further specifications not shown there.
 
-Option lists: a kind specifies its options (the kinds that its children/arguments can be) as one or more ordered lists. For example, a `4-POWER` might be able to take a `5-SIGMOID` as its first argument with a `4-POW` as its second argument, but not the opposite. In the graph depiction, there are no ordered lists, each kind is connected to each kind that is an option for any of its arguments.
+Option lists: a kind specifies its options (the kinds that its children/arguments can be) as one or more ordered lists. For example, a `4-POWER` might be able to take a `5-SIGMOID` as its first argument with a `4-POW` as its second argument, but not the opposite. In the graph depiction, there are no ordered lists, each kind's children are simply all the individual kinds that can ever be any of its arguments.
 
 Option preferences: A kind specifies its option lists in a particular order, ranked by likelihood, along with an amount to shuffle this order each time, and defaults to fall back on. Obviously none of this is represented in the graph, as the graph does not even indicate full option lists.
 
