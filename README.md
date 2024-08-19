@@ -8,7 +8,7 @@ The primary outputs are `.bmp` files, which can be re-rendered at any resolution
 
 The program can produce a wide diversity of images. Usage could be compared to bushwacking through a jungle of unpleasant outputs to find aesthetically fruitful areas.
 
-The intention is for it to be reasonable to say that this program generates its outputs "by itself". User input only affects the images in an abstract, indirect, and probabilistic way.
+The intention is for it to be reasonable to say that this program generates its outputs "by itself". Your choices ultimately nudge the outputs toward your aesthetics, but only in an abstract, indirect, and probabilistic way.
 
 The mechanism behind the program is intended to be "simple" and "general".
 
