@@ -357,7 +357,7 @@ Borders are subject to this same reseeding, but their variation is sometimes ove
 
 <br>
 
-The user cannot directly affect an individual image, theme, or scheme in any way at any time.
+The user does not directly affect an individual image, theme, or scheme in any way at any time.
 
 It is not AI, in that it does not use machine learning or training data.
 
