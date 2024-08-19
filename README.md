@@ -8,6 +8,8 @@ The primary outputs are `.bmp` files, which can be re-rendered at any resolution
 
 The program can produce a wide diversity of images. Usage could be compared to bushwacking through a jungle of unpleasant outputs to find aesthetically fruitful areas.
 
+The intention is for it to be reasonable to say that this program generates its outputs "by itself". User input only affects the images in an abstract, indirect, and probabilistic way.
+
 The mechanism behind the program is intended to be "simple" and "general".
 
 Essentially, an image is drawn in one pass from one continuous function of the XY plane. There is no "composition" beforehand, no shapes, no layers, and no glitches or other effects applied afterwards. More detail about the constraints is at the [end of this page](#how-it-does-not-work).
@@ -354,6 +356,8 @@ Borders are subject to this same reseeding, but their variation is sometimes ove
 # How it does not work
 
 <br>
+
+The user cannot directly affect an individual image, theme, or scheme in any way at any time.
 
 It is not AI, in that it does not use machine learning or training data.
 
