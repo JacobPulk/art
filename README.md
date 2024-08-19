@@ -305,6 +305,17 @@ A **scheme** represents an algorithm for constructing functions. It is a set of 
 #### Constructing functions
 When a **scheme** is used to construct a function, the order of construction is more or less backwards with respect to the order of calculation. The first node constructed is a root, representing a final calculated value of the function. According to the scheme, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. 6 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. To the extend they are connected, the effects of the 7 values will be more coherent in the final image, because their functions depend on shared arguments (nodes). Thus, a **scheme**, applied through this stochastic process, generates the 6-valued function that almost fully determines an image.
 
+#### Details
+The description above is represented in the graphs produced by the `EXPORT SCHEME GRAPHS` setting. However, each kind in a scheme has some further specifications not shown there.
+
+Option lists: a kind specifies its options (the kinds that its children/arguments can be) as one or more ordered lists. For example, a `4-POWER` might be able to take a `5-SIGMOID` as its first argument with a `4-POW` as its second argument, but not the opposite. In the graph depiction, there are no ordered lists, each kind is connected to each kind that is an option for any of its arguments.
+
+Option preferences: A kind specifies its option lists in a particular order, ranked by likelihood, along with an amount to shuffle this order each time, and defaults to fall back on. Obviously none of this is represented in the graph, as the graph does not even indicate full option lists.
+
+Degree: Some mini-functions can take an arbitrary number of arguments (e.g. `MINX`, `AMEAN`). A kind for one of these mini-functions specifies a range of degrees (a range of numbers of arguments) it can take.
+
+Maximum count: Each kind specifies how many cords of that kind the scheme is allowed to produce in a rope. Once that many are in the rope, the scheme will do its best to avoid adding more.
+
 <br>
 
 ### Themes
