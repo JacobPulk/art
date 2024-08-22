@@ -73,8 +73,8 @@ I use this Greek alphabet convention where `alpha` is the first saved theme for 
 `data\themes`, which has the saved (usable) themes.  
 `data\schemes`, which has the saved (usable) schemes.
 
-- You can rename these files freely, as long as you maintain simple naming conventions.
-If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs`.
+- You can rename these files freely, as long as you maintain simple naming conventions.  
+If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs`.  
 If you rename a scheme in `data\schemes`, rename the corresponding themes in `data\themes`.
   
 - Using the program simply consists of entering commands as long as you like. You will be alternating a command to generate something with one or two save commands.
