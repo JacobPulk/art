@@ -372,7 +372,7 @@ The other 3 values of the function determine the extent to which the hue, satura
 
 <br>
 
-### Functions
+### 4a. Functions
 
 A function is an arbitrary composition of about a dozen possible types of component mini-functions (like types of Lego blocks), currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). The component functions and calculating method are constructed to maintain a range of [0,1] on the domain [0,1] at (basically) every step. The whole function is treated as a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph), where each node is an instance of one of those components, and represents an intermediate or final value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
 
@@ -382,16 +382,16 @@ In the code, to avoid confusion from long words with multiple meanings like "fun
 
 <br>
 
-### Schemes
+### 4b. Schemes
 
-#### Kinds
+#### kinds
 
 A **scheme** represents an algorithm for constructing functions. It is a set of **kinds**, which are like a specified (metaphorically, colored or numbered) component function type (e.g. `POW`), specifying how it is to be treated in the function construction process: how many instances are allowed in the function, which **kinds** it can take as arguments, etc. A **scheme** may have no **kinds** of some function types, and may have several **kinds** with the same function type. Maybe a `3-POW` can only accept a `5-SIGMOID` as an argument, while a `4-POW` can accept a `1-X` or a `2-X`. (Of course, any worthwhile **scheme** will have at least one `X` **kind** and at least one `Y` **kind**; the functions it generates should depend on both `X` and `Y`.)
 
-#### Constructing functions
+#### constructing functions
 When a **scheme** is used to construct a function, the order of construction is more or less backwards with respect to the order of calculation. The first node constructed is a root, representing a final calculated value of the function. According to the scheme, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. 6 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. To the extend they are connected, the effects of the 7 values will be more coherent in the final image, because their functions depend on shared arguments (nodes). Thus, a **scheme**, applied through this stochastic process, generates the 6-valued function that almost fully determines an image.
 
-#### Details
+#### details
 The description above is represented in the graphs produced by the `EXPORT SCHEME GRAPHS` setting. However, each kind in a scheme has some further specifications not shown there.
 
 Option lists: a kind specifies its options (the kinds that its children/arguments can be) as one or more ordered lists. For example, a `4-POWER` might be able to take a `5-SIGMOID` as its first argument with a `4-POW` as its second argument, but not the opposite. In the graph depiction, there are no ordered lists, each kind's children are simply all the individual kinds that can ever be any of its arguments.
@@ -404,33 +404,33 @@ Maximum count: Each kind specifies how many cords of that kind the scheme is all
 
 <br>
 
-### Themes
+### 4c. Themes
 
 A **scheme** says nothing about parameters for the functions it generates. It needs a **theme** to assign them. A **theme** has five parts. The first two determine the parameters inside the function.
 
-#### Conceiver
+#### conceiver
 
 A **conceiver** is a mapping from **kinds** to **concepts**. A **concept** specifies a distribution of parameters. Thus, a **conceiver** will, stochastically, assign parameters to the components of a function, according to which **kind** they represent. It may be pulling parameters from one distribution for `3-POW`s and from another for `4-POW`s.
 
-#### Correlator
+#### correlator
 
 After a **conceiver** has assigned parameters to the entire function, the **correlator** may rearrange some of those parameters. The **correlator** specifies a positive or negative correlation between **kinds** of a given relationship within the function. For example, the **correlator** may collect a list of `3-POW`s that are first cousins of `4-POW`s, and rearrange their parameters so that the highest `3-POW` parameters tend to be matched with the lowest `4-POW` parameters.
 
-#### Calmer
+#### calmer
 
 All 6 final values of the function potentially range from 0 to 1. Apart from the main value, it may not be desirable to allow the others to affect the image so strongly. The **calmer** specifies a distribution from which, for each image, constants are chosen that shrink (or shrink and shift) these 5 values. Images with rainbows tend to result from **calmers** that do not calm the hue much, and allow it to be shifted through a substantial part of the spectrum.
 
-#### Colorcounter
+#### colorcounter
 
 This part of a theme simply specifies a distribution of numbers of colors to use for the palette. This is applied at the beginning of the process, essential to creating the palette in the first place, even before the **scheme** has been considered. 
 
-#### Complicator
+#### complicator
 
 This specifies two distributions, which are sampled to choose the minimum and maximum number of iterations the image's functions will be put through.
 
 <br>
 
-### Theme search
+### 4d. Theme search
 
 Generating random **themes** is mostly straightforward. An important part of the code, part of generating a random **conceiver**, is the set of functions for generating random **concepts** for each of the types of component functions. These define a _distribution of distributions_ of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 1/2, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 1/2 and 2 being essential for a perfect circle.  
 
@@ -438,7 +438,7 @@ The search ends when a randomly generated **theme** meets the requirements indic
 
 <br>
 
-### Scheme search
+### 4e. Scheme search
 
 Generating random **schemes** is not as straightforward as one would hope, because a **scheme** should guarantee that the functions it produces depend on both `X` and `Y` components. It does not simply have to include `X` and `Y` kinds; it also has to guarantee that at least one of each will be reached every time. So, X **kinds**, Y **kinds**, guaranteed X-dependent **kinds**, guaranteed Y-dependent **kinds**, X- & Y-combining **kinds**, guaranteed X- & Y-depedent **kinds**, and unrestricted **kinds** are all generated separately to maintain their separate requirements; the **kinds** that can be used for the final 6 values must all be guaranteed X- & Y-dependent.
 
