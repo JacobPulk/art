@@ -420,7 +420,7 @@ Maximum count: Each kind specifies how many cords of that kind the scheme is all
 
 ### 4c. Themes
 
-A **scheme** says nothing about parameters for the functions it generates. It needs a **theme** to assign them. A **theme** has five parts. The first two determine the parameters inside the function.
+The first four parts of a theme (P-parts) affect palette generation. The other four parts (C-parts) affect the functions, either by constraining the scheme before it is applied, or adding/modifying parameters after it is applied.
 
 #### the Prism
 
@@ -440,7 +440,7 @@ This is a distribution of numbers of permutations of the initial palette to gene
 
 #### the Controller
 
-This specifies a narrowing of the scheme: for each kind, it specifies a permutation of a subset of the original set of options to consider, and a factor (<1) by which to multiply its looseness.
+This is applied to a scheme; it specifies a way to constrain it. For each kind in the scheme, it specifies a permutation of a subset of the original set of options to consider, and a factor (<1) by which to multiply its looseness.
 
 #### the Conceiver
 
