@@ -308,12 +308,12 @@ The functions that define images can only be calculated in order to render image
 
 <br>
 
-Basically, an image is defined by a palette and 6 mathematical functions. The palette is generated more or less independently from the functions.
+Basically, an image is defined by a palette and 6 mathematical functions. The palette is basically a one-dimensional strip of colors and is generated more or less independently from the functions.
 
 The functions are single-valued, more or less continuous functions of the XY plane. The image is drawn in one pass, by applying the functions and palette to each pixel's coordinates to arrive at a color for it.
 
 At each pixel:  
-- Two function values tweak the palette.  
+- Two function values tweak the palette. 
 - One function value determines a location on the palette.  
 - Applied to the tweaked palette, this results in a color.  
 - The other three function values directly tweak that color's hue, saturation and brightness.  
@@ -329,6 +329,8 @@ A **theme** specifies several things, all stochastically, some applied before th
 and some applied after:
 - values assigned to the constant parameters of the scheme's functions (like the exponent in `POW`)
 - parameters for the final color calculation
+
+To generate a new scheme/theme, schemes/themes are generated randomly until one meets set requirements for rudimentary estimates of its "quality" (visual complexity, rendering speed, etc.)
 
 When there are multiple panels in an image, they are generated identically apart from using a different [seed](https://en.wikipedia.org/wiki/Random_seed) for the random number generator at a select few random parts of the process.
 
