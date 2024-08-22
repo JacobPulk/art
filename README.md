@@ -280,7 +280,7 @@ No graphics libraries are used.
 
 There are no preset or prototypical colors, palettes, images, compositions, or similar.
 
-An image is drawn in one pass, with one layer. It does not synthesizing multiple images for an output image.
+An image is drawn in one pass, with one layer. It does not synthesize multiple images for an output image.
 
 Calculations for a given pixel do not involve any other pixels.
 
