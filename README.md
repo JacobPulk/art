@@ -102,7 +102,7 @@ Of course this only works if the last used scheme has one or more themes saved.
 
 - ### generate themes
 
-In order to generate one new theme for a given scheme, the program will find it by generating (& discarding) a series of random new themes until one meets the requirements in [Settings](#5-settings).
+In order to generate one new theme for a given scheme, the program will find it by generating/discarding random new themes until the scheme/theme combination meets the requirements in [Settings](#5-settings). When it does, it will use that scheme and theme to generate and display a new image—you need to see what the theme does.
 
 `belize` will generate a new theme for the "belize" scheme. 
 
@@ -115,33 +115,34 @@ You will notice that this search sometimes investigates multiple schemes before 
 
 - ### generate schemes
 
-You can specify nothing, and (repeatedly) direct the program to find a new **scheme**, saving the **schemes** you like. Of course, to test each **scheme**, you will probably want to test at least the first-generated **theme** several times (explore images), and may want to test several more **themes** for it.
+A scheme is useless without a theme. In order to generate one new scheme, the program will find it by generating/discarding random new schemes and themes until a scheme/theme combination meets the requirements in [Settings](#5-settings). When it does, it will use that scheme and theme to generate and display a new image.
 
-`??` will find a new **scheme** and a new **theme** for it, and will generate and show a new image created by them.
+`??` will generate a new scheme.
 
 <br>
 
 - ### re-render images
 
-You can re-render an already-produced image at a specified resolution (representing the longer side of the panels within the ptych). Use a double-quote mark:
+You can re-render an already-produced image at a specified resolution (representing the longer side of each of the panels within the ptych). Use a double-quote mark:
 
 `" 2000` will re-render the last shown image at 2000 pixels.
 
 `" nice 2000` will re-render the saved image called "nice" (leave off the extension) at 2000 pixels.
 
-`" " 2000` will re-render all images in the `rerender` folder at 2000 pixels.
-
 <br>
 
-- ### bulk discovery
+- ### generating in bulk
 
-Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, themes, or schemes to generate sequentially.
+Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, themes, or schemes to generate sequentially. Everything will be saved automatically with program-generated names.
 
 `.. * 50` will generate 50 new images from random saved schemes and themes.
 
 `!! * 50` will generate 50 new themes for random saved schemes. One image from each will be generated.
 
 `?? * 50` will generate 50 new schemes, each with a new theme. One image from each will be generated.
+
+`" " 2000` will re-render all images in the `data\rerender` folder at 2000 pixels.  
+Nothing is ever automatically placed in the `data\rerender` folder. It is only there for you to copy image files into, in order to easily tell the program which ones to re-render. Re-rendered images are output in the `data\images` folder like the rest.
 
 <br>
 
@@ -151,9 +152,11 @@ Once you are familiar with the program, you might want to trawl through content 
 
 <br>
 
-## 3.5. Interrupt scheme/theme search
+## 3.5. Interrupt searching or rendering
 
-Using default settings, searches for **schemes** and **themes** should produce a result in seconds. Regardless, if the search is taking too long, press ``ctrl+C`` to interrupt it and enter a new command.
+Most scheme/theme searches, and image renders, should produce a result in seconds or minutes, especially under the default settings. Regardless, if a search or render is taking too long, press ``ctrl + c`` to interrupt it and enter a new command.
+
+Pressing `ctrl + c` outside of these times will crash the program.
 
 <br>
 
@@ -161,25 +164,26 @@ Using default settings, searches for **schemes** and **themes** should produce a
 
 <br>
 
-After generating anything, you will be prompted to save the new content—first the image...
+After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.
 
-`image` will save the image with a timestamp-based filename, with the render/resolution just shown.
+`image` will save the image file just shown with a timestamp-based name.
 
-`image 2000` will save the image with a timestamp-based filename, at 2000 pixels.
+`image 2000` will re-render the image at 2000 pixels and save it with a timestamp-based name.
 
-`image nice` will save the image with the filename "nice", with the render/resolution just shown.
+`image nice` will save the image file just shown with the name "nice".
 
-`image nice 2000` will save the image with the filename "nice", at 2000 pixels.
+`image nice 2000` will re-render the image at 2000 pixels and save the image with the name "nice".
 
 <br>
 
-..and then the **scheme**, **theme**, or both (depending on what has already been saved—you will be told which option(s) are available).
+Then, if a new theme, or scheme and theme, have been generated, you will be prompted to save one or both.
 
-`scheme moth` will save the **scheme** with the filename "moth".
+`scheme moth` will save the scheme with the name "moth".
 
-`theme alpha` will save the **theme** with the filename "x_alpha", where "x" is the already-named **scheme** that was used.
+`theme gold` will save the theme with the name "gold".  
+This is only an option when the scheme has been saved.
 
-`both moth alpha` will save the **scheme** with the filename "moth" and the **theme** with the filename "moth_alpha".
+`both moth gold` will save the scheme with the name "moth" and the theme with the name "gold".
 
 <br>
 
@@ -187,7 +191,7 @@ On either prompt...
 
 `` ` `` (a backtick, next to the `1` key on a normal keyboard) will skip saving entirely.
 
-`-` (a dash) will skip saving just the currently prompted part (the image, or the **scheme**/**theme**).
+`-` (a dash) will skip saving just the currently prompted part (the image, or the scheme/theme).
 
 <br>
 
