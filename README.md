@@ -22,8 +22,15 @@ You can guide searches for new schemes and themes by adjusting settings, and you
 
 All schemes, themes, and images generated can probably be assumed, statistically, to have never been generated before, and to never be generated again.
 
-<br>
-<br>
+<br>  
+
+***  
+
+***  
+
+***  
+
+<br>  
 
 # How to use it
 
@@ -209,7 +216,7 @@ Change settings in `art_settings.txt`. Setting names and values are separated by
 
 <br>
 
-- ### Scheme/theme requirements
+- ### Scheme/theme requirement settings
 
 The next six settings represent your requirements for new scheme/theme combinations. As the program searches through randomly generated schemes/themes, for each attempt these measures will be estimated. The search ends when one is found that meets your requirements. Obviously, the more restrictive the requirements are, the longer the search will take.
 
@@ -240,7 +247,7 @@ Thus, even the program's search for one new scheme (for example, with a `??` com
 
 <br>
 
-- ### Extra exports
+- ### Extra export settings
 
 You may be interested to see the functions behind particular images, or the outlines of particular schemes. For each of the following settings, when set to `True`, their files will be added to the `data\graphs` folder.
 
@@ -250,8 +257,15 @@ You may be interested to see the functions behind particular images, or the outl
 
 `EXPORT SCHEME GRAPHS` will provide, for each new saved scheme, a `.tgf` file depicting its function-constructing method. See [Schemes](#schemes) for details on what this means, and note that this graph does not contain all information in a scheme. It is just a summary.
 
-<br>
-<br>
+<br>  
+
+***  
+
+***  
+
+***  
+
+<br>  
 
 # How it works (short version)
 
