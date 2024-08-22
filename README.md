@@ -164,7 +164,7 @@ Pressing `ctrl + c` outside of these times will crash the program.
 
 <br>
 
-After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.
+- After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.
 
 `image` will save the image file just shown with a timestamp-based name.
 
@@ -176,7 +176,7 @@ After generating a new image (either directly or as part of generating a new the
 
 <br>
 
-Then, if a new theme, or scheme and theme, have been generated, you will be prompted to save one or both.
+- Then, if a new theme, or scheme and theme, have been generated, you will be prompted to save one or both.
 
 `scheme moth` will save the scheme with the name "moth".
 
@@ -187,7 +187,7 @@ This is only an option when the scheme has been saved.
 
 <br>
 
-On either prompt...
+- On either prompt...
 
 `` ` `` (a backtick, next to the `1` key on a normal keyboard) will skip saving entirely.
 
