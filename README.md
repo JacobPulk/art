@@ -67,8 +67,7 @@ Run `art.py` however you want.
 
 - A scheme and theme combined together are analogous to an artist. Together, they specify a stochastic (random number-influenced) system for creating images.
 
-- Each theme is made for a particular scheme and only works with that scheme.  
-Themes' full names make this clear: the theme stored as `belize_gamma.json` is for the scheme `belize.json`.  
+- Each theme is made for a particular scheme and only works with that scheme. Themes' full names make this clear: the theme stored as `belize_gamma.json` is for the scheme `belize.json`.  
 Reusing theme suffixes across different schemes is fine. For example, `angola_gamma.json` is an unrelated theme for the scheme `angola.json`.  
 I use this Greek alphabet convention where `alpha` is the first saved theme for that scheme, `beta` is the second, etc. You do not need to do this.
 
