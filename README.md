@@ -446,27 +446,39 @@ This specifies two distributions, which are sampled to choose the minimum and ma
 
 ### 4d. Theme search
 
-Generating random **themes** is mostly straightforward. An important part of the code, part of generating a random **conceiver**, is the set of functions for generating random **concepts** for each of the types of component functions. These define a _distribution of distributions_ of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 1/2, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 1/2 and 2 being essential for a perfect circle.  
+A theme search is always to find a theme for a given scheme.  
+- A random theme is generated
+- Its Controller is applied to the scheme
+- The controlled scheme generates a sample of many ropes
+- For each rope, the theme is applied and the complexity, speed, etc are estimated
+- The estimates for the whole sample are collected and checked against the set requirements
+- If the requirements are met, the theme is returned, otherwise the loop begins again.
 
-The search ends when a randomly generated **theme** meets the requirements indicated in the settings. At the beginning of a **theme** search, the relevant **scheme** is applied many times to generate a sample of many "ropes" (functions). The **theme** is applied to all of them, the complexity and speed are estimated for all of them, and the results are checked against the set requirements.
+Generating random themes is mostly straightforward. Each component is generated separately.  
+
+A Conceiver is a mapping from kinds to concepts, so in generating a random Conceiver, we need to generate random concepts. The random concept-generating functions are an important and dense part of the code. These define a _distribution of distributions_ of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 0.5, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 0.5 and 2 being essential for a perfect circle.
+
+
 
 <br>
 
 ### 4e. Scheme search
 
+A scheme search is really just a series of theme searches. A random scheme is generated; some number of random themes are tried for it; if one meets the theme requirements, the scheme and that theme are returned; otherwise, the next random scheme is tried; and so on.
+
 One would hope that generating random schemes would simply involve generating a random series of kinds. Unfortunately, most such random schemes would often generate ropes that have X-cords but no Y-cords, or Y-cords but no X-cords. A resulting image would be purely horizontal or vertical stripes and this is boring. Thus, a scheme should guarantee that the functions it produces include both `X` and `Y` components.  
 
-It is not enough to simply include `X` and `Y` kinds—the scheme has to guarantee that at least one of each will be used every time. This is accomplished by explicitly generating kinds in each of the following classes, or "kind kinds":  
+It is not enough to simply include `X` and `Y` kinds—the scheme has to guarantee that at least one of each will be used every time. This is accomplished by explicitly generating kinds in each of the following classes, or "kind kinds", in order:  
 - X kinds
 - Y kinds
 - guaranteed X-dependent kinds
 - guaranteed Y-dependent kinds
 - X- & Y-combining kinds
-- guaranteed X- & Y-depedent kinds
+- guaranteed X- & Y-dependent kinds
 - unrestricted kinds
-They are generated separately to maintain their separate requirements. The kinds that can be used for the final 6 values must all be guaranteed X- & Y-dependent.
+You can see how kinds can be generated that are guaranteed to have each property, by making them take kinds of the right earlier classes as children. Only guaranteed X- & Y-dependent kinds can be used as roots.
 
-A scheme search is really just a series of theme searches. A random scheme is generated; some number of random themes are tried for it; if one meets the theme requirements, the scheme and that theme are returned; otherwise, the next random scheme is tried; and so on.
+
 
 <br>
 
