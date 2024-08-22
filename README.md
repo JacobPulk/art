@@ -42,7 +42,7 @@ All schemes, themes, and images generated can probably be assumed, statistically
 
 The program consists of a few Python scripts. I strongly recommend using PyPy to run them, as the other options I have tried appear to be much slower. You have 3 options:
 
-### Use PyPy
+### use PyPy
 If you have already been using PyPy 3.10, just use it as normal for this. Otherwise follow these steps:
 
 1. Download [PyPy 3.10](https://www.pypy.org/download.html) and extract the folder wherever you want.  
