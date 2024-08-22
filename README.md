@@ -358,27 +358,31 @@ A palette of several colors is chosen, and arranged in a sequence, both accordin
 
 ## 3. Rendering
 
-For each pixel, 7 almost-everywhere continuous functions (see below for how the functions are constructed) are calculated, according to two arguments: its X and Y coordinates. The domains and ranges are all [0,1]. The interpretation of these 7 functions is as follows.
-
-### iteration
-
-One value of the function determines the number of iterations the other 6 functions will undergo. This is made continuous by calculating all following values with the "floor" number of iterations and the "ceiling" number, and interpolating between.
-
-### palette choice
-
-One value of the function determines, loosely speaking, which one of the 10 palettes is to be used. This is made continuous—non-integer palettes are handled—by completing the calculations for both the "floor" palette and the "ceiling" palette, and interpolating between. So, this value really determines two palettes and a distance between them, which will be synthesized to choose a color.
-
-### "toonity"
-
-One value of the function determines the smoothness or abruptness of the transitions between colors on the palettes being used.
+For each pixel, 6 deterministic, almost-everywhere continuous functions are calculated, ultimately depending on just two arguments, the pixel's X- and Y-coordinates. The interpretation of these 6 values is as follows.
 
 ### main height
 
-The "main" value of the function is interpreted as a "height" on the palette (again, imagined as a vertical sequence of layers). Given a palette and a "toonity", a height implies a certain color. In general, the pixel will be between two palettes (see palette choice), so the color will be calculated for both palettes and blended in between, according to how far along it is between one and the other.
+The "main" value of the function is interpreted as a height on a palette (again, imagined as a vertical strip of colors).
+
+### palette choice
+
+One value of the function determines, loosely speaking, which one of the palettes is to be used. Before being applied, this value is scaled down by a value previously determined by the theme's [Calmer](#-calmer). In general this will not be an integer values; the interpretation is made continuous by completing the calculations for both the "floor" palette and the "ceiling" palette, and interpolating between. So, this value really determines two palettes and a fraction of the distance between them, which will be synthesized to choose a color.
+
+### gradience
+
+One value of the function determines the smoothness or abruptness of the transitions between colors on the palettes being used. Before being applied, this value is scaled and shifted by a value previously determined by the theme's [Calmer](#-calmer).
+
+### (initial color determination)
+
+Given a palette and a gradience, a height implies a certain color. This color is calculated for both the "floor" palette and the "ceiling" palette, and, according to the fraction of the distance between them this pixel ought to be, the initial color determination is the interpolation between those two.
 
 ### hue, saturation, brightness adjustment
 
-The other 3 values of the function determine the extent to which the hue, saturation, and brightness are to be shifted upwards or downwards from the main color.
+The other 3 values of the function determine the extent to which the hue, saturation, and brightness are to be shifted upwards or downwards from the main color. Before being applied, these values are scaled down by a value previously determined by the theme's [Calmer](#-calmer).
+
+### (final color determination)
+
+The resulting HSV components are adjusted to be in the proper range and converted to RGB.
 
 <br>
 
@@ -392,7 +396,7 @@ The atomic functions can take two kinds of inputs: arguments (the output of othe
 
 Otherwise, the atomic functions are all written for an argument domain of [-1, 1]. All atomic functions are written for a codomain of [-1, 1]. In most cases—wherever possible—the range is also [-1, 1]. The whole function is treated as a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph), where each node is an instance of one of those atomic functions, and represents an intermediate or final value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
 
-The 6 functions that define an image are really parts of one DAG, with 6 nodes indicated as the final values. The DAG can therefore be considered as a function from [0, 1]<sup>2</sup> to [-1, 1]<sup>6</sup> — i.e., from (X-coord, Y-coord) to (main height, palette index, gradience, hue tweak, saturation tweak, brightness tweak). The render method above is a function from [-1, 1]<sup>6</sup> to [0, 255]<sup>3</sup> — i.e., taking those values to the final (red, green, blue) assignment.
+The 6 functions that define an image are really parts of one DAG, with 6 nodes indicated as the final values. After calculation, the final values are scaled back to [0, 1]. Therefore, an image's DAG can be considered as a function from [0, 1]<sup>2</sup> to [0, 1]<sup>6</sup> — i.e., from (X-coord, Y-coord) to (main height, palette index, gradience, hue tweak, saturation tweak, brightness tweak). The render method above is a function from [0, 1]<sup>6</sup> and a set of palettes to [0, 255]<sup>3</sup> — i.e., taking those values to the final (red, green, blue) assignment.
 
 In the code, to avoid confusion from long words with multiple meanings like "function" and "parametrize", a function is called a **rope** and the instances of component mini-functions making it up are called **cords**. The list indicating which cords represent each of the 6 final values is called the **fray**.
 
