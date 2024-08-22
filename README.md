@@ -422,6 +422,24 @@ Maximum count: Each kind specifies how many cords of that kind the scheme is all
 
 A **scheme** says nothing about parameters for the functions it generates. It needs a **theme** to assign them. A **theme** has five parts. The first two determine the parameters inside the function.
 
+#### the Prism
+
+This is a distribution of numbers of colors to use for the initial palette.
+
+#### the Puddle
+
+This comprises six distributions, sampling from which determine the "stillness" and "dirtiness" for each of hue, saturation, and brightness. "Stillness" reduces the number of potentially different values for each of those components in the palette. "Dirtiness" makes the spectrum from which components are randomly chosen more fine-grained; the components are less limited to being attractively evenly-spaced.
+
+#### the Pasteller
+
+This specifies a median fraction of the colors in the palette to desaturate and brighten.
+
+#### the Permuter
+
+This is a distribution of numbers of permutations of the initial palette to generate initially, for use in the [palette choice](#-palette-choice) step of color calculation.
+
+#### the Controller
+
 #### conceiver
 
 A **conceiver** is a mapping from **kinds** to **concepts**. A **concept** specifies a distribution of parameters. Thus, a **conceiver** will, stochastically, assign parameters to the components of a function, according to which **kind** they represent. It may be pulling parameters from one distribution for `3-POW`s and from another for `4-POW`s.
@@ -433,10 +451,6 @@ After a **conceiver** has assigned parameters to the entire function, the **corr
 #### calmer
 
 All 6 final values of the function potentially range from 0 to 1. Apart from the main value, it may not be desirable to allow the others to affect the image so strongly. The **calmer** specifies a distribution from which, for each image, constants are chosen that shrink (or shrink and shift) these 5 values. Images with rainbows tend to result from **calmers** that do not calm the hue much, and allow it to be shifted through a substantial part of the spectrum.
-
-#### colorcounter
-
-This part of a theme simply specifies a distribution of numbers of colors to use for the palette. This is applied at the beginning of the process, essential to creating the palette in the first place, even before the **scheme** has been considered. 
 
 #### complicator
 
@@ -456,7 +470,7 @@ A theme search is always to find a theme for a given scheme.
 
 Generating random themes is mostly straightforward. Each component is generated separately.  
 
-A Conceiver is a mapping from kinds to concepts, so in generating a random Conceiver, we need to generate random concepts. The random concept-generating functions are an important and dense part of the code. These define a _distribution of distributions_ of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 0.5, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 0.5 and 2 being essential for a perfect circle.
+A Conceiver is a mapping from kinds to concepts, so in generating a random Conceiver, we need to generate random concepts. The random concept-generating functions are an important and dense part of the code. These define a distribution of distributions of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 0.5, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 0.5 and 2 being essential for a perfect circle.
 
 
 
