@@ -189,7 +189,7 @@ This is only an option when the scheme has been saved.
 
 - On either prompt...
 
-`` ` `` (a backtick, next to the `1` key on a normal keyboard) will skip saving entirely.
+`` ` `` ([a backtick](https://letmegooglethat.com/?q=backtick+key)) will skip saving entirely.
 
 `-` (a dash) will skip saving just the currently prompted part (the image, or the scheme/theme).
 
@@ -197,43 +197,39 @@ This is only an option when the scheme has been saved.
 
 ## 5. Settings
 
-Change settings in the `settings.txt` file. The setting name and value are separated by tabs; you can add or remove tabs freely.
+Change settings in `art_settings.txt`. Setting names and values are separated by tabs. You can add or remove tabs freely.
 
-`DEFAULT RESOLUTION` is self-explanatory.
+- `DEFAULT RESOLUTION` is self-explanatory.
 
-`SEARCH SLOWING` (in seconds per megapixel) and `RENDER SLOWING` (in milliseconds per **theme**) slow the program to avoid CPU heating.
+- `SEARCH SLOWING` (in seconds per megapixel) and `RENDER SLOWING` (in milliseconds per theme) slow the program, if you feel it is overtaxing your CPU.
 
 <br>
 
-The other settings represent your requirements for new themes (and, indirectly, for new schemes - for which the program must be able to find an acceptable theme). As the program searches through new (randomly generated) themes, for each one these measures will be estimated. The search ends and a theme is presented when one is found that meets your requirements. Obviously, the more restrictive the requirements are, the longer the search will take.
+- The next six settings represent your requirements for new scheme/theme combinations. As the program searches through randomly generated schemes/themes, for each attempt these measures will be estimated. The search ends when one is found that meets your requirements. Obviously, the more restrictive the requirements are, the longer the search will take.
 
 For a given set of requirements, some schemes may be easy to find themes meeting them, and some schemes may be difficult or impossible. As an analogy, one car make might routinely produce models that produce cars that can exceed 200mph, another make might rarely produce models that produce cars that can exceed 200mph, and a third make might not be able to make cars that go that fast at all.
 
-Thus, the program's search for one new scheme (for example, with a `??` command) may involve many attempts at possible new schemes. For each one a number of themes will be tried; if they all fail, that scheme will be given up on and a new scheme will be generated to try. The same approach is used by the `!!` command to find a single new theme for a random already-saved scheme. It would be unreasonable to expect your set requirements to be meetable by all saved schemes, so the search will periodically move on between random schemes to investigate.
+Thus, even the program's search for one new scheme (for example, with a `??` command) may involve many attempts at possible new schemes. For each one a certain number of themes will be tried; if they all fail, that scheme will be given up on and a new scheme will be generated to try. The same approach is used by the `!!` command to find a single new theme for a random already-saved scheme. It would be unreasonable to expect your set requirements to be meetable by all saved schemes, so the search will periodically move on between random schemes to investigate.
 
 <br>
 
 "Complexity" is a _very rough_ estimate of the visual complexity resulting images. Low complexity **themes** may be less interesting; high complexity **themes** may be less pretty. **Themes** with median complexity above about 13 are hard to find.
 
-`LOW COMPLEXITY MIN` is the lowest complexity you will accept for an image at the 5th percentile (i.e., for the top of the simplest 5% of images produced by the theme).
-
-`MEDIAN COMPLEXITY MIN` is the lowest complexity you will accept for a median image (i.e., half the images may be that simple or simpler).
-
-`MEDIAN COMPLEXITY MAX` is the highest complexity you will accept for a median image (i.e., half the images may be that complex or more complex).
-
+`LOW COMPLEXITY MIN` is the lowest complexity you will accept for an image at the 5th percentile (i.e., for the top of the simplest 5% of images produced by the theme).  
+`MEDIAN COMPLEXITY MIN` is the lowest complexity you will accept for a median image (i.e., half the images may be that simple or simpler).  
+`MEDIAN COMPLEXITY MAX` is the highest complexity you will accept for a median image (i.e., half the images may be that complex or more complex).  
 `HIGH COMPLEXITY MAX` is the highest complexity you will accept the an image at the 95th percentile (i.e., for the bottom of the most complex 5% of images produced by the theme).
 
 <br>
 
 "Speed" is an estimate of the speed of rendering the resulting images. A higher speed is better.
 
-`LOW SPEED MIN` is the lowest speed you will accept for an image at the 5th percentile (i.e., for the top of the slowest 5% of images produced by the theme).
-
+`LOW SPEED MIN` is the lowest speed you will accept for an image at the 5th percentile (i.e., for the top of the slowest 5% of images produced by the theme).  
 `MEDIAN SPEED MIN` is the lowest speed you will accept for a median image (i.e., half the images may be that slow or slower).
 
 <br>
 
-You may be interested to see the functions behind particular images, or the outlines of particular schemes. With the following settings set to `True`, their files will be added to the `data\graphs` folder.
+- You may be interested to see the functions behind particular images, or the outlines of particular schemes. For each of the following settings, when set to `True`, their files will be added to the `data\graphs` folder.
 
 `EXPORT IMAGE FORMULAS` will provide, for each new saved image, a relatively human-readable `.txt` file describing its function.
 
