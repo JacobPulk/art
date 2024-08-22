@@ -399,17 +399,20 @@ In the code, to avoid confusion from long words with multiple meanings like "fun
 ### 4b. Schemes
 
 A scheme represents an algorithm for constructing functions. It basically names which atomic functions can be used, and which ones can be arguments for which others.
-
+  
+  
 - #### kinds
 
 More specifically, a scheme is a set of kinds, which are like isotopes of atomic function types (e.g. `4-POW`). A kind specifies how instances of its function are to be treated in the function construction process: which kinds it can take as arguments, how many instances of it are allowed in the whole function, and so on. A scheme may have no kinds of some atomic function types, and may have several kinds of the same atomic function type. Perhaps  a `3-POW` can only accept a `5-SIGMOID` as an argument, while a `4-POW` can accept a `9-X` or a `2-X`.
 
 Of course, any worthwhile scheme will have at least one `X` kind and at least one `Y` kind. The functions it generates should depend on both the x-coordinate and y-coordinate, so there is variation across both axes.
-
+  
+  
 - #### building functions
 
 When a scheme is used to build a function, the order of building is more or less backwards with respect to the order of calculation. The first node constructed is a root, representing a final calculated value of the function. According to the scheme, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. Looking at the bottom, the only atomic functions that take no arguments are `X` and `Y`, so the lower tips of the DAG will all be of those types. Looking at the top, 6 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. When the DAGS are more intimately connected, their root values depend on more shared arguments, so the effects of the 6 aspects will be more coherent in the final image.
-
+  
+  
 - #### details
 
 The description above is represented in the graphs produced by the `EXPORT SCHEME GRAPHS` setting. However, each kind in a scheme also has some more detailed specifications.
