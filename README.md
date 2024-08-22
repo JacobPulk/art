@@ -36,7 +36,7 @@ All schemes, themes, and images generated can probably be assumed, statistically
 
 <br>
 
-## 1. How to: Download & run
+## 1. Download & run
 
 The program consists of a few Python scripts. I strongly recommend using PyPy to run them, as the other options I have tried appear to be much slower. You have 3 options:
 
@@ -61,7 +61,7 @@ Run `art.py` however you want.
 
 <br>
 
-## 2. How to: Basic information  
+## 2. Basic information  
 
 - A scheme and theme combined together are analogous to an artist. Together, they specify a stochastic (random number-influenced) system for creating images.
 
@@ -159,7 +159,7 @@ Nothing is ever automatically placed in the `data\rerender` folder. It is only t
 
 <br>
 
-## 3.5. How to: Interrupt searching or rendering
+## 3.5. Interrupt searching or rendering
 
 Most scheme/theme searches, and image renders, should produce a result in seconds or minutes, especially under the default settings. Regardless, if a search or render is taking too long, press ``ctrl + c`` to interrupt it and enter a new command.
 
@@ -167,7 +167,7 @@ Pressing `ctrl + c` outside of these times will crash the program.
 
 <br>
 
-## 4. How to: Save commands
+## 4. Save commands
 
 <br>
 
@@ -202,7 +202,7 @@ This is only an option when the scheme has been saved.
 
 <br>
 
-## 5. How to: Settings
+## 5. Settings
 
 Change settings in `art_settings.txt`. Setting names and values are separated by tabs. You can add or remove tabs freely.
 
