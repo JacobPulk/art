@@ -382,11 +382,7 @@ The other 3 values of the function determine the extent to which the hue, satura
 
 <br>
 
-## 4. Schemes, themes, and functions
-
-<br>
-
-### 4a. Functions
+## 4. Functions
 
 A function is an arbitrary composition of about a dozen possible types of component mini-functions (like types of Lego blocks), currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). The component functions and calculating method are constructed to maintain a range of [0,1] on the domain [0,1] at (basically) every step. The whole function is treated as a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph), where each node is an instance of one of those components, and represents an intermediate or final value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
 
@@ -396,13 +392,13 @@ In the code, to avoid confusion from long words with multiple meanings like "fun
 
 <br>
 
-### 4b. Schemes
+## 5. Schemes
 
 A scheme represents an algorithm for constructing functions. It basically names which atomic functions can be used, and which ones can be arguments for which others.
 
 <br>
 
-- #### kinds
+### Kinds
 
 More specifically, a scheme is a set of kinds, which are like isotopes of atomic function types (e.g. `4-POW`). A kind specifies how instances of its function are to be treated in the function construction process: which kinds it can take as arguments, how many instances of it are allowed in the whole function, and so on. A scheme may have no kinds of some atomic function types, and may have several kinds of the same atomic function type. Perhaps  a `3-POW` can only accept a `5-SIGMOID` as an argument, while a `4-POW` can accept a `9-X` or a `2-X`.
 
@@ -410,13 +406,13 @@ Of course, any worthwhile scheme will have at least one `X` kind and at least on
 
 <br>
 
-- #### building functions
+### Building functions
 
 When a scheme is used to build a function, the order of building is more or less backwards with respect to the order of calculation. The first node constructed is a root, representing a final calculated value of the function. According to the scheme, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. Looking at the bottom, the only atomic functions that take no arguments are `X` and `Y`, so the lower tips of the DAG will all be of those types. Looking at the top, 6 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. When the DAGS are more intimately connected, their root values depend on more shared arguments, so the effects of the 6 aspects will be more coherent in the final image.
 
 <br>
 
-- #### details
+### Scheme details
 
 The description above is represented in the graphs produced by the `EXPORT SCHEME GRAPHS` setting. However, each kind in a scheme also has some more detailed specifications.
 
@@ -430,61 +426,63 @@ Maximum count: Each kind specifies how many cords of that kind the scheme is all
 
 <br>
 
-### 4c. Themes
+## 6. Themes
 
 The first four parts of a theme (P-parts) affect palette generation. The other four parts (C-parts) affect the functions, either by constraining the scheme before it is applied, or adding/modifying parameters after it is applied.
 
 <br>
 
-- #### the Prism
+### Prism
 
 This is a distribution of numbers of colors to use for the initial palette.
 
 <br>
 
-- #### the Puddle
+### Puddle
 
 This comprises six distributions, sampling from which determine the "stillness" and "dirtiness" for each of hue, saturation, and brightness. "Stillness" reduces the number of potentially different values for each of those components in the palette. "Dirtiness" makes the spectrum from which components are randomly chosen more fine-grained; the components are less limited to being attractively evenly-spaced.
 
 <br>
 
-- #### the Pasteller
+### Pasteller
 
 This specifies a median fraction of the colors in the palette to desaturate and brighten.
 
 <br>
 
-- #### the Permuter
+### Permuter
 
 This is a distribution of numbers of permutations of the initial palette to generate initially, for use in the [palette choice](#-palette-choice) step of color calculation.
 
 <br>
 
-- #### the Controller
+### Controller
 
 This is applied to a scheme; it specifies a way to constrain it. For each kind in the scheme, it specifies a permutation of a subset of the original set of options to consider, and a factor (<1) by which to multiply its looseness.
 
 <br>
 
-- #### the Conceiver
+### Conceiver
 
 This specifies a way to stochastically assign parameters to a rope. It is a mapping from kinds to concepts. For each kind in the scheme, the Conceiver has a concept for it—a distribution of parameters for that atomic function. For example, suppose the scheme has a `4-POW` kind. `POW` has one parameter, the exponent; a concept for `POW` is a distribution of the base-2 logarithm of that exponent. When the Conceiver is applied to a rope generated by the scheme, and it encounters a `4-POW` cord, it will sample from this distribution, raise 2 to that number, and set that as the exponent parameter.
 
 <br>
 
-- #### the Correlator
+### Correlator
 
 After a Conceiver has assigned parameters to the rope, the Correlator may rearrange some of those parameters. This component specifies a positive or negative correlation between particular parameters of particular kinds with a particular relationship within the function. For example, the Correlator may collect a list of `3-POW`s that are first cousins of `4-POW`s, and rearrange their exponent parameters so that the highest `3-POW` parameters tend to be matched with the lowest `4-POW` parameters.
 
 <br>
 
-- #### the Calmer
+### Calmer
 
 All 6 final values of the function potentially range from 0 to 1. Apart from the main value, it may not be desirable to allow the others to affect the image so strongly. The **calmer** specifies a distribution from which, for each image, constants are chosen that shrink (or shrink and shift) these 5 values. Images with rainbows tend to result from **calmers** that do not calm the hue much, and allow it to be shifted through a substantial part of the spectrum.
 
 <br>
 
-### 4d. Theme search
+## 7. Searches
+
+### 7a. Theme search
 
 A theme search is always to find a theme for a given scheme.  
 - A random theme is generated
@@ -498,11 +496,9 @@ Generating random themes is mostly straightforward. Each component is generated 
 
 A Conceiver is a mapping from kinds to concepts, so in generating a random Conceiver, we need to generate random concepts. The random concept-generating functions are an important and dense part of the code. These define a distribution of distributions of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 0.5, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 0.5 and 2 being essential for a perfect circle.
 
-
-
 <br>
 
-### 4e. Scheme search
+### 7b. Scheme search
 
 A scheme search is really just a series of theme searches. A random scheme is generated; some number of random themes are tried for it; if one meets the theme requirements, the scheme and that theme are returned; otherwise, the next random scheme is tried; and so on.
 
@@ -522,7 +518,7 @@ You can see how kinds can be generated that are guaranteed to have each property
 
 <br>
 
-## 5. Ptych coordination
+## 8. Ptych coordination
 
 Panels in a ptych are similar but different.  
 
