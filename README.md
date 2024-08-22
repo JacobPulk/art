@@ -384,9 +384,13 @@ The other 3 values of the function determine the extent to which the hue, satura
 
 ## 4. Functions
 
-A function is an arbitrary composition of about a dozen possible types of component mini-functions (like types of Lego blocks), currently known as `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, and `GMEAN`. You can guess at their meaning. Most take at least one argument (e.g., the base in `POW`) and have at least one parameter (e.g., the exponent in `POW`). The component functions and calculating method are constructed to maintain a range of [0,1] on the domain [0,1] at (basically) every step. The whole function is treated as a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph), where each node is an instance of one of those components, and represents an intermediate or final value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
+A function is an arbitrary composition of 14 possible types of atomic functions: `X`, `Y`, `RAND`, `INV`, `POW`, `POWER`, `SIGMOID`, `ARCFAN`, `SIN`, `SPIN`, `MINX`, `AMEAN`, `GMEAN`, and `IT`. You can guess at their meaning.
 
-The "7 functions" that define an image are really just one function, with 7 nodes indicated as the final values.
+The atomic functions can take two kinds of inputs: arguments (the output of other atomic functions, i.e. variables) and parameters (constants). Most take both. For example, `POW` raises a variable base to a constant exponent.
+
+The atomic functions are all written for an argument domain of [-1, 1] (for those that take arguments) and a codomain of [-1, 1]. In most cases, the range is also [-1, 1]. The whole function is treated as a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph), where each node is an instance of one of those components, and represents an intermediate or final value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
+
+The 6 functions that define an image are really parts of one DAG, with 6 nodes indicated as the final values. The DAG can therefore be considered as a function from [-1, 1]<sup>2</sup> to [-1, 1]<sup>6</sup>. The render method above is a function from [-1, 1]<sup>6</sup> to [0, 255]<sup>3</sup> — an RGB value.
 
 In the code, to avoid confusion from long words with multiple meanings like "function" and "parametrize", a function is called a **rope** and the instances of component mini-functions making it up are called **cords**. The list indicating which cords represent each of the 6 final values is called the **fray**.
 
@@ -482,7 +486,7 @@ All 6 final values of the function potentially range from 0 to 1. Apart from the
 
 ## 7. Searches
 
-### 7a. Theme search
+### Theme search
 
 A theme search is always to find a theme for a given scheme.  
 - A random theme is generated
@@ -498,7 +502,7 @@ A Conceiver is a mapping from kinds to concepts, so in generating a random Conce
 
 <br>
 
-### 7b. Scheme search
+### Scheme search
 
 A scheme search is really just a series of theme searches. A random scheme is generated; some number of random themes are tried for it; if one meets the theme requirements, the scheme and that theme are returned; otherwise, the next random scheme is tried; and so on.
 
