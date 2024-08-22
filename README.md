@@ -366,11 +366,11 @@ The "main" value of the function is interpreted as a height on a palette (again,
 
 ### palette choice
 
-One value of the function determines, loosely speaking, which one of the palettes is to be used. Before being applied, this value is scaled down by a value previously determined by the theme's [Calmer](#-calmer). In general this will not be an integer values; the interpretation is made continuous by completing the calculations for both the "floor" palette and the "ceiling" palette, and interpolating between. So, this value really determines two palettes and a fraction of the distance between them, which will be synthesized to choose a color.
+One value of the function determines, loosely speaking, which one of the palettes is to be used. Before being applied, this value is scaled down by a value previously determined by the theme's [Calmer](#calmer). In general this will not be an integer values; the interpretation is made continuous by completing the calculations for both the "floor" palette and the "ceiling" palette, and interpolating between. So, this value really determines two palettes and a fraction of the distance between them, which will be synthesized to choose a color.
 
 ### gradience
 
-One value of the function determines the smoothness or abruptness of the transitions between colors on the palettes being used. Before being applied, this value is scaled and shifted by a value previously determined by the theme's [Calmer](#-calmer).
+One value of the function determines the smoothness or abruptness of the transitions between colors on the palettes being used. Before being applied, this value is scaled and shifted by a value previously determined by the theme's [Calmer](#calmer).
 
 ### (initial color determination)
 
@@ -378,7 +378,7 @@ Given a palette and a gradience, a height implies a certain color. This color is
 
 ### hue, saturation, brightness adjustment
 
-The other 3 values of the function determine the extent to which the hue, saturation, and brightness are to be shifted upwards or downwards from the main color. Before being applied, these values are scaled down by a value previously determined by the theme's [Calmer](#-calmer).
+The other 3 values of the function determine the extent to which the hue, saturation, and brightness are to be shifted upwards or downwards from the main color. Before being applied, these values are scaled down by a value previously determined by the theme's [Calmer](#calmer).
 
 ### (final color determination)
 
@@ -462,7 +462,7 @@ This specifies a median fraction of the colors in the palette to desaturate and 
 
 ### Permuter
 
-This is a distribution of numbers of permutations of the initial palette to generate initially, for use in the [palette choice](#-palette-choice) step of color calculation.
+This is a distribution of numbers of permutations of the initial palette to generate initially, for use in the [palette choice](#palette-choice) step of color calculation.
 
 <br>
 
