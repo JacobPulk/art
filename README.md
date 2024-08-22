@@ -352,7 +352,7 @@ Written in Python, only importing from the standard library. [Nuitka](https://py
 
 ## 2. Palettes
 
-A small series of palettes containing the identical colors is obtained by the following steps.
+A small series of palettes, all containing identical colors, is obtained by the following steps.
 
 First, a final number of colors is chosen, according to the [prism](#prism).
 
