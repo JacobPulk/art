@@ -162,9 +162,7 @@ Nothing is ever automatically placed in the `data\rerender` folder. It is only t
 
 ## 3.5. Interrupt searching or rendering
 
-Most scheme/theme searches, and image renders, should produce a result in seconds or minutes, especially under the default settings. Regardless, if a search or render is taking too long, press ``ctrl + c`` to interrupt it and enter a new command.
-
-Pressing `ctrl + c` outside of these times will crash the program.
+Most scheme/theme searches, and image renders, should produce a result in seconds or minutes, especially under the default settings. Regardless, if a search or render is taking too long, press ``ctrl + i`` to interrupt it and enter a new command.
 
 <br>
 
