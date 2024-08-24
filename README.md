@@ -118,7 +118,7 @@ In order to produce a new artist, the program will create and discard random new
 
 - ### re-render an image
 
-You can re-render an already-produced image at a specified resolution (representing the longer side of a panel). Use a double-quote mark:
+You can re-render an existing image at a specified resolution (representing the longer side of a panel). Use a double-quote mark:
 
 `" 2000` will re-render the last shown image at 2000 pixels.  
 <br>  
@@ -126,17 +126,17 @@ You can re-render an already-produced image at a specified resolution (represent
 
 <br>
 
-- ### creating in bulk
+- ### create in bulk
 
-Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, themes, or schemes to generate sequentially. Everything will be saved automatically with program-generated names.
+Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, versions, or artists to generate in a row. Everything will be saved automatically with program-generated names.
 
-`.. * 50` will generate 50 new images from random saved schemes and themes.  
+`.. * 50` will create 50 new images from random saved artists.  
 <br>  
-`!! * 50` will generate 50 new themes for random saved schemes. One image from each will be generated.  
+`!! * 50` will create 50 new versions of random saved artists. One image from each will be created.  
 <br>  
-`?? * 50` will generate 50 new schemes, each with a new theme. One image from each will be generated.  
+`?? * 50` will create 50 new artists. One version for each will be created, as will one image by that version.  
 <br>  
-`" " 2000` will re-render all images in the `data\rerender` folder at 2000 pixels. Nothing is ever automatically placed in the `data\rerender` folder. It is only there for you to copy image files into, in order to easily tell the program which ones to re-render. Re-rendered images are output in the `data\images` folder like the rest.
+`" " 2000` will re-render all images in the `data\rerender` folder at 2000 pixels. Nothing is ever automatically placed in this folder. It is only there for you to copy image files into, in order to easily tell the program which ones to re-render. Images re-rendered by this command are saved in the `data\images` folder just like any other rendered images.
 
 <br>
 
@@ -144,31 +144,31 @@ Once you are familiar with the program, you might want to trawl through content 
 
 <br>
 
-- After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.
+After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.
+
+`image` will save the image file just shown with a timestamp-based name.  
 <br>  
-`image` will save the image file just shown with a timestamp-based name.
+`image 2000` will re-render the image at 2000 pixels and save it with a timestamp-based name.  
 <br>  
-`image 2000` will re-render the image at 2000 pixels and save it with a timestamp-based name.
+`image nice` will save the image file just shown with the name "nice".  
 <br>  
-`image nice` will save the image file just shown with the name "nice".
-<br>  
-`image nice 2000` will re-render the image at 2000 pixels and save the image with the name "nice".
+`image nice 2000` will re-render the image at 2000 pixels and save the image with the name "nice".  
 
 <br>
 
-- Then, if a new artist has been generated, you will be prompted to save it.
+Then, if a new artist has been generated, you will be prompted to save it.  
 <br>  
-If the scheme has already been saved, you will be prompted to enter `gamma` to save the artist with the theme name "gamma".
+If the scheme has already been saved, you will be prompted to enter `gamma` to save the artist with the theme name "gamma".  
 <br>  
 If not, you will be prompted to enter `moth gamma` to save the artist with the full name "moth gamma".
 
 <br>
 
-- On either prompt...
+On either prompt...
 
-`` ` `` ([a backtick](https://letmegooglethat.com/?q=backtick+key)) will skip saving entirely.
+`` ` `` ([a backtick](https://letmegooglethat.com/?q=backtick+key)) will skip saving entirely.  
 <br>  
-`-` (a dash) will skip saving just the currently prompted part (the image, or the scheme/theme).
+`-` (a dash) will skip saving just the currently prompted part (the image, or the scheme/theme).  
 
 <br>
 
