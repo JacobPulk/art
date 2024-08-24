@@ -87,11 +87,8 @@ Run `art.py` however you want.
 <br>
   
 `..` will have a random saved artist/version create a new image.  
-<br>  
 `.` will have a random saved version of the last used artist create a new image.  
-<br>  
 ` ` (blank command) will have the last used artist/version create a new image.  
-<br>  
 `belize gamma` or `belize_gamma` will have the version "gamma" of the artist "belize" create a new image.
 
 <br>
@@ -101,9 +98,7 @@ Run `art.py` however you want.
 In order to produce a new version of an artist, the program will create and discard random new versions until it finds one that meets the requirements set in your [Settings](#5-settings). When it does, it will have that version of the artist create a new image.  
 <br>  
 `belize` will create a new version of the artist named "belize".  
-<br>  
 `!` will create a new version of the last artist used.  
-<br>  
 `!!` will create a new version of a random saved artist.
 
 <br> 
@@ -121,7 +116,6 @@ In order to produce a new artist, the program will create and discard random new
 You can re-render an existing image at a specified resolution (representing the longer side of a panel). Use a double-quote mark:  
 <br>  
 `" 2000` will re-render the last shown image at 2000 pixels.  
-<br>  
 `" nice 2000` will re-render the saved image called "nice" (leave off the extension) at 2000 pixels.
 
 <br>
@@ -131,11 +125,8 @@ You can re-render an existing image at a specified resolution (representing the 
 Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, versions, or artists to generate in a row. Everything will be saved automatically with program-generated names.  
 <br>  
 `.. * 50` will create 50 new images from random saved artists.  
-<br>  
 `!! * 50` will create 50 new versions of random saved artists. One image from each will be created.  
-<br>  
 `?? * 50` will create 50 new artists. One version for each will be created, as will one image by that version.  
-<br>  
 `" " 2000` will re-render all images in the `data\rerender` folder at 2000 pixels. Nothing is ever automatically placed in this folder. It is only there for you to copy image files into, in order to easily tell the program which ones to re-render. Images re-rendered by this command are saved in the `data\images` folder just like any other rendered images.
 
 <br>
@@ -144,34 +135,34 @@ Once you are familiar with the program, you might want to trawl through content 
 
 <br>
 
-- After a new image is created and shown, you will be prompted to save it.  
-<br>  
+Depending on what was just created, you will be prompted to save... 
+<br>
+
+- ### an image  
+
 `image` will save it with a timestamp-based name.  
-<br>  
 `image nice` will save it with the name "nice".    
-<br>  
-`image 2000` will re-render it at 2000 pixels and save that with a timestamp-based name.
-<br>  
+`image 2000` will re-render it at 2000 pixels and save that with a timestamp-based name.  
 `image nice 2000` will re-render it at 2000 pixels and save that with the name "nice".  
 
 <br>
 
-- Then, if a new version was created (but not a new artist), you will be prompted to save it.  
-<br>  
+- ### a version
+
 `gamma` will save that version with the name "gamma".  
 
 <br>
 
-- IF a new version was created for a new artist, you will be prompted to save both.
-<br>
+- ### an artist + version  
+
 `moth gamma` will save that artist with the name "moth" and that version with the name "gamma".
 
 <br>
 
-On either prompt...
+On any save prompt...  
+<br>
 
-`` ` `` ([a backtick](https://letmegooglethat.com/?q=backtick+key)) will skip saving entirely.  
-<br>  
+`` ` `` (a [backtick](https://letmegooglethat.com/?q=backtick+key)) will skip saving entirely.  
 `-` (a dash) will skip saving just the currently prompted part (the image, or the scheme/theme).  
 
 <br>
