@@ -418,11 +418,11 @@ The atomic functions can take two kinds of inputs: arguments (the output of othe
 
 `X` and `Y` are unique in not taking the output of other functions. They are each written with one variable argument, but its value is automatically assigned the current X-coordinate or Y-coordinate, respectively. Those coordinates are represented as the domain [0, 1].
 
-Otherwise, the atomic functions are all written for an argument domain of [-1, 1]. All atomic functions are written for a codomain of [-1, 1]. In most cases—wherever possible—the range is also [-1, 1]. The whole function is treated as a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph), where each node is an instance of one of those atomic functions, and represents an intermediate or final value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
+Otherwise, the atomic functions are all written for an argument domain of [-1, 1]. All atomic functions are written for a codomain of [-1, 1]. In most cases—wherever possible—the range is also [-1, 1]. The whole function is treated as a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph) that may be [disconnected](https://en.wikipedia.org/wiki/Connectivity_(graph_theory)). Each node is an instance of one of those atomic functions, and represents an intermediate or final value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
 
 The 6 functions that define an image are really parts of one DAG, with 6 nodes indicated as the final values. After calculation, the final values are scaled back to [0, 1]. Therefore, an image's DAG can be considered as a function from [0, 1]<sup>2</sup> to [0, 1]<sup>6</sup> — i.e., from (X-coord, Y-coord) to (main height, palette index, gradience, hue tweak, saturation tweak, brightness tweak). The render method above is a function from [0, 1]<sup>6</sup> and a set of palettes to [0, 255]<sup>3</sup> — i.e., taking those values to the final (red, green, blue) assignment.
 
-In the code, to avoid confusion from long words with multiple meanings like "function" and "parametrize", a function is called a **rope** and the instances of component mini-functions making it up are called **cords**. The list indicating which cords represent each of the 6 final values is called the **fray**.
+In order to avoid confusion from different uses of the word "function", atomic functions are called "atoms" and the composite function is called a "thicket" (analogous to a tree, but for a DAG). The "roots" of the thicket indicate which of the atoms are to be interpreted as the 6 final values.
 
 <br>
 
@@ -432,11 +432,11 @@ A scheme represents an algorithm for constructing functions. It basically names 
 
 <br>
 
-### Kinds
+### Isotopes
 
-More specifically, a scheme is a set of kinds, which are like isotopes of atomic function types (e.g. `4-POW`). A kind specifies how instances of its function are to be treated in the function construction process: which kinds it can take as arguments, how many instances of it are allowed in the whole function, and so on. A scheme may have no kinds of some atomic function types, and may have several kinds of the same atomic function type. Perhaps  a `3-POW` can only accept a `5-SIGMOID` as an argument, while a `4-POW` can accept a `9-X` or a `2-X`.
+More specifically, a scheme is a set of isotopes, which are specific versions of elements (e.g. `4-POW`). An isotope specifies how instances of its function are to be treated in the function construction process: which isotopes it can take as arguments, how many instances of it are allowed in the whole function, and so on. A scheme may have no isotopes of some elements, and may have several isotopes of the same element. Perhaps  a `3-POW` can only accept a `5-SIGMOID` as an argument, while a `4-POW` can accept a `9-X` or a `2-X`.
 
-Of course, any worthwhile scheme will have at least one `X` kind and at least one `Y` kind. The functions it generates should depend on both the x-coordinate and y-coordinate, so there is variation across both axes.
+Of course, any worthwhile scheme will have at least one `X` isotope and at least one `Y` isotope. The functions it generates should depend on both the x-coordinate and y-coordinate, so there is variation across both axes.
 
 <br>
 
@@ -448,15 +448,15 @@ When a scheme is used to build a function, the order of building is more or less
 
 ### Scheme details
 
-The description above is represented in the graphs produced by the `EXPORT SCHEME GRAPHS` setting. However, each kind in a scheme also has some more detailed specifications.
+The description above is represented in the graphs produced by the `EXPORT SCHEME GRAPHS` setting. However, each isotope in a scheme also has some more detailed specifications.
 
-Option lists: a kind specifies its options (the kinds that its children/arguments can be) as one or more ordered lists. For example, a `4-POWER` might be able to take a `5-SIGMOID` as its first argument with a `4-POW` as its second argument, but not the opposite. In the graph depiction, there are no ordered lists, each kind's children are simply all the individual kinds that can ever be any of its arguments.
+Option lists: a isotope specifies its options (the isotopes that its children/arguments can be) as one or more ordered lists. For example, a `4-POWER` might be able to take a `5-SIGMOID` as its first argument with a `4-POW` as its second argument, but not the opposite. In the graph depiction, there are no ordered lists, each isotope's children are simply all the individual isotopes that can ever be any of its arguments.
 
-Option preferences: A kind specifies its option lists in a particular order, ranked by likelihood, along with an amount to shuffle this order each time, and defaults to fall back on. Obviously none of this is represented in the graph, as the graph does not even indicate full option lists.
+Option preferences: An isotope specifies its option lists in a particular order, ranked by likelihood, along with an amount to shuffle this order each time, and defaults to fall back on. Obviously none of this is represented in the graph, as the graph does not even indicate full option lists.
 
-Degree: Some mini-functions can take an arbitrary number of arguments (e.g. `MINX`, `AMEAN`). Each kind for one of these mini-functions specifies a range of degrees (a range of numbers of arguments) it can take.
+Degree: Some elements can take an arbitrary number of arguments (e.g. `MINX`, `AMEAN`). Each isotope of one of these elements specifies a range of degrees (a range of numbers of arguments) it can take.
 
-Maximum count: Each kind specifies how many cords of that kind the scheme is allowed to produce in a rope. Once that many are in the rope, the scheme will do its best to avoid adding more.
+Maximum count: Each isotope specifies how many atoms of that isotope the scheme is allowed to produce in a thicket. Once that many are in the thicket, the scheme will do its best to avoid adding more.
 
 <br>
 
@@ -492,19 +492,19 @@ This is a distribution of numbers of permutations of the initial palette to gene
 
 ### Controller
 
-This is applied to a scheme; it specifies a way to constrain it. For each kind in the scheme, it specifies a permutation of a subset of the original set of options to consider, and a factor (<1) by which to multiply its looseness.
+This is applied to a scheme; it specifies a way to constrain it. For each isotope in the scheme, it specifies a permutation of a subset of the original set of options to consider, and a factor (<1) by which to multiply its looseness.
 
 <br>
 
 ### Conceiver
 
-This specifies a way to stochastically assign parameters to a rope. It is a mapping from kinds to concepts. For each kind in the scheme, the Conceiver has a concept for it—a distribution of parameters for that atomic function. For example, suppose the scheme has a `4-POW` kind. `POW` has one parameter, the exponent; a concept for `POW` is a distribution of the base-2 logarithm of that exponent. When the Conceiver is applied to a rope generated by the scheme, and it encounters a `4-POW` cord, it will sample from this distribution, raise 2 to that number, and set that as the exponent parameter.
+This specifies a way to stochastically assign parameters to a thicket. It is a mapping from isotopes to concepts. For each isotope in the scheme, the Conceiver has a concept for it—a distribution of parameters for that atomic function. For example, suppose the scheme has a `4-POW` isotope. `POW` has one parameter, the exponent; a concept for `POW` is a distribution of the base-2 logarithm of that exponent. When the Conceiver is applied to a thicket generated by the scheme, and it encounters a `4-POW` atom, it will sample from this distribution, raise 2 to that number, and set that as the exponent parameter.
 
 <br>
 
 ### Correlator
 
-After a Conceiver has assigned parameters to the rope, the Correlator may rearrange some of those parameters. This component specifies a positive or negative correlation between particular parameters of particular kinds with a particular relationship within the function. For example, the Correlator may collect a list of `3-POW`s that are first cousins of `4-POW`s, and rearrange their exponent parameters so that the highest `3-POW` parameters tend to be matched with the lowest `4-POW` parameters.
+After a Conceiver has assigned parameters to the thicket, the Correlator may rearrange some of those parameters. This component specifies a positive or negative correlation between particular parameters of particular isotopes with a particular relationship within the function. For example, the Correlator may collect a list of `3-POW`s that are first cousins of `4-POW`s, and rearrange their exponent parameters so that the highest `3-POW` parameters tend to be matched with the lowest `4-POW` parameters.
 
 <br>
 
@@ -521,14 +521,14 @@ All 6 final values of the function potentially range from 0 to 1. Apart from the
 A theme search is always to find a theme for a given scheme.  
 - A random theme is generated
 - Its Controller is applied to the scheme
-- The controlled scheme generates a sample of many ropes
-- For each rope, the theme is applied and the complexity, speed, etc are estimated
+- The controlled scheme generates a sample of many thickets
+- For each thicket, the theme is applied and the complexity, speed, etc are estimated
 - The estimates for the whole sample are collected and checked against the set requirements
 - If the requirements are met, the theme is returned, otherwise the loop begins again.
 
 Generating random themes is mostly straightforward. Each component is generated separately.  
 
-A Conceiver is a mapping from kinds to concepts, so in generating a random Conceiver, we need to generate random concepts. The random concept-generating functions are an important and dense part of the code. These define a distribution of distributions of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 0.5, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 0.5 and 2 being essential for a perfect circle.
+A Conceiver is a mapping from isotopes to concepts, so in generating a random Conceiver, we need to generate random concepts. The random concept-generating functions are an important and dense part of the code. These define a distribution of distributions of parameters, that will hopefully result in a more or less even distribution of visually different results down the line. Some "special" options for parameters are given extra weight. For example, for the exponent in `POW`, 0, 0.5, and 2 might be "visually meaningful" values, 0 not affecting the result at all, and 0.5 and 2 being essential for a perfect circle.
 
 <br>
 
@@ -536,17 +536,17 @@ A Conceiver is a mapping from kinds to concepts, so in generating a random Conce
 
 A scheme search is really just a series of theme searches. A random scheme is generated; some number of random themes are tried for it; if one meets the theme requirements, the scheme and that theme are returned; otherwise, the next random scheme is tried; and so on.
 
-One would hope that generating random schemes would simply involve generating a random series of kinds. Unfortunately, most such random schemes would often generate ropes that have X-cords but no Y-cords, or Y-cords but no X-cords. A resulting image would be purely horizontal or vertical stripes and this is boring. Thus, a scheme should guarantee that the functions it produces include both `X` and `Y` components.  
+One would hope that generating random schemes would simply involve generating a random series of isotopes. Unfortunately, most such random schemes would often generate thickets that have X-atoms but no Y-atoms, or Y-atoms but no X-atoms. A resulting image would be purely horizontal or vertical stripes and this is boring. Thus, a scheme should guarantee that the functions it produces include both `X` and `Y` components.  
 
-It is not enough to simply include `X` and `Y` kinds—the scheme has to guarantee that at least one of each will be used every time. This is accomplished by explicitly generating kinds in each of the following classes, or "kind kinds", in order:  
-- X kinds
-- Y kinds
-- guaranteed X-dependent kinds
-- guaranteed Y-dependent kinds
-- X- & Y-combining kinds
-- guaranteed X- & Y-dependent kinds
-- unrestricted kinds
-You can see how kinds can be generated that are guaranteed to have each property, by making them take kinds of the right earlier classes as children. Only guaranteed X- & Y-dependent kinds can be used as roots.
+It is not enough to simply include `X` and `Y` isotopes—the scheme has to guarantee that at least one of each will be used every time. This is accomplished by explicitly generating isotopes in each of the following classes, or "isotope kinds", in order:  
+- X isotopes
+- Y isotopes
+- guaranteed X-dependent isotopes
+- guaranteed Y-dependent isotopes
+- X- & Y-combining isotopes
+- guaranteed X- & Y-dependent isotopes
+- unrestricted isotopes
+You can see how isotopes can be generated that are guaranteed to have each property, by making them take isotopes of the right earlier classes as children. Only guaranteed X- & Y-dependent isotopes can be used as roots.
 
 
 
