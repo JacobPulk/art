@@ -118,8 +118,8 @@ In order to produce a new artist, the program will create and discard random new
 
 - ### re-render an image
 
-You can re-render an existing image at a specified resolution (representing the longer side of a panel). Use a double-quote mark:
-
+You can re-render an existing image at a specified resolution (representing the longer side of a panel). Use a double-quote mark:  
+<br>  
 `" 2000` will re-render the last shown image at 2000 pixels.  
 <br>  
 `" nice 2000` will re-render the saved image called "nice" (leave off the extension) at 2000 pixels.
@@ -128,8 +128,8 @@ You can re-render an existing image at a specified resolution (representing the 
 
 - ### create in bulk
 
-Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, versions, or artists to generate in a row. Everything will be saved automatically with program-generated names.
-
+Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, versions, or artists to generate in a row. Everything will be saved automatically with program-generated names.  
+<br>  
 `.. * 50` will create 50 new images from random saved artists.  
 <br>  
 `!! * 50` will create 50 new versions of random saved artists. One image from each will be created.  
@@ -144,8 +144,8 @@ Once you are familiar with the program, you might want to trawl through content 
 
 <br>
 
-After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.
-
+After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.  
+<br>  
 `image` will save the image file just shown with a timestamp-based name.  
 <br>  
 `image 2000` will re-render the image at 2000 pixels and save it with a timestamp-based name.  
