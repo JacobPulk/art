@@ -82,7 +82,7 @@ Run `art.py` however you want.
 
 <br>
 
-- ### create images  
+- ### create an image  
 
 <br>
   
@@ -94,9 +94,9 @@ Run `art.py` however you want.
 <br>  
 `belize gamma` or `belize_gamma` will have the artist by that name create a new image.
 
-<br> 
+<br>
 
-- ### create versions+images
+- ### create a version + image
 
 In order to produce a new version for an artist, the program will create and discard random new versions until one meets the requirements set in your [Settings](#5-settings). When it does, it will have that version of the artist create a new image.  
 <br>  
@@ -108,7 +108,7 @@ In order to produce a new version for an artist, the program will create and dis
 
 <br> 
 
-- ### create artists+versions+images
+- ### create an artist + version + image
 
 In order to produce a new artist, the program will create and discard random new artists, trying several versions of each, until one meets the requirements set in your [Settings](#5-settings). When it does, it will have that version of the artist create a new image.  
 <br>  
@@ -116,12 +116,12 @@ In order to produce a new artist, the program will create and discard random new
 
 <br>
 
-- ### re-render images
+- ### re-render an image
 
-You can re-render an already-produced image at a specified resolution (representing the longer side of each of the panels within the ptych). Use a double-quote mark:
-
+You can re-render an already-produced image at a specified resolution (representing the longer side of a panel). Use a double-quote mark:
+<br>  
 `" 2000` will re-render the last shown image at 2000 pixels.
-
+<br>  
 `" nice 2000` will re-render the saved image called "nice" (leave off the extension) at 2000 pixels.
 
 <br>
@@ -129,13 +129,13 @@ You can re-render an already-produced image at a specified resolution (represent
 - ### creating in bulk
 
 Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, themes, or schemes to generate sequentially. Everything will be saved automatically with program-generated names.
-
+<br>  
 `.. * 50` will generate 50 new images from random saved schemes and themes.
-
+<br>  
 `!! * 50` will generate 50 new themes for random saved schemes. One image from each will be generated.
-
+<br>  
 `?? * 50` will generate 50 new schemes, each with a new theme. One image from each will be generated.
-
+<br>  
 `" " 2000` will re-render all images in the `data\rerender` folder at 2000 pixels.  
 Nothing is ever automatically placed in the `data\rerender` folder. It is only there for you to copy image files into, in order to easily tell the program which ones to re-render. Re-rendered images are output in the `data\images` folder like the rest.
 
@@ -146,21 +146,21 @@ Nothing is ever automatically placed in the `data\rerender` folder. It is only t
 <br>
 
 - After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.
-
+<br>  
 `image` will save the image file just shown with a timestamp-based name.
-
+<br>  
 `image 2000` will re-render the image at 2000 pixels and save it with a timestamp-based name.
-
+<br>  
 `image nice` will save the image file just shown with the name "nice".
-
+<br>  
 `image nice 2000` will re-render the image at 2000 pixels and save the image with the name "nice".
 
 <br>
 
 - Then, if a new artist has been generated, you will be prompted to save it.
-
-If the scheme has already been saved, you will be prompted to enter `gamma` to save the artist with the theme name "gamma".  
-
+<br>  
+If the scheme has already been saved, you will be prompted to enter `gamma` to save the artist with the theme name "gamma".
+<br>  
 If not, you will be prompted to enter `moth gamma` to save the artist with the full name "moth gamma".
 
 <br>
@@ -168,7 +168,7 @@ If not, you will be prompted to enter `moth gamma` to save the artist with the f
 - On either prompt...
 
 `` ` `` ([a backtick](https://letmegooglethat.com/?q=backtick+key)) will skip saving entirely.
-
+<br>  
 `-` (a dash) will skip saving just the currently prompted part (the image, or the scheme/theme).
 
 <br>
