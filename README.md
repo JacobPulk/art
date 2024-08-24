@@ -135,7 +135,8 @@ Once you are familiar with the program, you might want to trawl through content 
 
 <br>
 
-Depending on what was just created, you will be prompted to save... 
+Depending on what was just created, you will be prompted to save...  
+
 <br>
 
 - ### an image  
@@ -155,13 +156,13 @@ Depending on what was just created, you will be prompted to save...
 
 - ### an artist + version  
 
-`moth gamma` will save that artist with the name "moth" and that version with the name "gamma".
+`moth gamma` will save that artist with the name "moth" and that version with the name "gamma".  
 
+<br>
 <br>
 
 On any save prompt...  
-<br>
-
+  
 `` ` `` (a [backtick](https://letmegooglethat.com/?q=backtick+key)) will skip saving entirely.  
 `-` (a dash) will skip saving just the currently prompted part (the image, or the scheme/theme).  
 
@@ -169,7 +170,7 @@ On any save prompt...
 
 ## 5. Stop commands
 
-`#` will quit the program.
+`#` on any prompt will quit the program.
 
 `ctrl + i` will interrupt an image render, version search, or artist search if you feel it is taking too long. Most renders and searches should produce a result in seconds or minutes, especially under the default settings, but some will not.
 
