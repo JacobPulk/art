@@ -1,5 +1,7 @@
 # art.py
 
+<br>  
+
 # What it does
 
 This command-line program generates procedural art images. See a gallery [here](https://imgur.com/a/Pz2uvam). 
@@ -23,14 +25,6 @@ Artists will produce images with some consistencies. Some artists will be more d
 You can guide searches for new artists by adjusting settings, and you can choose which images or artists to save along the way. In other words, images are composed by procedure and randomness, and are curated by you. Those procedures are composed by procedure and randomness, and are curated by you.
 
 All images and artists generated can probably be assumed, statistically, to have never been generated before, and to never be generated again.
-
-<br>  
-
-***  
-
-***  
-
-***  
 
 <br>  
 
@@ -63,13 +57,13 @@ Run `art.py` however you want.
 
 <br>
 
-## 2. Basic information  
+## 2. Basic concepts  
 
 - Artists can have multiple versions. For an artist to create an image, one version needs to be chosen. Together, the artist and version specify a stochastic (random number-influenced) system for creating images. Any artist and version can produce an unlimited number of new images.
 
-- Artists and their versions are more or less "black boxes", so there would be no reason to create one without seeing at least one image made by them.
+- Artists and their versions are basically [black boxes](https://en.wikipedia.org/wiki/Black_box). There would be no reason to create one without seeing an image created by it.
 
-- Thus, there are three levels at which things can be created:  
+- Therefore, there are three levels at which things can be created:  
 (1) existing artist & version -> **new image**  
 (2) existing artist -> **new version & new image**  
 (3) **new artist, new version & new image**  
