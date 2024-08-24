@@ -86,9 +86,9 @@ Run `art.py` however you want.
 
 <br>
   
-`..` will have a random saved artist create a new image.  
+`..` will have a random artist create a new image.  
 <br>  
-`.` will have a random saved artist, among those with the same scheme as the last artist, to create a new image.  
+`.` will have a random saved version of the last used artist create a new image.  
 <br>  
 ` ` (blank command) will have the last artist create a new image.  
 <br>  
