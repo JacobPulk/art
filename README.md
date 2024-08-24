@@ -65,7 +65,7 @@ Run `art.py` however you want.
 
 ## 2. Basic information  
 
-- An artist is made of one "scheme" and one "theme". Think of the scheme as the deeper part, and the theme as a modifier of it. Together, they specify a stochastic (random number-influenced) system for creating images.
+- An artist is made of one "scheme" and one "theme". Think of the scheme as the deeper part, and the theme as modifying it. Together, they specify a stochastic (random number-influenced) system for creating images.
 
 - Themes are attached to, and only made for, specific schemes. Schemes can be generated freely. This means a new artist can be formed by
 (1) creating a new theme for an existing scheme, or
