@@ -72,15 +72,15 @@ Run `art.py` however you want.
 
 - The program comes with many "core" artists named by those conventions. These were not made or manipulated by hand, but randomly created by this program and chosen/saved by me. You can use these and/or find your own. Remember that new images from old artists, even old versions of old artists, are still new.
   
-- Using the program simply consists of entering commands from the following list.
+- Using the program simply consists of entering commands from the following lists.
 
 <br>
 
-## 3. Main (generating) commands
+## 3. Create commands
 
 <br>
 
-- ### generate images  
+- ### create images  
 
 <br>
   
@@ -94,7 +94,7 @@ Run `art.py` however you want.
 
 <br> 
 
-- ### generate artists
+- ### create versions+images
 
 In order to produe a new artist, the program will find it by creating and discarding random new artists until one meets the requirements set in your [Settings](#5-settings). When it does, it will have that artist create a new image.  
 <br>  
@@ -102,8 +102,12 @@ In order to produe a new artist, the program will find it by creating and discar
 <br>  
 `!` will create a new artist with whatever scheme was last used.  
 <br>  
-`!!` will create a new artist with a random saved scheme.  
-<br>  
+`!!` will create a new artist with a random saved scheme.
+
+<br> 
+
+- ### create artists+versions+images
+
 `??` will generate a totally new artist.
 
 <br>
@@ -118,7 +122,7 @@ You can re-render an already-produced image at a specified resolution (represent
 
 <br>
 
-- ### generating in bulk
+- ### creating in bulk
 
 Once you are familiar with the program, you might want to trawl through content more efficiently. You can specify a number of images, themes, or schemes to generate sequentially. Everything will be saved automatically with program-generated names.
 
@@ -130,18 +134,6 @@ Once you are familiar with the program, you might want to trawl through content 
 
 `" " 2000` will re-render all images in the `data\rerender` folder at 2000 pixels.  
 Nothing is ever automatically placed in the `data\rerender` folder. It is only there for you to copy image files into, in order to easily tell the program which ones to re-render. Re-rendered images are output in the `data\images` folder like the rest.
-
-<br>
-
-- ### quit
-
-`#` will quit the program.
-
-<br>
-
-## 3.5. Interrupt searching or rendering
-
-Most artist searches and image renders should produce a result in seconds or minutes, especially under the default settings. Regardless, if a search or render is taking too long, press ``ctrl + i`` to interrupt it and enter a new command.
 
 <br>
 
@@ -177,7 +169,15 @@ If not, you will be prompted to enter `moth gamma` to save the artist with the f
 
 <br>
 
-## 5. Settings
+## 5. Stop commands
+
+`#` will quit the program.
+
+`ctrl + i` will interrupt an image render, version search, or artist search if you feel it is taking too long. Most renders and searches should produce a result in seconds or minutes, especially under the default settings, but some will not.
+
+<br>
+
+## 6. Settings
 
 Change settings in `art_settings.txt`. Setting names and values are separated by tabs. You can add or remove tabs freely.
 
@@ -234,7 +234,7 @@ You may be interested to see the functions behind particular images, or the outl
 
 <br>
 
-# More information
+## 7. More information
   
 - A **ptych** (from "triptych" or "polyptych"), also saved as a `.json` file, is a blueprint for an image (containing one to several related panels). An image can be re-rendered at any resolution from its ptych.
   
