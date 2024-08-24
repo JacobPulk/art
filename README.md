@@ -98,7 +98,7 @@ Run `art.py` however you want.
 
 - ### create a version + image
 
-In order to produce a new version for an artist, the program will create and discard random new versions until it finds one that meets the requirements set in your [Settings](#5-settings). When it does, it will have that version of the artist create a new image.  
+In order to produce a new version of an artist, the program will create and discard random new versions until it finds one that meets the requirements set in your [Settings](#5-settings). When it does, it will have that version of the artist create a new image.  
 <br>  
 `belize` will create a new version of the artist named "belize".  
 <br>  
