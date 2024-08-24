@@ -92,7 +92,7 @@ Run `art.py` however you want.
 <br>  
 ` ` (blank command) will have the last artist create a new image.  
 <br>  
-`belize gamma` or `belize_gamma` will have the artist by that name create a new image.
+`belize gamma` or `belize_gamma` will have the version "gamma" of the artist "belize" create a new image.
 
 <br>
 
