@@ -86,11 +86,11 @@ Run `art.py` however you want.
 
 <br>
   
-`..` will have a random artist create a new image.  
+`..` will have a random saved artist/version create a new image.  
 <br>  
 `.` will have a random saved version of the last used artist create a new image.  
 <br>  
-` ` (blank command) will have the last artist create a new image.  
+` ` (blank command) will have the last used artist/version create a new image.  
 <br>  
 `belize gamma` or `belize_gamma` will have the version "gamma" of the artist "belize" create a new image.
 
