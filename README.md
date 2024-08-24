@@ -144,23 +144,27 @@ Once you are familiar with the program, you might want to trawl through content 
 
 <br>
 
-After generating a new image (either directly or as part of generating a new theme or scheme), you will be prompted to save it.  
+- After a new image is created and shown, you will be prompted to save it.  
 <br>  
-`image` will save the image file just shown with a timestamp-based name.  
+`image` will save it with a timestamp-based name.  
 <br>  
-`image 2000` will re-render the image at 2000 pixels and save it with a timestamp-based name.  
+`image nice` will save it with the name "nice".    
 <br>  
-`image nice` will save the image file just shown with the name "nice".  
+`image 2000` will re-render it at 2000 pixels and save that with a timestamp-based name.
 <br>  
-`image nice 2000` will re-render the image at 2000 pixels and save the image with the name "nice".  
+`image nice 2000` will re-render it at 2000 pixels and save that with the name "nice".  
 
 <br>
 
-Then, if a new artist has been generated, you will be prompted to save it.  
+- Then, if a new version was created (but not a new artist), you will be prompted to save it.  
 <br>  
-If the scheme has already been saved, you will be prompted to enter `gamma` to save the artist with the theme name "gamma".  
-<br>  
-If not, you will be prompted to enter `moth gamma` to save the artist with the full name "moth gamma".
+`gamma` will save that version with the name "gamma".  
+
+<br>
+
+- IF a new version was created for a new artist, you will be prompted to save both.
+<br>
+`moth gamma` will save that artist with the name "moth" and that version with the name "gamma".
 
 <br>
 
