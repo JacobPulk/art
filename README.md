@@ -65,7 +65,7 @@ Run `art.py` however you want.
 
 ## 2. Basic information  
 
-- Artists can have multiple versions. To create an image, one version needs to be chosen. Together, the artist and version specify a stochastic (random number-influenced) system for creating images. Any artist and version can produce an unlimited number of new images.
+- Artists can have multiple versions. For an artist to create an image, one version needs to be chosen. Together, the artist and version specify a stochastic (random number-influenced) system for creating images. Any artist and version can produce an unlimited number of new images.
 
 - Artists and their versions are more or less "black boxes", so there would be no reason to create one without seeing at least one image made by them.
 
