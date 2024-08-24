@@ -1,6 +1,7 @@
 # art.py
 
 <br>  
+<br>  
 
 # What it does
 
@@ -26,6 +27,7 @@ You can guide searches for new artists by adjusting settings, and you can choose
 
 All images and artists generated can probably be assumed, statistically, to have never been generated before, and to never be generated again.
 
+<br>  
 <br>  
 
 # How to use it
@@ -96,19 +98,21 @@ Run `art.py` however you want.
 
 - ### create versions+images
 
-In order to produe a new artist, the program will find it by creating and discarding random new artists until one meets the requirements set in your [Settings](#5-settings). When it does, it will have that artist create a new image.  
+In order to produce a new version for an artist, the program will create and discard random new versions until one meets the requirements set in your [Settings](#5-settings). When it does, it will have that version of the artist create a new image.  
 <br>  
-`belize` will create a new artist with the "belize" scheme.  
+`belize` will create a new version of the artist named "belize".  
 <br>  
-`!` will create a new artist with whatever scheme was last used.  
+`!` will create a new version of the last artist used.
 <br>  
-`!!` will create a new artist with a random saved scheme.
+`!!` will create a new version of a random saved artist.
 
 <br> 
 
 - ### create artists+versions+images
 
-`??` will generate a totally new artist.
+In order to produce a new artist, the program will create and discard random new artists, trying several versions of each, until one meets the requirements set in your [Settings](#5-settings). When it does, it will have that version of the artist create a new image.  
+<br>  
+`??` will create a new artist.
 
 <br>
 
