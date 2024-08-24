@@ -85,16 +85,13 @@ Run `art.py` however you want.
 
 - ### generate images
 
-`..` will use a random saved scheme and theme to generate and display a new image.  
-Try this command first.
-
-`.` will use the last used scheme, and a random one of its saved themes, to generate and display a new image.  
-Of course this only works if the last used scheme has one or more themes saved.
-
-` ` (just leave the command blank) will use whatever scheme and theme were last used to generate and display a new image.
-
-`belize gamma` will use the "belize" scheme and its "gamma" theme to generate and display a new image.  
-`belize_gamma` works the same.
+`..` will use a random saved artist to create a new image.  
+<br>  
+`.` will use a random saved artist whose scheme is the last scheme used, to create a new image.  
+<br>  
+` ` (blank command) will use the last artist used to create a new image.  
+<br>  
+`belize gamma` or `belize_gamma` will use the artist by that name to create a new image.
 
 <br> 
 
