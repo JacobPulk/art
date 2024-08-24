@@ -83,9 +83,11 @@ Run `art.py` however you want.
 
 <br>
 
-- ### generate images
+- ### generate images  
 
-`..` will use a random saved artist to create a new image.  
+<br>
+  
+`..` will have a random saved artist create a new image.  
 <br>  
 `.` will have a random saved artist, among those with the same scheme as the last artist, to create a new image.  
 <br>  
@@ -97,14 +99,14 @@ Run `art.py` however you want.
 
 - ### generate artists
 
-In order to produe a new artist, the program will find it by generating and discarding random new artists until one meets the requirements set in your [Settings](#5-settings). When it does, it will use that artist to generate and display a new image.
-
-`belize` will generate a new artist with the "belize" scheme. 
-
-`!` will generate a new artist with whatever scheme was last used.
-
-`!!` will generate a new artist with a random saved scheme. (You will notice that this search sometimes investigates multiple schemes before producing an artist. This is intentional - see [Settings](#5-settings).)
-
+In order to produe a new artist, the program will find it by creating and discarding random new artists until one meets the requirements set in your [Settings](#5-settings). When it does, it will have that artist create a new image.  
+<br>  
+`belize` will create a new artist with the "belize" scheme.  
+<br>  
+`!` will create a new artist with whatever scheme was last used.  
+<br>  
+`!!` will create a new artist with a random saved scheme.  
+<br>  
 `??` will generate a totally new artist.
 
 <br>
