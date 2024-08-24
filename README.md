@@ -63,10 +63,10 @@ Run `art.py` however you want.
 
 - Artists and their versions are basically [black boxes](https://en.wikipedia.org/wiki/Black_box). There would be no reason to create one without seeing an image created by it.
 
-- Therefore, there are three levels at which things can be created:  
-(1) existing artist & version -> **new image**  
-(2) existing artist -> **new version & new image**  
-(3) **new artist, new version & new image**  
+- Therefore, there are three levels at which you can create things:  
+(1) existing artist & version -> _**new image**_  
+(2) existing artist -> _**new version & new image**_  
+(3) _**new artist, new version & new image**_  
 
 - Version names can be repeated between artists. For example, the artist "belize" has a version "gamma", and the artist "angola" has an unrelated version "gamma". You do not need to use the Greek alphabet version-naming convention, and you should not use the country/state artist-naming convention.
 
