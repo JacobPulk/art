@@ -87,11 +87,11 @@ Run `art.py` however you want.
 
 `..` will use a random saved artist to create a new image.  
 <br>  
-`.` will use a random saved artist whose scheme is the last scheme used, to create a new image.  
+`.` will have a random saved artist, among those with the same scheme as the last artist, to create a new image.  
 <br>  
-` ` (blank command) will use the last artist used to create a new image.  
+` ` (blank command) will have the last artist create a new image.  
 <br>  
-`belize gamma` or `belize_gamma` will use the artist by that name to create a new image.
+`belize gamma` or `belize_gamma` will have the artist by that name create a new image.
 
 <br> 
 
