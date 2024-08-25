@@ -190,24 +190,24 @@ Change settings in `art_settings.txt`. Setting names and values are separated by
 
 <br>
 
-- ### scheme/theme requirements
+- ### artist requirements
 
-The next six settings represent your requirements for new scheme/theme combinations. As the program searches through randomly generated schemes/themes, for each attempt these measures will be estimated. The search ends when one is found that meets your requirements. Obviously, the more restrictive the requirements are, the longer the search will take.
+The next six settings represent your requirements for new artists. As the program searches through randomly generated versions, for each one these measures will be estimated. The search ends when one is found that meets your requirements. Obviously, the more restrictive the requirements are, the longer the search will take.
 
-For a given set of requirements, some schemes may be easy to find themes meeting them, and some schemes may be difficult or impossible. As an analogy, one car make might routinely produce models that produce cars that can exceed 200mph, another make might rarely produce models that produce cars that can exceed 200mph, and a third make might not be able to make cars that go that fast at all.
+For a given set of requirements, some artists may be easy to find versions meeting them, and some artists may be difficult or impossible. As an analogy, one car make might routinely produce models that produce cars that can exceed 200mph, another make might rarely produce models that produce cars that can exceed 200mph, and a third make might not be able to make cars that go that fast at all.
 
-Thus, even the program's search for one new scheme (for example, with a `??` command) may involve many attempts at possible new schemes. For each one a certain number of themes will be tried; if they all fail, that scheme will be given up on and a new scheme will be generated to try. The same approach is used by the `!!` command to find a single new theme for a random already-saved scheme. It would be unreasonable to expect your set requirements to be meetable by all saved schemes, so the search will periodically move on between random schemes to investigate.
+Thus the program's search for a new artist (the `??` command) will generally involve many attempts at possible new artists. For each one a certain number of versions will be tried; if they all fail, that artist will be given up on and a new one will be generated to try. The same approach is used by the `!!` command to find a new version for a random already-saved artist. It would be unreasonable to expect your set requirements to be meetable by all saved artists, so the search will periodically move on between random artists to investigate.
 
 <br>
 
-"Complexity" is a _very rough_ estimate of the visual complexity of the resulting images. Low complexity scheme/themes may be less interesting; high complexity ones may be less pretty.
+"Complexity" is a very rough estimate of the visual complexity of the resulting images. Low complexity artists may be less interesting; high complexity ones may be less pretty.
 
-`LOW COMPLEXITY MAX` is the highest complexity you will accept for an image at the 5th percentile (i.e., for the top of the simplest 5% of images produced by the theme). This setting keeps schemes/themes from being overly complex. One would think this setting should be a _high_ complexity maximum. However, in practice, high complexities are too difficult to estimate effectively. One might also think we would want to set a _minimum_ low complexity—to make sure the simplest images are not too simple. However, in practice, the following setting (a mininum median complexity) works well enough for that.
+`LOW COMPLEXITY MAX` is the highest complexity you will accept for an image at the 5th percentile (i.e., for the top of the simplest 5% of images produced by the artist/version). This setting keeps artists/versions from being overly complex. One would think this setting should be a _high_ complexity maximum. However, in practice, high complexities are too difficult to estimate effectively. One might also think we would want to set a _minimum_ low complexity—to make sure the simplest images are not too simple. However, in practice, the following setting (a mininum median complexity) works well enough for that.
 `MEDIAN COMPLEXITY MIN` is the lowest complexity you will accept for a median image (i.e., half the images may be that simple or simpler).
 
 <br>
 
-"Striation" is a _very rough_ estimate of the striped-ness of the resulting images.
+"Striation" is a very rough estimate of the striped-ness of the resulting images.
 
 `MEDIAN STRIATION MAX` is the highest striation you will accept for a median image (i.e., half the images may be that striate or more so).
 `HIGH STRIATION MAX` is the highest striation you will accept for an image at the 95th percentile (i.e., 5% of the images may be that striate or more so).
@@ -223,26 +223,26 @@ Thus, even the program's search for one new scheme (for example, with a `??` com
 
 - ### extra exports
 
-You may be interested to see the functions behind particular images, or the outlines of particular schemes. For each of the following settings, when set to `True`, their files will be added to the `data\graphs` folder.
+You may be interested to see the functions behind particular images, or the outlines of particular artists. For each of the following settings, when set to `True`, their files will be added to the `data\graphs` folder.
 
 `EXPORT IMAGE FORMULAS` will provide, for each new saved image, a relatively human-readable `.txt` file describing its function.
 
 `EXPORT IMAGE GRAPHS` will provide, for each new saved image, a `.tgf` (Trivial Graph Format) file depicting its function. When opened in a program like [yEd](https://www.yworks.com/products/yed) and arranged in an appropriate layout (e.g., `Layout -> Hierarchical` in yEd), it will be the clearest possible visualization of the structure of its formula.
 
-`EXPORT SCHEME GRAPHS` will provide, for each new saved scheme, a `.tgf` file depicting its function-constructing method. See [Schemes](#schemes) for details on what this means, and note that this graph does not contain all information in a scheme. It is just a summary.
+`EXPORT SCHEME GRAPHS` will provide, for each new saved artist, a `.tgf` file depicting its function-constructing method. See [Schemes](#schemes) for details on what this means, and note that this graph does not contain all information in an artist. It is just a summary.
 
 <br>
 
 ## 7. More information
   
-- A **ptych** (from "triptych" or "polyptych"), also saved as a `.json` file, is a blueprint for an image (containing one to several related panels). An image can be re-rendered at any resolution from its ptych.
+- A **ptych** (from "triptych" or "polyptych"), also saved as a `.json` file, is the blueprint for an image. An image can be re-rendered at any resolution from its ptych.
   
 - The `data` folder includes, among other subfolders:  
 `data\images`, which has the saved images.  
 `data\ptychs`, which has the saved (re-renderable) ptychs.  
-`data\themes`, which has the saved (usable) themes.  
-`data\schemes`, which has the saved (usable) schemes.
+`data\versions`, which has the saved (usable) versions.  
+`data\artists`, which has the saved (usable) artists.
 
 - You can rename these files freely, as long as you maintain simple naming conventions.  
 If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs`.  
-If you rename a scheme in `data\schemes`, rename the corresponding themes in `data\themes`.
+If you rename a artists in `data\artists`, rename the corresponding versions in `data\versions`.
