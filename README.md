@@ -9,7 +9,7 @@ This command-line program generates procedural art images. See a gallery [here](
 
 An image will contain one panel or a few that are similar-but-different, ideally complementary.
 
-The main outputs are `.bmp` files, which can be re-rendered at any resolution based on associated `.json` files.
+The main outputs are `.png` files, which can be re-rendered at any resolution based on associated `.json` files.
 
 The program can produce a wide diversity of images. Usage could be compared to bushwacking through a jungle of unpleasant outputs to find aesthetically fruitful areas.
 
@@ -202,8 +202,8 @@ Thus the program's search for a new artist (the `??` command) will generally inv
 
 "Complexity" is a very rough estimate of the visual complexity of the resulting images. Low complexity artists may be less interesting; high complexity ones may be less pretty.
 
-`LOW COMPLEXITY MAX` is the highest complexity you will accept for an image at the 5th percentile (i.e., for the top of the simplest 5% of images produced by the artist/version). This setting keeps artists/versions from being overly complex. One would think this setting should be a _high_ complexity maximum. However, in practice, high complexities are too difficult to estimate effectively. One might also think we would want to set a _minimum_ low complexity—to make sure the simplest images are not too simple. However, in practice, the following setting (a mininum median complexity) works well enough for that.
 `MEDIAN COMPLEXITY MIN` is the lowest complexity you will accept for a median image (i.e., half the images may be that simple or simpler).
+`HIGH COMPLEXITY MIN` is the lowest complexity you will accept for an image at the 95th percentile (i.e., for the most complex 5% of images produced by the artist/version).
 
 <br>
 
@@ -217,7 +217,7 @@ Thus the program's search for a new artist (the `??` command) will generally inv
 "Speed" is an estimate of the speed of rendering the resulting images. It is intended to be proportional to megapixels per minute.
 
 `LOW SPEED MIN` is the lowest speed you will accept for an image at the 5th percentile (i.e., for the top of the slowest 5% of images produced by the theme).  
-`MEDIAN SPEED MIN` is the lowest speed you will accept for a median image (i.e., half the images may be that slow or slower).
+`MEDIAN SPEED MAX` is the highest speed you will accept for a median image (i.e., half the images will be this slow or slower). You would expect this setting to be for a minimum speed, but the previous setting takes care of that. Slower median speeds are more likely to result in interesting images.
 
 <br>
 
