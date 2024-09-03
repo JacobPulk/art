@@ -68,7 +68,8 @@ Run `art.py` however you want.
 - Therefore, there are three levels at which you can create things:  
 (1) existing artist & version -> _**new image**_  
 (2) existing artist -> _**new version & new image**_  
-(3) _**new artist, new version & new image**_  
+(3) _**new artist, new version & new image**_
+In this order, they increase in "difficulty" (time you and the program have to spend bushwhacking to find a quality result).  
 
 - Version names can be repeated between artists. For example, the artist "belize" has a version "gamma", and the artist "angola" has an unrelated version "gamma". You do not need to use the Greek alphabet version-naming convention, and you should not use the country/state artist-naming convention.
 
