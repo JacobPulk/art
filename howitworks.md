@@ -24,7 +24,9 @@ Rendering an image, from the function that describes it, is deterministic. (Even
 
 The code should be as general as possible. Ideally, any color, palette, function, etc. would be produceable by the program. (This is currently done well but not perfectly.)
 
-In other words, the code should be "smooth" in probabilistically tending towards the preferential colors, palettes, functions, etc. Given two possible outputs, an intermediate between them should be possible too.
+In other words, the code should be "smooth" in probabilistically tending towards the preferential colors, palettes, functions, etc. Given two possible outputs, an intermediate between them should be possible too.  
+
+An artist is never filtered - artists are vetted, but when an artist is chosen, their images are not. When an image is to be made, whatever blueprint the artist first produces is used.
 
 The functions that define images can only be calculated in order to render images for the user. Where the program evaluates potential new artists and versions (for complexity and speed), it is not allowed to test by silently rendering pixels in the background.
 
