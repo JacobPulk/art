@@ -105,7 +105,7 @@ The arrangement is stochastically performed several times, each on a replicate p
 
 ## 3. Rendering
 
-For each pixel, 8 deterministic, almost-everywhere continuous functions are calculated, ultimately depending on just two arguments, the pixel's X- and Y-coordinates. The interpretation of these 6 values is as follows.
+For each pixel, 8 deterministic, almost-everywhere continuous functions are calculated, ultimately depending on just two arguments, the pixel's X- and Y-coordinates. The interpretation of these 8 values is as follows.
 
 <br>
 
