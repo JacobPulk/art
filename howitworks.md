@@ -168,13 +168,13 @@ In order to avoid confusion from different uses of the word "function", atomic f
 
 <br>
 
-## 5. artists
+## 5. Artists
 
 A artist represents an algorithm for constructing functions. It basically names which atomic functions can be used, and which ones can be arguments for which others.
 
 <br>
 
-### Isotopes
+### isotopes
 
 More specifically, a artist is a set of isotopes, which are specific versions of elements (e.g. `4-POW`). An isotope specifies how instances of its function are to be treated in the function construction process: which isotopes it can take as arguments, how many instances of it are allowed in the whole function, and so on. A artist may have no isotopes of some elements, and may have several isotopes of the same element. Perhaps  a `3-POW` can only accept a `5-SIGMOID` as an argument, while a `4-POW` can accept a `9-X` or a `2-X`.
 
@@ -182,9 +182,9 @@ Of course, any worthwhile artist will have at least one `X` isotope and at least
 
 <br>
 
-### Building functions
+### building functions
 
-When a artist is used to build a function, the order of building is more or less backwards with respect to the order of calculation. The first node constructed is a root, representing a final calculated value of the function. According to the artist, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. Looking at the bottom, the only atomic functions that take no arguments are `X` and `Y`, so the lower tips of the DAG will all be of those types. Looking at the top, 8 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. When the DAGS are more intimately connected, their root values depend on more shared arguments, so the effects of the 8 aspects will be more coherent in the final image.
+When a artist is used to build a function (thicket), the order of building (growth) is more or less backwards with respect to the order of calculation. The first node constructed is a root, representing a final calculated value of the function. According to the artist, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. Looking at the bottom, the only atomic functions that take no arguments are `X` and `Y`, so the lower tips of the DAG will all be of those types. Looking at the top, 8 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. When the DAGS are more intimately connected, their root values depend on more shared arguments, so the effects of the 8 aspects will be more coherent in the final image.
 
 <br>
 
