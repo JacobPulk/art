@@ -105,7 +105,7 @@ The arrangement is stochastically performed several times, each on a replicate p
 
 ## 3. Rendering
 
-For each pixel, 6 deterministic, almost-everywhere continuous functions are calculated, ultimately depending on just two arguments, the pixel's X- and Y-coordinates. The interpretation of these 6 values is as follows.
+For each pixel, 8 deterministic, almost-everywhere continuous functions are calculated, ultimately depending on just two arguments, the pixel's X- and Y-coordinates. The interpretation of these 6 values is as follows.
 
 <br>
 
@@ -162,7 +162,7 @@ The atomic functions can take two kinds of inputs: arguments (the output of othe
 
 Otherwise, the atomic functions are all written for an argument domain of [-1, 1]. All atomic functions are written for a codomain of [-1, 1]. In most cases—wherever possible—the range is also [-1, 1]. The whole function is treated as a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph) that may be [disconnected](https://en.wikipedia.org/wiki/Connectivity_(graph_theory)). Each node is an instance of one of those atomic functions, and represents an intermediate or final value in the calculation of the function. The node's children represent its arguments—values that need to be calculated first.
 
-The 6 functions that define an image are really parts of one DAG, with 6 nodes indicated as the final values. After calculation, the final values are scaled back to [0, 1]. Therefore, an image's DAG can be considered as a function from [0, 1]<sup>2</sup> to [0, 1]<sup>6</sup> — i.e., from (X-coord, Y-coord) to (main height, palette index, gradience, hue tweak, saturation tweak, brightness tweak). The render method above is a function from [0, 1]<sup>6</sup> and a set of palettes to [0, 255]<sup>3</sup> — i.e., taking those values to the final (red, green, blue) assignment.
+The 8 functions that define an image are really parts of one DAG, with 8 nodes indicated as the final values. After calculation, the final values are scaled back to [0, 1]. Therefore, an image's DAG can be considered as a function from [0, 1]<sup>2</sup> to [0, 1]<sup>6</sup> — i.e., from (X-coord, Y-coord) to (main height, palette index, gradience, hue tweak, saturation tweak, brightness tweak). The render method above is a function from [0, 1]<sup>6</sup> and a set of palettes to [0, 255]<sup>3</sup> — i.e., taking those values to the final (red, green, blue) assignment.
 
 In order to avoid confusion from different uses of the word "function", atomic functions are called "atoms" and the composite function is called a "thicket" (analogous to a tree, but for a DAG). The "roots" of the thicket indicate which of the atoms are to be interpreted as the 6 final values.
 
@@ -184,7 +184,7 @@ Of course, any worthwhile artist will have at least one `X` isotope and at least
 
 ### Building functions
 
-When a artist is used to build a function, the order of building is more or less backwards with respect to the order of calculation. The first node constructed is a root, representing a final calculated value of the function. According to the artist, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. Looking at the bottom, the only atomic functions that take no arguments are `X` and `Y`, so the lower tips of the DAG will all be of those types. Looking at the top, 6 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. When the DAGS are more intimately connected, their root values depend on more shared arguments, so the effects of the 6 aspects will be more coherent in the final image.
+When a artist is used to build a function, the order of building is more or less backwards with respect to the order of calculation. The first node constructed is a root, representing a final calculated value of the function. According to the artist, the algorithm repeatedly appends child nodes (arguments) to the function (again, a DAG), creating new nodes and grafting existing nodes, until all nodes have all their arguments saturated. Looking at the bottom, the only atomic functions that take no arguments are `X` and `Y`, so the lower tips of the DAG will all be of those types. Looking at the top, 6 root nodes are used, one for each value of the function; the DAGs they root may or may not be connected to one another. When the DAGS are more intimately connected, their root values depend on more shared arguments, so the effects of the 8 aspects will be more coherent in the final image.
 
 <br>
 
@@ -252,7 +252,7 @@ After a Conceiver has assigned parameters to the thicket, the Correlator may rea
 
 ### Calmer
 
-All 6 final values of the function potentially range from 0 to 1. Apart from the main value, it may not be desirable to allow the others to affect the image so strongly. The **calmer** specifies a distribution from which, for each image, constants are chosen that shrink (or shrink and shift) these 5 values. Images with rainbows tend to result from **calmers** that do not calm the hue much, and allow it to be shifted through a substantial part of the spectrum.
+All 8 final values of the function potentially range from 0 to 1. Apart from the main value, it may not be desirable to allow the others to affect the image so strongly. The **calmer** specifies a distribution from which, for each image, constants are chosen that shrink (or shrink and shift) these 7 values. For example, images with rainbows tend to result from **calmers** that do not calm the hue much, and allow it to be shifted through a substantial part of the spectrum.
 
 <br>
 
