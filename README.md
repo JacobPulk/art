@@ -173,7 +173,9 @@ On any save prompt...
 
 `#` on any prompt will quit the program.
 
-`ctrl + i` will interrupt an image render, version search, or artist search if you feel it is taking too long. Most renders and searches should produce a result in seconds or minutes, especially under the default settings, but some will not.
+`ctrl + i` will interrupt an image render, version search, or artist search if you feel it is taking too long. Most renders and searches should produce a result in seconds or minutes, especially under the default settings, but some will not.  
+
+`ctrl + c` at any time will immediately crash/quit the program. This will obviously lose the content being currently generated, but is otherwise safe.  
 
 <br>
 
@@ -218,7 +220,8 @@ Thus the program's search for a new artist (the `??` command) will generally inv
 "Speed" is an estimate of the speed of rendering the resulting images. It is intended to be proportional to megapixels per minute.
 
 `LOW SPEED MIN` is the lowest speed you will accept for an image at the 5th percentile (i.e., for the top of the slowest 5% of images produced by the theme).  
-`MEDIAN SPEED MAX` is the highest speed you will accept for a median image (i.e., half the images will be this slow or slower). You would expect this setting to be for a minimum speed, but the previous setting takes care of that. Slower median speeds are more likely to result in interesting images.
+`MEDIAN SPEED MIN` is the lowest speed you will accept for a median image (i.e., half the images will be this fast or faster).  
+`MEDIAN SPEED MAX` is the highest speed you will accept for a median image (i.e., half the images will be this slow or slower). You would expect this setting to be for a minimum speed, but the previous settings takes care of that. Slower median speeds are more likely to result in interesting images.
 
 <br>
 
@@ -245,5 +248,5 @@ You may be interested to see the functions behind particular images, or the outl
 `data\artists`, which has the saved (usable) artists.
 
 - You can rename these files freely, as long as you maintain simple naming conventions.  
-If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs`.  
-If you rename a artists in `data\artists`, rename the corresponding versions in `data\versions`.
+If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs` (so you can re-render it).  
+If you rename an artist in `data\artists`, rename the corresponding versions in `data\versions`.
