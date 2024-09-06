@@ -61,11 +61,13 @@ Run `art.py` however you want.
 
 ## 2. Basic concepts  
 
+- Refer to [this image](https://i.imgur.com/yAiroUi.jpeg) summarizing the following. 
+
 - Artists can have multiple versions. For an artist to create an image, one version needs to be chosen. Together, the artist and version specify a stochastic (random number-influenced) system for creating images. Any artist and version can produce an unlimited number of new images.
 
 - Artists and their versions are basically [black boxes](https://en.wikipedia.org/wiki/Black_box). There would be no reason to create one without seeing an image created by it.
 
-- Therefore, there are three levels at which you can create things:  
+- Therefore, there are three levels at which you can create interestingly new things:  
 (1) existing artist & version -> _**new image**_  
 (2) existing artist -> _**new version & new image**_  
 (3) _**new artist, new version & new image**_  
@@ -74,6 +76,8 @@ These are in order of increasing "difficulty"—time you and the program have to
 - Version names can be repeated between artists. For example, the artist "belize" has a version "gamma", and the artist "angola" has an unrelated version "gamma". You do not need to use the Greek alphabet version-naming convention, and you should not use the country/state artist-naming convention.
 
 - The program comes with many "core" artists named by those conventions. These were not made or manipulated by hand, but randomly created by this program and chosen/saved by me. You can use these and/or find your own. Remember that new images from old artists, even old versions of old artists, are still new.
+
+- A ptych is a blueprint for an image. A PNG can be rendered at any resolution from a ptych.  
   
 - Using the program simply consists of entering commands from the following lists.
 
