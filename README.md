@@ -61,7 +61,7 @@ Run `art.py` however you want.
 
 ## 2. Basic concepts  
 
-- Refer to [this image](https://i.imgur.com/ha3gP9J.jpeg) summarizing the following. 
+- Refer to [this overview](https://i.imgur.com/ha3gP9J.jpeg) of the program and [this screenshot](https://i.imgur.com/CG3NjzU.png) of it in action.. 
 
 - Artists can have multiple versions. For an artist to create an image, one version needs to be chosen. Together, the artist and version specify a stochastic (random number-influenced) system for creating images. Any artist and version can produce an unlimited number of new images.
 
