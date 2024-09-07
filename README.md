@@ -219,7 +219,7 @@ Thus the program's search for a new artist (the `??` command) will generally inv
 
 You may be interested to see the functions behind particular images, or the outlines of particular artists. For each of the following settings, when set to `True`, their files will be added to the `data\graphs` folder.
 
-`EXPORT IMAGE FORMULAS` will provide, for each new saved image, a relatively human-readable `.txt` file describing its function.
+`EXPORT IMAGE FORMULAS` will provide, for each new saved image, a `.txt` file describing its function. [(example)](https://i.imgur.com/a0JmWRG.png)
 
 `EXPORT IMAGE GRAPHS` will provide, for each new saved image, a `.tgf` (Trivial Graph Format) file depicting its function. When opened in a program like [yEd](https://www.yworks.com/products/yed) and arranged in an appropriate layout (e.g., `Layout -> Hierarchical` in yEd), it will be the clearest possible visualization of the structure of its formula.
 
