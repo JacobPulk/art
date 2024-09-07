@@ -235,20 +235,31 @@ You may be interested to see the functions behind particular images, or the outl
 The `data` folder includes:
 <br>
 
-- `data\images`
+- `data\images`  
 Saved images (`.png` files).  
+<br>
+
+- `data\ptychs`  
+Saved ptychs (`.json`). Images are re-rendered from these with [" commands](#re-render-an-image).  
+<br>
+
+- `data\versions`  
+Saved versions (`.json`). New images are created from these, along with their associated artists, with [. commands](#create-an-image).  
 <br>  
-- `data\ptychs`
-Saved ptychs (`.json` files). Images are re-rendered from these with [re-render commands](#re-render-an-image).
+
+- `data\artists`  
+Saved artists (`.json`). New images, and perhaps new versions, are created from these, with [. commands](#create-an-image) and [! commands](#create-a-version-image).  
 <br>  
-`data\versions`—saved versions (`.json` files). New images are created from these, along with their associated artists, with [create an image commands](#create-an-image).  
+
+- `data\graphs`  
+Saved graphs (`.tgf`) and text representations (`.txt`) of artists and functions.  
 <br>  
-`data\artists`—saved artists (`.json` files). New images, and perhaps new versions, are created from these, with [create an image commands](#create-an-image) and [create a version + image commands](#create-a-version-+-image).  
+
+- `data\rerender`  
+The only purpose of this folder is for you to tell the program a list of images to re-render. Cut or copy the `.png` files out of `data\images` into this folder. Upon receiving the (e.g.) `" " 2000` command (see [create in bulk](#create-in-bulk)), the program will find all the ptychs corresponding to the images in this folder, and re-render them at 2000 pixels.
+
 <br>  
-`data\graphs`—saved graphs (`.tgf` files) and text representations (`.txt` files) of artists and functions.  
-<br>  
-`data\rerender`—The only purpose of this folder is for you to tell the program a list of images to re-render. Cut or copy the `.png` files out of `data\images` into this folder. Upon receiving the (e.g.) `" " 2000` command (see [create in bulk](#create-in-bulk)), the program will find all the ptychs corresponding to the images in this folder, and re-render them at 2000 pixels.
-<br>  
+
 You can rename and remove these files freely, as long as you maintain these obvious conventions:
 Don't delete any images or ptychs you might want to re-render.  
 If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs` (so you can re-render it).  
