@@ -13,7 +13,7 @@ The main outputs are `.png` files, which can be re-rendered at any resolution ba
 
 The program can produce a wide diversity of images. Usage could be compared to bushwacking through a jungle of unpleasant outputs to find aesthetically fruitful areas.
 
-The intention is for it to be reasonable to say that this program generates its outputs "by itself". Your choices ultimately nudge the outputs toward your aesthetics, but only in an abstract, indirect, and probabilistic way.
+This program generates its outputs "by itself". As a user, your choices do nudge the outputs toward your aesthetics, but only in an abstract, indirect, and probabilistic way.
 
 The mechanism behind the program is intended to be "simple" and "general".
 
@@ -233,9 +233,11 @@ You may be interested to see the functions behind particular images, or the outl
 The `data` folder includes:
 <br>
 
-`data\images`—saved images (`.png` files).  
+- `data\images`
+Saved images (`.png` files).  
 <br>  
-`data\ptychs`—saved ptychs (`.json` files). Images are re-rendered from these with [re-render commands](#re-render-an-image).
+- `data\ptychs`
+Saved ptychs (`.json` files). Images are re-rendered from these with [re-render commands](#re-render-an-image).
 <br>  
 `data\versions`—saved versions (`.json` files). New images are created from these, along with their associated artists, with [create an image commands](#create-an-image).  
 <br>  
