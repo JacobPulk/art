@@ -260,7 +260,7 @@ The only purpose of this folder is for you to tell the program a list of images 
 
 <br>  
 
-You can rename and remove these files freely, as long as you maintain these obvious conventions:
+You can rename and remove these files freely, as long as you maintain these obvious conventions:  
 Don't delete any images or ptychs you might want to re-render.  
 If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs` (so you can re-render it).  
 If you rename an artist in `data\artists`, rename the corresponding versions in `data\versions`.
