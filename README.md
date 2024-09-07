@@ -230,22 +230,22 @@ You may be interested to see the functions behind particular images, or the outl
 ## 7. Folders & files
   
 
-  
-- The `data` folder includes:
-<br>  
-`data\images`: saved images (`.png` files).  
-<br>  
-`data\ptychs`: saved ptychs (`.json` files). Images can be re-rendered from these.  
-<br>  
-`data\versions`: saved versions (`.json` files). New images can be created from these along with their associated artists.  
-<br>  
-`data\artists`: saved artists (`.json` files). New images can be created from these along with their associated versions.  
-<br>  
-`data\graphs`: saved graphs and text representations of artists and functions.  
-<br>  
-`data\rerender`: The only purpose of this folder is for you to tell the program a list of images to re-render. Cut or copy the image files out of `data\images` into this folder. Upon receiving the (e.g.) `" " 2000` command, the program will find all the ptychs corresponding to the images in this folder, and re-render them at 2000 pixels.
+The `data` folder includes:
+<br>
 
-- You can rename and remove these files freely, as long as you maintain these obvious conventions:
+`data\images`—saved images (`.png` files).  
+<br>  
+`data\ptychs`—saved ptychs (`.json` files). Images can be re-rendered from these.  
+<br>  
+`data\versions`—saved versions (`.json` files). New images can be created from these along with their associated artists.  
+<br>  
+`data\artists`—saved artists (`.json` files). New images can be created from these along with their associated versions.  
+<br>  
+`data\graphs`—saved graphs and text representations of artists and functions.  
+<br>  
+`data\rerender`—The only purpose of this folder is for you to tell the program a list of images to re-render. Cut or copy the image files out of `data\images` into this folder. Upon receiving the (e.g.) `" " 2000` command, the program will find all the ptychs corresponding to the images in this folder, and re-render them at 2000 pixels.
+<br>  
+You can rename and remove these files freely, as long as you maintain these obvious conventions:
 Don't delete any images or ptychs you might want to re-render.  
 If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs` (so you can re-render it).  
 If you rename an artist in `data\artists`, rename the corresponding versions in `data\versions`.
