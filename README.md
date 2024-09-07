@@ -23,7 +23,9 @@ This is a meta-program in that these image-determining functions are generated b
 
 Artists will produce images with some consistencies. Some artists will be more diverse than others, and some consistencies will be more subtle than others.
 
-You can guide searches for new artists by adjusting settings, and you can choose which images or artists to save along the way. In other words, images are composed by procedure and randomness, and are curated by you. Those procedures are composed by procedure and randomness, and are curated by you.
+You can guide searches for new artists by adjusting settings, and you can choose which images or artists to save along the way.  
+
+In summary, images are composed by procedure and randomness, and are curated by you. Those procedures are composed by procedure and randomness, and are curated by you.
 
 All images and artists generated can probably be assumed, statistically, to have never been generated before, and to never be generated again.
 
