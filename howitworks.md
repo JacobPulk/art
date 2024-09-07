@@ -36,11 +36,23 @@ The functions that define images can only be calculated in order to render image
 
 <br>
 
-# How it works (short version)
+# How it works (shortest version)
 
 <br>
 
-Basically, an image is defined by a palette and 8 mathematical functions. The palette is basically a 1-dimensional strip of colors and is generated more or less independently from the functions.
+A simplified [visual explanation](https://i.imgur.com/DkPXJ0q.jpeg).  
+
+Basically, an image is defined by a palette and a mathematical function. The palette is basically a 1-dimensional strip of colors and is generated more or less independently from the function. The function is an arbitrary combination of simple basic functions. It tells the program where on the palette each pixel's color is to be found.
+
+<br>
+
+***  
+
+<br>
+
+# How it works (short version)
+
+<br>
 
 The functions are single-valued, more or less continuous functions of the XY plane. The image is drawn in one pass, by applying the functions and palette to each pixel's coordinates to arrive at a color for it.
 
