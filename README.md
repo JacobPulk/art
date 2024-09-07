@@ -232,10 +232,10 @@ You may be interested to see the functions behind particular images, or the outl
 
   
 - The `data` folder includes:  
-`data\images`: saved images (`.PNG` files).  
-`data\ptychs`: saved ptychs (`.JSON` files). Images can be re-rendered from these.  
-`data\versions`: saved versions (`.JSON` files). New images can be created from these along with their associated artists.  
-`data\artists`: saved artists (`.JSON` files). New images can be created from these along with their associated versions.
+`data\images`: saved images (.PNG files).  
+`data\ptychs`: saved ptychs (.JSON files). Images can be re-rendered from these.  
+`data\versions`: saved versions (.JSON files). New images can be created from these along with their associated artists.  
+`data\artists`: saved artists (.JSON files). New images can be created from these along with their associated versions.
 `data\graphs`: saved graphs and text representations of artists and functions.  
 `data\rerender`: The only purpose of this folder is for you to tell the program a list of images to re-render. Cut or copy the image files out of `data\images` into this folder. Upon receiving the (e.g.) `" " 2000` command, the program will find all the ptychs corresponding to the images in this folder, and re-render them at 2000 pixels.
 
