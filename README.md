@@ -179,7 +179,7 @@ On any save prompt...
 
 `#` on any prompt will quit the program.
 
-`ctrl + i` will interrupt an image render, version search, or artist search if you feel it is taking too long. Most renders and searches should produce a result in seconds or minutes, especially under the default settings, but some will not.  
+`alt + h` will interrupt an image render, version search, or artist search if you feel it is taking too long. Most renders and searches should produce a result in seconds or minutes, especially under the default settings, but some will not.  
 
 `ctrl + c` at any time will immediately crash/quit the program. This will obviously lose the content being currently generated, but is otherwise safe.  
 
