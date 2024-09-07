@@ -248,7 +248,7 @@ Saved versions (`.json`). New images are created from these, along with their as
 <br>  
 
 - `data\artists`  
-Saved artists (`.json`). New images, and perhaps new versions, are created from these, with [. commands](#create-an-image) and [! commands](#create-a-version-image).  
+Saved artists (`.json`). New images, and perhaps new versions, are created from these, with [. commands](#create-an-image) and [! commands](#create-a-version--image).  
 <br>  
 
 - `data\graphs`  
