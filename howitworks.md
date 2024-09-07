@@ -54,10 +54,10 @@ Basically, an image is defined by a palette and a mathematical function. The pal
 
 <br>
 
-The functions are single-valued, more or less continuous functions of the XY plane. The image is drawn in one pass, by applying the functions and palette to each pixel's coordinates to arrive at a color for it.
+The image is drawn in one pass, by applying the function and palette to each pixel's coordinates to arrive at a color for it. The function is not single-valued as depicted above; along with that main value are 7 others that modify/enhance the result in various ways. All are more or less continuous functions of the XY plane. 
 
 At each pixel:  
-- Two function values tweak the palette. 
+- Two function values adjust the palette. One adjusts the order of colors; the other adjusts the gradience/abruptness of the transitions between colors.  
 - One function value determines a location on the palette.  
 - Applied to the tweaked palette, this results in a color.  
 - Three function values directly tweak that color's hue, saturation and brightness.
