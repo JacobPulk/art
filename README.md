@@ -77,9 +77,9 @@ These are in order of increasing "difficulty"—time you and the program have to
 
 - The program comes with many "core" artists named by those conventions. These were not made or manipulated by hand, but randomly created by this program and chosen/saved by me. You can use these and/or find your own. Remember that new images from old artists, even old versions of old artists, are still new.
 
-- A ptych is a blueprint for an image. A PNG can be rendered at any resolution from a ptych.  
+- A **ptych** (from "triptych" or "polyptych"), also saved as a `.json` file, is the blueprint for an image. An image can be re-rendered at any resolution from its ptych.
   
-- Using the program simply consists of entering commands from the following lists.
+- Using the program essentially consists of entering commands from the following lists.
 
 <br>
 
@@ -229,7 +229,7 @@ You may be interested to see the functions behind particular images, or the outl
 
 ## 7. More information
   
-- A **ptych** (from "triptych" or "polyptych"), also saved as a `.json` file, is the blueprint for an image. An image can be re-rendered at any resolution from its ptych.
+
   
 - The `data` folder includes, among other subfolders:  
 `data\images`, which has the saved images.  
