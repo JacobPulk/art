@@ -223,7 +223,7 @@ You may be interested to see the functions behind particular images, or the outl
 
 `EXPORT IMAGE GRAPHS` will provide, for each new saved image, a `.tgf` (Trivial Graph Format) file depicting its function. When opened in a program like [yEd](https://www.yworks.com/products/yed) and arranged in an appropriate layout (e.g., `Layout -> Hierarchical` in yEd), it will be the clearest possible visualization of the structure of its formula. [(example visualized)](https://i.imgur.com/6uNlkYr.png)
 
-`EXPORT ARTIST GRAPHS` will provide, for each new saved artist, a `.tgf` file depicting its function-constructing method. See [How It Works](https://github.com/JacobPulk/art/blob/main/howitworks.md#5-artists) for details on what this means, and note that this graph does not contain all information in an artist. It is just a summary.
+`EXPORT ARTIST GRAPHS` will provide, for each new saved artist, a `.tgf` file depicting its function-constructing method. See [How It Works](https://github.com/JacobPulk/art/blob/main/howitworks.md#5-artists) for details on what this means, and note that this graph does not contain all information in an artist. It is just a summary. [(example visualized)](https://i.imgur.com/V2iQrKV.png)
 
 <br>
 
