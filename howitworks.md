@@ -2,7 +2,7 @@
 
 <br>
 
-The user does not directly affect an individual image, version, or artist in any way at any time.
+The user does not ever directly affect an individual image, version, or artist in any way.
 
 It is not AI, in that it does not use machine learning or training data.
 
