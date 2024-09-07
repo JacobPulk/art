@@ -236,23 +236,23 @@ The `data` folder includes:
 <br>
 
 - `data\images`  
-Saved images (`.png` files).  
+Saved images (`.png` files). These are here just for your perusal.  
 <br>
 
 - `data\ptychs`  
-Saved ptychs (`.json`). Images are re-rendered from these with [" commands](#re-render-an-image).  
+Saved ptychs (`.json`). These are used to re-render old images by [" commands](#re-render-an-image).  
 <br>
 
 - `data\versions`  
-Saved versions (`.json`). New images are created from these, along with their associated artists, with [. commands](#create-an-image).  
+Saved versions (`.json`). These are used to create new images by [. commands](#create-an-image).  
 <br>  
 
 - `data\artists`  
-Saved artists (`.json`). New images, and perhaps new versions, are created from these, with [. commands](#create-an-image) and [! commands](#create-a-version--image).  
+Saved artists (`.json`). These are used to create new images by [. commands](#create-an-image) and [! commands](#create-a-version--image).  
 <br>  
 
 - `data\graphs`  
-Saved graphs (`.tgf`) and text representations (`.txt`) of artists and functions.  
+Saved graphs (`.tgf`) and text representations (`.txt`) of artists and functions. These are here just for your perusal.  
 <br>  
 
 - `data\rerender`  
