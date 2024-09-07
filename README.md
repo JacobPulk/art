@@ -227,16 +227,19 @@ You may be interested to see the functions behind particular images, or the outl
 
 <br>
 
-## 7. More information
+## 7. Folders & files
   
 
   
-- The `data` folder includes, among other subfolders:  
-`data\images`, which has the saved images.  
-`data\ptychs`, which has the saved (re-renderable) ptychs.  
-`data\versions`, which has the saved (usable) versions.  
-`data\artists`, which has the saved (usable) artists.
+- The `data` folder includes:  
+`data\images`: saved images (`.PNG` files).  
+`data\ptychs`: saved ptychs (`.JSON` files). Images can be re-rendered from these.  
+`data\versions`: saved versions (`.JSON` files). New images can be created from these along with their associated artists.  
+`data\artists`: saved artists (`.JSON` files). New images can be created from these along with their associated versions.
+`data\graphs`: saved graphs and text representations of artists and functions.  
+`data\rerender`: The only purpose of this folder is for you to tell the program a list of images to re-render. Cut or copy the image files out of `data\images` into this folder. Upon receiving the (e.g.) `" " 2000` command, the program will find all the ptychs corresponding to the images in this folder, and re-render them at 2000 pixels.
 
-- You can rename these files freely, as long as you maintain simple naming conventions.  
+- You can rename and remove these files freely, as long as you maintain these obvious conventions:
+Don't delete any images or ptychs you might want to re-render.  
 If you rename an image in `data\images`, rename the corresponding ptych in `data\ptychs` (so you can re-render it).  
 If you rename an artist in `data\artists`, rename the corresponding versions in `data\versions`.
