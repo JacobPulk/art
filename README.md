@@ -199,7 +199,7 @@ Change settings in `art_settings.txt`. Setting names and values are separated by
 
 - ### artist requirements
 
-The next six settings represent your requirements for new artists. As the program searches through randomly generated versions, for each one these measures will be estimated. The search ends when one is found that meets your requirements. Obviously, the more restrictive the requirements are, the longer the search will take.
+The next four settings represent your requirements for new artists (or, more precisely, new versions of artists). As the program searches through randomly generated artists/versions, for each one it will simulate creating a series of images (without displaying anything). If it gets through a certain number of images without any of them violating the requirements, the search ends and that artist/version is returned. That number is `REQUIREMENT STRINGENCY`. Obviously, the more restrictive the requirements are, and the higher the stringecy, the longer the search will take.
 
 For a given set of requirements, some artists may be easy to find versions meeting them, and some artists may be difficult or impossible. As an analogy, one car make might routinely produce models that produce cars that can exceed 200mph, another make might rarely produce models that produce cars that can exceed 200mph, and a third make might not be able to make cars that go that fast at all.
 
@@ -207,25 +207,11 @@ Thus the program's search for a new artist (the `??` command) will generally inv
 
 <br>
 
-"Complexity" is a very rough estimate of the visual complexity of the resulting images. Low complexity artists may be less interesting; high complexity ones may be less pretty.
+`COMPLEXITY` is a very rough estimate of the visual complexity of the resulting images. Low complexity artists may be less interesting; high complexity ones may be less pretty.
 
-`MEDIAN COMPLEXITY MIN` is the lowest complexity you will accept for a median image (i.e., half the images may be that simple or simpler).
-`HIGH COMPLEXITY MIN` is the lowest complexity you will accept for an image at the 95th percentile (i.e., for the most complex 5% of images produced by the artist/version).
+`STRIATION` is a very rough estimate of the striped-ness of the resulting images.
 
-<br>
-
-"Striation" is a very rough estimate of the striped-ness of the resulting images.
-
-`MEDIAN STRIATION MAX` is the highest striation you will accept for a median image (i.e., half the images may be that striate or more so).
-`HIGH STRIATION MAX` is the highest striation you will accept for an image at the 95th percentile (i.e., 5% of the images may be that striate or more so).
-
-<br>
-
-"Speed" is an estimate of the speed of rendering the resulting images. It is intended to be proportional to megapixels per minute.
-
-`LOW SPEED MIN` is the lowest speed you will accept for an image at the 5th percentile (i.e., for the top of the slowest 5% of images produced by the theme).  
-`MEDIAN SPEED MIN` is the lowest speed you will accept for a median image (i.e., half the images will be this fast or faster).  
-`MEDIAN SPEED MAX` is the highest speed you will accept for a median image (i.e., half the images will be this slow or slower). You would expect this setting to be for a minimum speed, but the previous settings takes care of that. Slower median speeds are more likely to result in interesting images.
+`SPEED` is an estimate of the speed of rendering the resulting images. It is intended to be proportional to megapixels per minute.
 
 <br>
 
